@@ -1,3 +1,19 @@
+/* CSS HEX */
+:root {
+  --isabelline: #efe9e7ff;
+  --lavender-web: #dae0f2ff;
+  --pink-lace: #f9cff2ff;
+  --palatinate-purple: #52154eff;
+  --russian-violet: #111344ff;
+  --ochre: #c97211ff;
+  --faux-eerie: #0d1427;
+  --primary-color: #111344ff;
+  --secondary-color: #c97211ff;
+  --font-color: #0d1427;
+  --bg-color: #fff;
+  --heading-color: #efe9e7ff;
+}
+
 html,
 body {
   padding: 0;
@@ -11,6 +27,18 @@ a {
   text-decoration: none;
 }
 
+.rounded-logo {
+  border-radius: 40%;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.navbar-item {
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-item:hover {
+  border-bottom: 2px solid var(--secondary-color);
 }

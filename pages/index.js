@@ -1,11 +1,12 @@
 import Head from 'next/head'
-
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-
+import SecuritySvg from '../components/security'
+import PhoneSvg from '../components/phone'
+import WorldSvg from '../components/world'
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>
           Custom Telecom Solutions Provider - Global Telemanagement Inc
@@ -16,12 +17,33 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <main className={styles.main}>
-        <h1>Global Telemanagement Inc.</h1>
-        <h2>Your one stop solution</h2>
+      <header
+        style={{
+          backgroundImage: 'url("/jmb_home_xl.png")',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          width: '100%',
+          height: '25vh',
+          paddingTop: '3vh'
+        }}
+      >
+        <h1 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
+          Global Telemanagement Inc.
+        </h1>
+        <h2 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
+          Your one stop solution
+        </h2>
+      </header>
+      <main className={styles.container}>
         <section>
           <h3>Why Choose GTI?</h3>
+          <ul>
+            <li>Voice Crystal Clear Calling where and when you want it.</li>
+            <li>Internet The Best Connection for your business.</li>
+            <li>
+              Data Robust solutions where security and predictability Count
+            </li>
+          </ul>
           <p>
             Companies that are not changing and moving forward are falling
             behind their competitors - sometimes tragically. GTI has been
@@ -33,11 +55,7 @@ export default function Home() {
             support.
           </p>
         </section>
-        <ul>
-          <li>Voice Crystal Clear Calling where and when you want it.</li>
-          <li>Internet The Best Connection for your business.</li>
-          <li>Data Robust solutions where security and predictability Count</li>
-        </ul>
+
         <section>
           <h3>The Bottom Line</h3>
           <p>

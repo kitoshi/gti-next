@@ -1,27 +1,79 @@
 import Link from 'next/link'
 import Image from 'next/image'
-export default function Navbar() {
+import PhoneSvg from '../components/phone'
+import EmailSVG from '../components/email'
+export default function Navbar(props) {
   return (
     <header>
-      <nav>
-        <Image
-          src='/logo_only_clr_sm.png'
-          alt='logo'
-          width={'64'}
-          height={'64'}
-        ></Image>
+      <nav
+        style={{
+          backgroundColor: 'var(--faux-eerie)',
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
         <Link href={'/'}>
-          <a>Home</a>
+          <a>
+            <Image
+              src='/logo_only_clr_sm.png'
+              alt='logo'
+              width={'32'}
+              height={'32'}
+              quality={'100'}
+              className='rounded-logo'
+            ></Image>
+          </a>
+        </Link>
+        <Link href={'/'}>
+          <a
+            style={{
+              color: 'var(--secondary-color)',
+              marginLeft: 'auto'
+            }}
+            className='navbar-item'
+          >
+            Home
+          </a>
         </Link>
         <Link href={'/services'}>
-          <a>Services</a>
+          <a
+            style={{
+              color: 'var(--secondary-color)',
+              marginLeft: '2%'
+            }}
+            className='navbar-item'
+          >
+            Services
+          </a>
         </Link>
         <Link href={'/about'}>
-          <a>About GTI</a>
+          <a
+            style={{
+              color: 'var(--secondary-color)',
+              marginLeft: '2%'
+            }}
+            className='navbar-item'
+          >
+            About GTI
+          </a>
         </Link>
-        <Link href={'/contact'}>
-          <a>Contact Us</a>
+        <Link href={'/contact'} style={{}}>
+          <a
+            style={{
+              color: 'var(--secondary-color)',
+              marginLeft: '2%'
+            }}
+            className='navbar-item'
+          >
+            Contact Us
+          </a>
         </Link>
+        <a>
+          <PhoneSvg backgroundcolor={'#0d1427'} objectcolor={'#c97211ff'} />
+        </a>
+        <a>
+          <EmailSVG backgroundcolor={'#0d1427'} objectcolor={'#c97211ff'} />
+        </a>
       </nav>
     </header>
   )

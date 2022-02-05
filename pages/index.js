@@ -140,13 +140,19 @@ export default function Home() {
             protect and support.
           </p>
         </section>
-        <section>
-          <aside style={{ float: 'left' }}>
+        <section style={{ display: 'grid' }}>
+          <aside
+            style={{
+              gridRowStart: '1',
+              gridColumnStart: '1',
+              gridColumnEnd: '2'
+            }}
+          >
             <Image
               src='/home_feat_02_400x300.png'
               alt='company meeting'
-              width={'400px'}
-              height={'300px'}
+              width={'300px'}
+              height={'200px'}
             ></Image>
           </aside>
           <h3>The Bottom Line</h3>

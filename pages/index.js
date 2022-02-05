@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import SecuritySvg from '../components/security'
@@ -37,26 +38,117 @@ export default function Home() {
       <main className={styles.container}>
         <section>
           <h3>Why Choose GTI?</h3>
-          <ul>
-            <li>Voice Crystal Clear Calling where and when you want it.</li>
-            <li>Internet The Best Connection for your business.</li>
-            <li>
-              Data Robust solutions where security and predictability Count
+          <ul
+            style={{
+              listStyleType: 'none',
+              display: 'flex',
+              padding: '0',
+              justifyContent: 'space-between'
+            }}
+          >
+            <li
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+            >
+              <PhoneSvg
+                backgroundcolor={'white'}
+                objectcolor={'var(--primary-color)'}
+                height={50}
+                width={50}
+                scale={2}
+              />
+              <h3>Voice</h3>
+              <p style={{ width: '80%' }}>
+                Crystal Clear Calling where and when you want it.
+              </p>
+            </li>
+            <li
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+            >
+              <WorldSvg
+                backgroundcolor={'white'}
+                objectcolor={'var(--primary-color)'}
+                height={50}
+                width={50}
+                scale={2}
+              />
+              <h3>Internet</h3>
+              <p style={{ width: '80%' }}>
+                The Best Connection for your business.
+              </p>
+            </li>
+            <li
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+            >
+              <SecuritySvg
+                backgroundcolor={'white'}
+                objectcolor={'var(--primary-color)'}
+                height={50}
+                width={50}
+                scale={2}
+              />
+              <h3>Data</h3>
+              <p style={{ width: '80%' }}>
+                Robust solutions where security and predictability count
+              </p>
             </li>
           </ul>
-          <p>
+        </section>
+        <section style={{ display: 'grid' }}>
+          <p style={{ gridColumnStart: '1', gridColumnEnd: '2' }}>
             Companies that are not changing and moving forward are falling
             behind their competitors - sometimes tragically. GTI has been
-            supporting business in adapting to these changes since 1995. We
-            provide you with Telecom solutions and support that help you focus
-            on your core business and succeed in this rapidly changing business
-            environment. We like to think that we are Momma Bear, and that your
-            Telecom services are the cubs that we need to fiercely protect and
-            support.
+            supporting business in adapting to these changes since 1995.{' '}
+          </p>
+          <aside
+            style={{
+              gridRowStart: '1',
+              gridRowEnd: '3',
+              gridColumnStart: '2',
+              gridColumnEnd: '3'
+            }}
+          >
+            <Image
+              src='/home_feat_01_lg.png'
+              alt='company meeting'
+              width={'400px'}
+              height={'400px'}
+            ></Image>
+          </aside>
+          <p
+            style={{
+              gridRowStart: '2',
+              gridColumnStart: '1',
+              gridColumnEnd: '2'
+            }}
+          >
+            We provide you with Telecom solutions and support that help you
+            focus on your core business and succeed in this rapidly changing
+            business environment. We like to think that we are Momma Bear, and
+            that your Telecom services are the cubs that we need to fiercely
+            protect and support.
           </p>
         </section>
-
         <section>
+          <aside style={{ float: 'left' }}>
+            <Image
+              src='/home_feat_02_400x300.png'
+              alt='company meeting'
+              width={'400px'}
+              height={'300px'}
+            ></Image>
+          </aside>
           <h3>The Bottom Line</h3>
           <p>
             Every service we develop at GTI is designed to make a significant,

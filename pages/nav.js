@@ -69,10 +69,22 @@ export default function Navbar(props) {
           </a>
         </Link>
         <a>
-          <PhoneSvg backgroundcolor={'#0d1427'} objectcolor={'#c97211ff'} />
+          <PhoneSvg
+            backgroundcolor={'#0d1427'}
+            objectcolor={'#c97211ff'}
+            scale={1}
+            height={24}
+            width={24}
+          />
         </a>
         <a>
-          <EmailSVG backgroundcolor={'#0d1427'} objectcolor={'#c97211ff'} />
+          <EmailSVG
+            backgroundcolor={'#0d1427'}
+            objectcolor={'#c97211ff'}
+            scale={1}
+            height={24}
+            width={24}
+          />
         </a>
       </nav>
     </header>

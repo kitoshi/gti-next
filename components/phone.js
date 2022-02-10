@@ -3,6 +3,7 @@ const PhoneSvg = (props) => (
     xmlns='http://www.w3.org/2000/svg'
     height={props.height}
     width={props.width}
+    className='landing'
     {...props}
   >
     <g transform={`scale(${props.scale})`}>

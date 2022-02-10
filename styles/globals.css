@@ -14,12 +14,20 @@
   --heading-color: #efe9e7ff;
 }
 
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Ubuntu-Regular'), url(/fonts/Ubuntu-Regular.ttf) format('ttf');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Ubuntu-Regular;
+  font-size: 125%;
 }
 
 a {
@@ -41,4 +49,12 @@ a {
 
 .navbar-item:hover {
   border-bottom: 2px solid var(--secondary-color);
+}
+
+.landing {
+  margin-top: 25px;
+}
+
+.landing-tiles:hover {
+  /*animate here*/
 }

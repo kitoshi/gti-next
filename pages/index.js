@@ -41,17 +41,25 @@ export default function Home() {
           <ul
             style={{
               listStyleType: 'none',
-              display: 'flex',
+              display: 'grid',
               padding: '0',
-              justifyContent: 'space-between'
+              justifyContent: 'space-evenly',
+              gridTemplateColumns: '1fr 1fr 1fr',
+              columnGap: '10px'
             }}
           >
             <li
               style={{
+                width: '100%',
+                gridColumnStart: '1',
+                gridColumnEnd: '2',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                border: '1px solid var(--russian-violet)',
+                borderRadius: '5px'
               }}
+              className='landing-tiles'
             >
               <PhoneSvg
                 backgroundcolor={'white'}
@@ -67,10 +75,16 @@ export default function Home() {
             </li>
             <li
               style={{
+                width: '100%',
+                gridColumnStart: '2',
+                gridColumnEnd: '3',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                border: '1px solid var(--russian-violet)',
+                borderRadius: '5px'
               }}
+              className='landing-tiles'
             >
               <WorldSvg
                 backgroundcolor={'white'}
@@ -86,10 +100,16 @@ export default function Home() {
             </li>
             <li
               style={{
+                width: '100%',
+                gridColumn: '3',
+                gridColumnEnd: '4',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                border: '1px solid var(--russian-violet)',
+                borderRadius: '5px'
               }}
+              className='landing-tiles'
             >
               <SecuritySvg
                 backgroundcolor={'white'}
@@ -106,7 +126,13 @@ export default function Home() {
           </ul>
         </section>
         <section style={{ display: 'grid' }}>
-          <p style={{ gridColumnStart: '1', gridColumnEnd: '2' }}>
+          <p
+            style={{
+              gridColumnStart: '1',
+              gridColumnEnd: '2',
+              gridRowStart: '1'
+            }}
+          >
             Companies that are not changing and moving forward are falling
             behind their competitors - sometimes tragically. GTI has been
             supporting business in adapting to these changes since 1995.{' '}
@@ -130,7 +156,8 @@ export default function Home() {
             style={{
               gridRowStart: '2',
               gridColumnStart: '1',
-              gridColumnEnd: '2'
+              gridColumnEnd: '2',
+              alignSelf: 'start'
             }}
           >
             We provide you with Telecom solutions and support that help you
@@ -144,6 +171,7 @@ export default function Home() {
           <aside
             style={{
               gridRowStart: '1',
+              gridRowEnd: '3',
               gridColumnStart: '1',
               gridColumnEnd: '2'
             }}
@@ -155,12 +183,37 @@ export default function Home() {
               height={'200px'}
             ></Image>
           </aside>
-          <h3>The Bottom Line</h3>
-          <p>
+          <h3
+            style={{
+              gridRowStart: '1',
+              gridColumnStart: '2',
+              gridColumnEnd: '3'
+            }}
+          >
+            The Bottom Line
+          </h3>
+          <p
+            style={{
+              gridRowStart: '2',
+              gridColumnStart: '2',
+              gridColumnEnd: '3'
+            }}
+          >
             Every service we develop at GTI is designed to make a significant,
             measurable impact on what you care most about.
           </p>
-          <ul>
+          <ul
+            style={{
+              listStyleType: 'none',
+              display: 'flex',
+              padding: '0',
+              justifyContent: 'space-between',
+              gridRowStart: '3',
+              gridRowEnd: '4',
+              gridColumnStart: '1',
+              gridColumnEnd: '3'
+            }}
+          >
             <li>Like delighting your customers</li>
             <li>Streamlining processes</li>
             <li>
@@ -168,7 +221,14 @@ export default function Home() {
               way
             </li>
           </ul>
-          <p>
+          <p
+            style={{
+              gridColumnStart: '1',
+              gridColumnEnd: '3',
+              gridRowStart: '4',
+              gridRowEnd: '5'
+            }}
+          >
             Technology is driving significant changes in the marketplace: Today,
             the world&apos;s leading retailer has no physical stores, the
             world&apos;s largest taxi company owns no vehicles, and the

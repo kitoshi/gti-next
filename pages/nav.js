@@ -2,7 +2,37 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PhoneSvg from '../components/phone'
 import EmailSVG from '../components/email'
+import HamburgerSVG from '../components/hamburger'
+import { useState, useEffect } from 'react'
 export default function Navbar(props) {
+  const [width, setWidth] = useState(0)
+  const [navdisplay, setDisplay] = useState(false)
+
+  useEffect(() => {
+    function updateWidth() {
+      setWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', updateWidth)
+    updateWidth()
+    if (width > 800) {
+      setDisplay(true)
+    }
+    if (width <= 800) {
+      setDisplay(false)
+    }
+    return () => {
+      window.removeEventListener('resize', updateWidth)
+    }
+  }, [width])
+
+  function updateDisplay() {
+    if (navdisplay === false) {
+      setDisplay(true)
+    } else {
+      setDisplay(false)
+    }
+  }
+
   return (
     <header>
       <nav
@@ -12,8 +42,21 @@ export default function Navbar(props) {
           alignItems: 'center'
         }}
       >
+        <button
+          style={width > 800 ? { display: 'none' } : { display: 'inline' }}
+          className='hamburger'
+          onTouchEnd={updateDisplay}
+        >
+          <HamburgerSVG width={'24'} height={'24'}>
+            Menu
+          </HamburgerSVG>
+        </button>
         <Link href={'/'}>
-          <a>
+          <a
+            style={
+              navdisplay === false ? { display: 'none' } : { display: 'inline' }
+            }
+          >
             <Image
               src='/logo_only_clr_sm.png'
               alt='logo'
@@ -26,10 +69,9 @@ export default function Navbar(props) {
         </Link>
         <Link href={'/'}>
           <a
-            style={{
-              color: 'var(--secondary-color)',
-              marginLeft: 'auto'
-            }}
+            style={
+              navdisplay === false ? { display: 'none' } : { display: 'inline' }
+            }
             className='navbar-item'
           >
             Home
@@ -37,10 +79,9 @@ export default function Navbar(props) {
         </Link>
         <Link href={'/services'}>
           <a
-            style={{
-              color: 'var(--secondary-color)',
-              marginLeft: '2%'
-            }}
+            style={
+              navdisplay === false ? { display: 'none' } : { display: 'inline' }
+            }
             className='navbar-item'
           >
             Services
@@ -48,27 +89,29 @@ export default function Navbar(props) {
         </Link>
         <Link href={'/about'}>
           <a
-            style={{
-              color: 'var(--secondary-color)',
-              marginLeft: '2%'
-            }}
+            style={
+              navdisplay === false ? { display: 'none' } : { display: 'inline' }
+            }
             className='navbar-item'
           >
-            About GTI
+            About
           </a>
         </Link>
         <Link href={'/contact'} style={{}}>
           <a
-            style={{
-              color: 'var(--secondary-color)',
-              marginLeft: '2%'
-            }}
+            style={
+              navdisplay === false ? { display: 'none' } : { display: 'inline' }
+            }
             className='navbar-item'
           >
-            Contact Us
+            Contact
           </a>
         </Link>
-        <a>
+        <a
+          style={
+            navdisplay === false ? { display: 'none' } : { display: 'inline' }
+          }
+        >
           <PhoneSvg
             backgroundcolor={'#0d1427'}
             objectcolor={'#c97211ff'}
@@ -77,7 +120,11 @@ export default function Navbar(props) {
             width={24}
           />
         </a>
-        <a>
+        <a
+          style={
+            navdisplay === false ? { display: 'none' } : { display: 'inline' }
+          }
+        >
           <EmailSVG
             backgroundcolor={'#0d1427'}
             objectcolor={'#c97211ff'}

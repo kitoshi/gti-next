@@ -22,25 +22,44 @@
   src: local('Ubuntu-Regular'), url(/fonts/Ubuntu-Regular.ttf) format('ttf');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Ubuntu-Regular;
-  font-size: 125%;
+  font-size: 100%;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  z-index: 5;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  color: 'var(--secondary-color)';
+}
+
+nav > a {
+  color: var(--heading-color);
+}
+
+button.hamburger {
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
 }
 
 .rounded-logo {
   border-radius: 40%;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .navbar-item {
@@ -57,4 +76,49 @@ a {
 
 .landing-tiles:hover {
   /*animate here*/
+}
+
+@media only screen and (min-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Ubuntu-Regular;
+    font-size: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    color: 'var(--secondary-color)';
+  }
+
+  nav {
+    position: relative;
+    flex-direction: row;
+  }
+
+  nav > a {
+    color: var(--heading-color);
+  }
+
+  .rounded-logo {
+    border-radius: 40%;
+  }
+
+  .navbar-item {
+    border-bottom: 2px solid transparent;
+  }
+
+  .navbar-item:hover {
+    border-bottom: 2px solid var(--secondary-color);
+  }
+
+  .landing {
+    margin-top: 25px;
+  }
 }

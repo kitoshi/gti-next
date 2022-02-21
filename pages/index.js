@@ -19,20 +19,21 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <header>
-          <Image
-            src='/jmb_home_xl.png'
-            alt='Picture of False Creek in Vancouver'
-            objectFit='cover'
-            objectPosition='center'
-            className='landingimage'
-            layout='fill'
-          />
-          <h1 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
-            Global Telemanagement Inc.
-          </h1>
-          <h2 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
-            Your one stop solution
-          </h2>
+        <Image
+          src='/jmb_home_xl.png'
+          alt='Picture of False Creek in Vancouver'
+          objectFit='cover'
+          objectPosition='center'
+          className='landingimage'
+          layout='fill'
+          priority='true'
+        />
+        <h1 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
+          Global Telemanagement Inc.
+        </h1>
+        <h2 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
+          Your one stop solution
+        </h2>
       </header>
       <main className={styles.container}>
         <section>

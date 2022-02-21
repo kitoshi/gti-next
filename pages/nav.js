@@ -3,10 +3,11 @@ import Image from 'next/image'
 import PhoneSvg from '../components/phone'
 import EmailSVG from '../components/email'
 import HamburgerSVG from '../components/hamburger'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 export default function Navbar(props) {
   const [width, setWidth] = useState(0)
   const [navdisplay, setDisplay] = useState(false)
+  const hamburgerRef = useRef(null)
 
   useEffect(() => {
     function updateWidth() {
@@ -15,6 +16,7 @@ export default function Navbar(props) {
     window.addEventListener('resize', updateWidth)
     updateWidth()
     if (width > 800) {
+      hamburgerRef.current.style.borderRadius = '0%'
       setDisplay(true)
     }
     if (width <= 800) {
@@ -27,14 +29,19 @@ export default function Navbar(props) {
 
   function updateDisplay() {
     if (navdisplay === false) {
+      hamburgerRef.current.style.borderRadius = '5%'
+
       setDisplay(true)
     } else {
+      hamburgerRef.current.style.borderRadius = '50%'
+
       setDisplay(false)
     }
   }
 
   return (
     <nav
+      ref={hamburgerRef}
       style={{
         backgroundColor: 'var(--faux-eerie)',
         display: 'flex',
@@ -44,7 +51,7 @@ export default function Navbar(props) {
       <button
         style={width > 800 ? { display: 'none' } : { display: 'inline' }}
         className='hamburger'
-        onTouchEnd={updateDisplay}
+        onClick={updateDisplay}
         aria-label='Nav Menu'
       >
         <HamburgerSVG width={'24'} height={'24'}>

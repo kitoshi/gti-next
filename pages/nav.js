@@ -29,12 +29,8 @@ export default function Navbar(props) {
 
   function updateDisplay() {
     if (navdisplay === false) {
-      hamburgerRef.current.style.borderRadius = '5%'
-
       setDisplay(true)
     } else {
-      hamburgerRef.current.style.borderRadius = '50%'
-
       setDisplay(false)
     }
   }
@@ -43,9 +39,11 @@ export default function Navbar(props) {
     <nav
       ref={hamburgerRef}
       style={{
-        backgroundColor: 'var(--faux-eerie)',
+        backgroundColor: 'white',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden',
+        className: 'navbar'
       }}
     >
       <button

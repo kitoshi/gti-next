@@ -5,6 +5,7 @@
   --pink-lace: #f9cff2ff;
   --palatinate-purple: #52154eff;
   --russian-violet: #111344ff;
+  --black-blue: #212a33;
   --ochre: #c97211ff;
   --faux-eerie: #0d1427;
   --gold: #d4af37;
@@ -17,11 +18,24 @@
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'OpenSans';
   font-style: medium;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Ubuntu-Regular'), url(/fonts/Ubuntu-Regular.ttf) format('ttf');
+  font-weight: 500;
+  src: url(/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'LibreBaskerville';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/LibreBaskerville/LibreBaskerville-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Raleway/Raleway-Medium.ttf);
 }
 
 * {
@@ -32,8 +46,20 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Ubuntu-Regular;
+  font-family: 'OpenSans';
   font-size: 100%;
+}
+
+h1 {
+  font-family: 'Raleway';
+}
+
+h2 {
+  font-family: 'Raleway';
+}
+
+header {
+  font-family: 'Raleway';
 }
 
 section {
@@ -46,15 +72,6 @@ div.landingcontainer {
   overflow: hidden;
 }
 
-header {
-  width: 100%;
-  height: 50vh;
-  padding-top: 3vh;
-  background-color: var(--faux-eerie);
-  z-index: -2;
-  position: relative;
-}
-
 .landingimage {
   z-index: -1;
 }
@@ -62,11 +79,11 @@ header {
 nav {
   position: fixed;
   right: 10px;
-  bottom: 10px;
+  top: 10px;
   flex-direction: column;
-  border-radius: 50%;
   z-index: 5;
   padding: 1px 1px;
+  border: 1px solid black;
 }
 
 a {
@@ -82,11 +99,127 @@ nav > a {
 button.hamburger {
   outline: none;
   background: transparent;
-  border: 1px solid transparent;
 }
 
-.rounded-logo {
-  border-radius: 40%;
+.btn {
+  font-family: 'LibreBaskerville', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+}
+
+.btn-shadow {
+  display: inline-block;
+  margin: 5px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-align: center;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+  outline: currentcolor none medium;
+  border: medium none;
+}
+
+.btn-shadow-grey {
+  display: inline-block;
+  margin: 5px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+  position: relative;
+  text-align: center;
+  background: rgba(97, 96, 96, 0) none repeat scroll 0% 0%;
+  outline: currentcolor none medium;
+  border: medium none;
+}
+
+.btn-shadow::before {
+  content: '';
+  height: 40px;
+  position: absolute;
+  bottom: -1px;
+  left: 10px;
+  right: 10px;
+  z-index: 0;
+  border-radius: 2em;
+  filter: blur(14px) brightness(0.9);
+}
+
+.btn-shadow-grey span {
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out 0s;
+  padding: 16px 60px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+}
+
+.btn-shadow-grey:hover {
+  color: rgb(0, 0, 0);
+}
+
+.btn-shadow-grey:hover span {
+  filter: brightness(0.9) contrast(1.2);
+  transform: scale(0.96);
+}
+
+.btn-shadow-grey:hover::before {
+  bottom: 8px;
+  filter: blur(6px) brightness(0.8);
+  left: 15px;
+  right: 15px;
+}
+
+.btn-shadow--grey span {
+  background: rgb(221, 220, 220) none repeat scroll 0% 0%;
+}
+
+.btn-shadow::before {
+  content: '';
+  height: 40px;
+  position: absolute;
+  bottom: -1px;
+  left: 10px;
+  right: 10px;
+  z-index: 0;
+  border-radius: 2em;
+  filter: blur(14px) brightness(0.9);
+}
+
+.btn-shadow span {
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out 0s;
+  padding: 16px 60px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+}
+
+.btn-shadow:hover {
+  color: rgb(255, 255, 255);
+}
+
+.btn-shadow:hover span {
+  filter: brightness(0.9) contrast(1.2);
+  transform: scale(0.96);
+}
+
+.btn-shadow:hover::before {
+  bottom: 8px;
+  filter: blur(6px) brightness(0.8);
+  left: 15px;
+  right: 15px;
+}
+
+.btn-shadow--black span {
+  background: rgb(51, 51, 51) none repeat scroll 0% 0%;
 }
 
 .navbar-item {
@@ -104,6 +237,11 @@ button.hamburger {
 section {
   padding-right: 5px;
   padding-left: 5px;
+  height: 100vh;
+}
+
+.rounded-logo {
+  border-radius: 40%;
 }
 
 li.landing-tiles {
@@ -157,14 +295,13 @@ li.landing-tiles {
   nav {
     position: inherit;
     flex-direction: row;
-    border-radius: 0;
   }
 
   nav > a {
     color: var(--heading-color);
   }
   section {
-    height: 50vh;
+    height: 100vh;
   }
 
   .rounded-logo {
@@ -210,5 +347,70 @@ li.landing-tiles {
       #f5f6f6 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
+  }
+
+  .btn {
+    font-family: 'OpenSans', Helvetica, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .btn:hover .btn-slide-show-text1 {
+    margin-left: 65px;
+  }
+
+  .btn-shadow {
+    display: inline-block;
+    margin: 5px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    outline: currentcolor none medium;
+    border: medium none;
+  }
+
+  .btn-shadow::before {
+    content: '';
+    height: 40px;
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    right: 10px;
+    z-index: 0;
+    border-radius: 2em;
+    filter: blur(14px) brightness(0.9);
+  }
+
+  .btn-shadow span {
+    display: inline-block;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-out 0s;
+    padding: 16px 60px;
+    border-radius: 50em;
+    position: relative;
+    z-index: 2;
+    will-change: transform, filter;
+  }
+
+  .btn-shadow:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .btn-shadow:hover span {
+    filter: brightness(0.9) contrast(1.2);
+    transform: scale(0.96);
+  }
+
+  .btn-shadow:hover::before {
+    bottom: 8px;
+    filter: blur(6px) brightness(0.8);
+    left: 15px;
+    right: 15px;
+  }
+
+  .btn-shadow--black span {
+    background: rgb(51, 51, 51) none repeat scroll 0% 0%;
   }
 }

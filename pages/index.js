@@ -6,6 +6,7 @@ import SecuritySvg from '../components/security'
 import PhoneSvg from '../components/phone'
 import WorldSvg from '../components/world'
 import LandingList from '../components/landinglist'
+import LandingHeader from '../components/landingheader'
 export default function Home() {
   return (
     <>
@@ -19,39 +20,16 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header
+      <section
         style={{
+          paddingRight: '2.5%',
+          paddingLeft: '2.5%',
           display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between'
+          flexDirection: 'column'
         }}
       >
-        <h1
-          style={{
-            marginTop: '0',
-            marginBottom: '0',
-            color: 'var(--heading-color)',
-            fontSize: '7.5vw',
-            textShadow:
-              '1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000',
-            textAlign: 'center'
-          }}
-        >
-          Global Telemanagement Inc.
-        </h1>
-
-        <Image
-          src='/jmb_home_xl.png'
-          alt='Picture of False Creek in Vancouver'
-          objectFit='cover'
-          objectPosition='center'
-          className='landingimage'
-          layout='responsive'
-          width='100%'
-          height='50%'
-          priority='true'
-        />
-      </header>
+        <LandingHeader />
+      </section>
       <main className={styles.container}>
         <section
           style={{

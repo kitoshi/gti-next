@@ -5,9 +5,10 @@ import Link from 'next/link'
 import SecuritySvg from '../components/security'
 import PhoneSvg from '../components/phone'
 import WorldSvg from '../components/world'
+import LandingList from '../components/landinglist'
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>
           Custom Telecom Solutions Provider - Global Telemanagement Inc
@@ -18,112 +19,56 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header>
+      <header
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between'
+        }}
+      >
+        <h1
+          style={{
+            marginTop: '0',
+            marginBottom: '0',
+            color: 'var(--heading-color)',
+            fontSize: '7.5vw',
+            textShadow:
+              '1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000',
+            textAlign: 'center'
+          }}
+        >
+          Global Telemanagement Inc.
+        </h1>
+
         <Image
           src='/jmb_home_xl.png'
           alt='Picture of False Creek in Vancouver'
           objectFit='cover'
           objectPosition='center'
           className='landingimage'
-          layout='fill'
+          layout='responsive'
+          width='100%'
+          height='50%'
           priority='true'
         />
-        <h1 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
-          Global Telemanagement Inc.
-        </h1>
-        <h2 style={{ marginTop: '0', color: 'var(--heading-color)' }}>
-          Your one stop solution
-        </h2>
       </header>
       <main className={styles.container}>
-        <section>
-          <h3>Why Choose GTI?</h3>
-          <ul
+        <section
+          style={{
+            backgroundColor: 'var(--section-color)',
+            paddingTop: '15px'
+          }}
+        >
+          <h3
             style={{
-              listStyleType: 'none',
-              display: 'grid',
-              padding: '0',
-              justifyContent: 'space-evenly',
-              gridTemplateColumns: '1fr 1fr 1fr',
-              columnGap: '10px'
+              fontSize: '100%',
+              fontSize: '6vw',
+              margin: '0'
             }}
           >
-            <li
-              style={{
-                width: '100%',
-                gridColumnStart: '1',
-                gridColumnEnd: '2',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                border: '1px solid var(--russian-violet)',
-                borderRadius: '5px'
-              }}
-              className='landing-tiles'
-            >
-              <PhoneSvg
-                backgroundcolor={'white'}
-                objectcolor={'var(--primary-color)'}
-                height={50}
-                width={50}
-                scale={2}
-              />
-              <h3>Voice</h3>
-              <p style={{ width: '80%' }}>
-                Crystal Clear Calling where and when you want it.
-              </p>
-            </li>
-            <li
-              style={{
-                width: '100%',
-                gridColumnStart: '2',
-                gridColumnEnd: '3',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                border: '1px solid var(--russian-violet)',
-                borderRadius: '5px'
-              }}
-              className='landing-tiles'
-            >
-              <WorldSvg
-                backgroundcolor={'white'}
-                objectcolor={'var(--primary-color)'}
-                height={50}
-                width={50}
-                scale={2}
-              />
-              <h3>Internet</h3>
-              <p style={{ width: '80%' }}>
-                The Best Connection for your business.
-              </p>
-            </li>
-            <li
-              style={{
-                width: '100%',
-                gridColumn: '3',
-                gridColumnEnd: '4',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                border: '1px solid var(--russian-violet)',
-                borderRadius: '5px'
-              }}
-              className='landing-tiles'
-            >
-              <SecuritySvg
-                backgroundcolor={'white'}
-                objectcolor={'var(--primary-color)'}
-                height={50}
-                width={50}
-                scale={2}
-              />
-              <h3>Data</h3>
-              <p style={{ width: '80%' }}>
-                Robust solutions where security and predictability count
-              </p>
-            </li>
-          </ul>
+            Why Choose GTI?
+          </h3>
+          <LandingList />
         </section>
         <section style={{ display: 'grid' }}>
           <p
@@ -144,14 +89,7 @@ export default function Home() {
               gridColumnStart: '2',
               gridColumnEnd: '3'
             }}
-          >
-            <Image
-              src='/home_feat_01_lg.png'
-              alt='company meeting'
-              width={'400px'}
-              height={'400px'}
-            ></Image>
-          </aside>
+          ></aside>
           <p
             style={{
               gridRowStart: '2',
@@ -167,7 +105,13 @@ export default function Home() {
             protect and support.
           </p>
         </section>
-        <section style={{ display: 'grid' }}>
+        <section
+          style={{
+            display: 'grid',
+            backgroundColor: 'var(--section-color)',
+            paddingTop: '15px'
+          }}
+        >
           <aside
             style={{
               gridRowStart: '1',
@@ -175,14 +119,7 @@ export default function Home() {
               gridColumnStart: '1',
               gridColumnEnd: '2'
             }}
-          >
-            <Image
-              src='/home_feat_02_400x300.png'
-              alt='company meeting'
-              width={'300px'}
-              height={'200px'}
-            ></Image>
-          </aside>
+          ></aside>
           <h3
             style={{
               gridRowStart: '1',
@@ -237,18 +174,24 @@ export default function Home() {
             to help and support you in moving forward.
           </p>
         </section>
+      </main>
+      <section
+        style={{
+          display: 'grid',
+          paddingTop: '15px'
+        }}
+      >
         <h4>GTI...bringing a world of telecom solutions to your business. </h4>
         <Link href={'/services'}>
           <a>Services</a>
         </Link>
-      </main>
-
-      <footer className={styles.footer}>
-        <p>
-          2017 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892 W.
-          Broadway Vancouver B.C. V6J 1Y9 604-637-4772
-        </p>
-      </footer>
-    </div>
+        <footer className={styles.footer}>
+          <p>
+            2017 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
+            W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772
+          </p>
+        </footer>
+      </section>
+    </>
   )
 }

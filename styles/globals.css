@@ -14,7 +14,7 @@
   --font-color: #0d1427;
   --bg-color: #fff;
   --heading-color: #efe9e7ff;
-  --section-color: #dae0f2ff;
+  --section-color: #212a33;
 }
 
 @font-face {
@@ -22,6 +22,7 @@
   font-style: medium;
   font-weight: 500;
   src: url(/fonts/OpenSans/OpenSans-Regular.ttf);
+  font-display: swap;
 }
 
 @font-face {
@@ -29,13 +30,15 @@
   font-style: normal;
   font-weight: 700;
   src: url(/fonts/LibreBaskerville/LibreBaskerville-Bold.ttf);
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Raleway';
+  font-family: 'DMSerifDisplay';
   font-style: normal;
-  font-weight: 500;
-  src: url(/fonts/Raleway/Raleway-Medium.ttf);
+  font-weight: 400;
+  src: url(/fonts/DMSerifDisplay/DMSerifDisplay-Regular.ttf);
+  font-display: swap;
 }
 
 * {
@@ -48,18 +51,33 @@ body {
   margin: 0;
   font-family: 'OpenSans';
   font-size: 100%;
+  width: 100vw;
 }
 
 h1 {
-  font-family: 'Raleway';
+  font-family: 'DMSerifDisplay';
+  font-size: 350%;
 }
 
 h2 {
-  font-family: 'Raleway';
+  font-family: 'DMSerifDisplay';
+}
+
+h3 {
+  font-family: 'DMSerifDisplay';
+  font-size: 250%;
 }
 
 header {
-  font-family: 'Raleway';
+  font-family: 'DMSerifDisplay';
+}
+
+button {
+  font-family: 'DMSerifDisplay';
+}
+
+span {
+  font-family: 'DMSerifDisplay';
 }
 
 section {
@@ -106,122 +124,6 @@ button.hamburger {
   text-transform: uppercase;
 }
 
-.btn:hover .btn-slide-show-text1 {
-  margin-left: 65px;
-}
-
-.btn-shadow {
-  display: inline-block;
-  margin: 5px;
-  font-weight: 500;
-  line-height: 24px;
-  color: rgb(255, 255, 255);
-  position: relative;
-  text-align: center;
-  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-  outline: currentcolor none medium;
-  border: medium none;
-}
-
-.btn-shadow-grey {
-  display: inline-block;
-  margin: 5px;
-  font-weight: 500;
-  line-height: 24px;
-  color: rgb(0, 0, 0);
-  position: relative;
-  text-align: center;
-  background: rgba(97, 96, 96, 0) none repeat scroll 0% 0%;
-  outline: currentcolor none medium;
-  border: medium none;
-}
-
-.btn-shadow::before {
-  content: '';
-  height: 40px;
-  position: absolute;
-  bottom: -1px;
-  left: 10px;
-  right: 10px;
-  z-index: 0;
-  border-radius: 2em;
-  filter: blur(14px) brightness(0.9);
-}
-
-.btn-shadow-grey span {
-  display: inline-block;
-  transform-style: preserve-3d;
-  transition: all 0.3s ease-out 0s;
-  padding: 16px 60px;
-  border-radius: 50em;
-  position: relative;
-  z-index: 2;
-  will-change: transform, filter;
-}
-
-.btn-shadow-grey:hover {
-  color: rgb(0, 0, 0);
-}
-
-.btn-shadow-grey:hover span {
-  filter: brightness(0.9) contrast(1.2);
-  transform: scale(0.96);
-}
-
-.btn-shadow-grey:hover::before {
-  bottom: 8px;
-  filter: blur(6px) brightness(0.8);
-  left: 15px;
-  right: 15px;
-}
-
-.btn-shadow--grey span {
-  background: rgb(221, 220, 220) none repeat scroll 0% 0%;
-}
-
-.btn-shadow::before {
-  content: '';
-  height: 40px;
-  position: absolute;
-  bottom: -1px;
-  left: 10px;
-  right: 10px;
-  z-index: 0;
-  border-radius: 2em;
-  filter: blur(14px) brightness(0.9);
-}
-
-.btn-shadow span {
-  display: inline-block;
-  transform-style: preserve-3d;
-  transition: all 0.3s ease-out 0s;
-  padding: 16px 60px;
-  border-radius: 50em;
-  position: relative;
-  z-index: 2;
-  will-change: transform, filter;
-}
-
-.btn-shadow:hover {
-  color: rgb(255, 255, 255);
-}
-
-.btn-shadow:hover span {
-  filter: brightness(0.9) contrast(1.2);
-  transform: scale(0.96);
-}
-
-.btn-shadow:hover::before {
-  bottom: 8px;
-  filter: blur(6px) brightness(0.8);
-  left: 15px;
-  right: 15px;
-}
-
-.btn-shadow--black span {
-  background: rgb(51, 51, 51) none repeat scroll 0% 0%;
-}
-
 .navbar-item {
   border-bottom: 2px solid transparent;
 }
@@ -238,39 +140,11 @@ section {
   padding-right: 5px;
   padding-left: 5px;
   height: 100vh;
+  width: 100%;
 }
 
 .rounded-logo {
   border-radius: 40%;
-}
-
-li.landing-tiles {
-  background: #f5f6f6;
-  background: -moz-linear-gradient(
-    top,
-    #f5f6f6 0%,
-    #dbdce2 21%,
-    #b8bac6 49%,
-    #dddfe3 80%,
-    #f5f6f6 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    #f5f6f6 0%,
-    #dbdce2 21%,
-    #b8bac6 49%,
-    #dddfe3 80%,
-    #f5f6f6 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #f5f6f6 0%,
-    #dbdce2 21%,
-    #b8bac6 49%,
-    #dddfe3 80%,
-    #f5f6f6 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
 }
 
 @media only screen and (min-width: 800px) {
@@ -284,6 +158,10 @@ li.landing-tiles {
     margin: 0;
     font-family: Ubuntu-Regular;
     font-size: 100%;
+  }
+
+  h1 {
+    font-size: 500%;
   }
 
   a {
@@ -320,97 +198,8 @@ li.landing-tiles {
     margin-top: 25px;
   }
 
-  li.landing-tiles {
-    background: #f5f6f6;
-    background: -moz-linear-gradient(
-      top,
-      #f5f6f6 0%,
-      #dbdce2 21%,
-      #b8bac6 49%,
-      #dddfe3 80%,
-      #f5f6f6 100%
-    );
-    background: -webkit-linear-gradient(
-      top,
-      #f5f6f6 0%,
-      #dbdce2 21%,
-      #b8bac6 49%,
-      #dddfe3 80%,
-      #f5f6f6 100%
-    );
-    background: linear-gradient(
-      to bottom,
-      #f5f6f6 0%,
-      #dbdce2 21%,
-      #b8bac6 49%,
-      #dddfe3 80%,
-      #f5f6f6 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
-  }
-
   .btn {
     font-family: 'OpenSans', Helvetica, sans-serif;
     text-transform: uppercase;
-  }
-
-  .btn:hover .btn-slide-show-text1 {
-    margin-left: 65px;
-  }
-
-  .btn-shadow {
-    display: inline-block;
-    margin: 5px;
-    font-weight: 500;
-    line-height: 24px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    text-align: center;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-    outline: currentcolor none medium;
-    border: medium none;
-  }
-
-  .btn-shadow::before {
-    content: '';
-    height: 40px;
-    position: absolute;
-    bottom: -1px;
-    left: 10px;
-    right: 10px;
-    z-index: 0;
-    border-radius: 2em;
-    filter: blur(14px) brightness(0.9);
-  }
-
-  .btn-shadow span {
-    display: inline-block;
-    transform-style: preserve-3d;
-    transition: all 0.3s ease-out 0s;
-    padding: 16px 60px;
-    border-radius: 50em;
-    position: relative;
-    z-index: 2;
-    will-change: transform, filter;
-  }
-
-  .btn-shadow:hover {
-    color: rgb(255, 255, 255);
-  }
-
-  .btn-shadow:hover span {
-    filter: brightness(0.9) contrast(1.2);
-    transform: scale(0.96);
-  }
-
-  .btn-shadow:hover::before {
-    bottom: 8px;
-    filter: blur(6px) brightness(0.8);
-    left: 15px;
-    right: 15px;
-  }
-
-  .btn-shadow--black span {
-    background: rgb(51, 51, 51) none repeat scroll 0% 0%;
   }
 }

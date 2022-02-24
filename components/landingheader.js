@@ -15,7 +15,6 @@ export default function LandingHeader(params) {
       </header>
       <h1
         style={{
-          fontSize: '10vw',
           paddingLeft: '2%',
           paddingRight: '2%',
           height: '70vh',
@@ -25,16 +24,40 @@ export default function LandingHeader(params) {
       >
         Enabling businesses to flow with change in order to grow
       </h1>
-      <div style={{ display: 'flex' }}>
-        <button className='btn btn-shadow btn-shadow--black'>
-          <span>Learn More</span>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <button
+          style={{
+            backgroundColor: 'var(--section-color)',
+            color: 'white',
+            width: '100px',
+            height: '50px',
+            borderRadius: '12px',
+            border: 'none',
+            marginRight: '5%'
+          }}
+        >
+          Learn More
         </button>
-        <button className='btn btn-shadow-grey btn-shadow--grey'>
-          <span>Get Quote</span>
+        <button
+          style={{
+            width: '100px',
+            height: '50px',
+            borderRadius: '12px',
+            borderStyle: 'solid',
+            border: 'none'
+          }}
+        >
+          Get Quote
         </button>
       </div>
 
-      <p style={{ textTransform: 'uppercase', fontSize: 'medium' }}>
+      <p
+        style={{
+          textTransform: 'uppercase',
+          fontSize: 'medium',
+          textAlign: 'center'
+        }}
+      >
         / Voice / Internet / Data
       </p>
     </>

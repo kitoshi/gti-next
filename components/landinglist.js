@@ -21,21 +21,20 @@ export default function LandingList(params) {
           display: 'grid',
           padding: '0',
           justifyContent: 'space-evenly',
-          gridTemplateColumns: '1fr 1fr 1fr',
+          gridTemplateRows: '1fr 1fr 1fr',
           columnGap: '10px'
         }}
       >
         <li
           style={{
             width: '100%',
-            gridColumnStart: '1',
-            gridColumnEnd: '2',
+            gridRowStart: '1',
+            gridRowEnd: '2',
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
-            border: '1px solid var(--russian-violet)',
-            borderRadius: '5px',
-            backgroundColor: 'var(--secondary-color)'
+            marginTop: '2%',
+            marginLeft: '1%'
           }}
           className='landing-tiles'
         >
@@ -43,24 +42,30 @@ export default function LandingList(params) {
             src='/office-phone.jpg'
             alt='texting on phone'
             layout='intrinsic'
-            width={500}
-            height={500}
+            width={150}
+            height={150}
           />
-          <h3>Voice</h3>
-          <p style={{ width: '80%' }}>
-            Crystal Clear Calling where and when you want it.
+          <p
+            style={{
+              width: '65%',
+              textAlign: 'center',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }}
+          >
+            Crystal clear voice calling where and when you want it.
           </p>
         </li>
         <li
           style={{
             width: '100%',
-            gridColumnStart: '2',
-            gridColumnEnd: '3',
+            gridRowStart: '2',
+            gridRowEnd: '3',
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
-            border: '1px solid var(--russian-violet)',
-            borderRadius: '5px'
+            marginTop: '2%',
+            marginLeft: '1%'
           }}
           className='landing-tiles'
         >
@@ -68,21 +73,30 @@ export default function LandingList(params) {
             src='/blueprints-laptop.jpg'
             alt='texting on phone'
             layout='intrinsic'
-            width={500}
-            height={500}
+            width={150}
+            height={150}
           />
-          <h3>Internet</h3>
-          <p style={{ width: '80%' }}>The Best Connection for your business.</p>
+          <p
+            style={{
+              width: '65%',
+              textAlign: 'center',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }}
+          >
+            The best internet connection for your business.
+          </p>
         </li>
         <li
           style={{
             width: '100%',
-            gridColumn: '3',
-            gridColumnEnd: '4',
+            gridRowStart: '3',
+            gridRowEnd: '4',
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
-            border: '1px solid var(--russian-violet)'
+            marginTop: '2%',
+            marginLeft: '1%'
           }}
           className='landing-tiles'
         >
@@ -90,12 +104,18 @@ export default function LandingList(params) {
             src='/office-login.jpg'
             alt='texting on phone'
             layout='intrinsic'
-            width={500}
-            height={500}
+            width={150}
+            height={150}
           />
-          <h3>Data</h3>
-          <p style={{ width: '80%' }}>
-            Robust solutions where security and predictability count
+          <p
+            style={{
+              width: '65%',
+              textAlign: 'center',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }}
+          >
+            Robust data solutions where security and predictability count
           </p>
         </li>
       </ul>

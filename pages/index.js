@@ -34,48 +34,31 @@ export default function Home() {
         <section
           style={{
             backgroundColor: 'var(--section-color)',
-            paddingTop: '15px'
+            paddingTop: '15px',
+            color: 'white'
           }}
         >
           <h3
             style={{
-              fontSize: '100%',
-              fontSize: '6vw',
               margin: '0'
             }}
           >
-            Why Choose GTI?
+            We scale your network infrastructure with your growing business
           </h3>
+
           <LandingList />
         </section>
-        <section style={{ display: 'grid' }}>
-          <p
-            style={{
-              gridColumnStart: '1',
-              gridColumnEnd: '2',
-              gridRowStart: '1'
-            }}
-          >
+        <section style={{ display: 'flex', flexDirection: 'column' }}>
+          <h3>Adapting to a changing environment</h3>
+          <p>
             Companies that are not changing and moving forward are falling
             behind their competitors - sometimes tragically. GTI has been
             supporting business in adapting to these changes since 1995.{' '}
           </p>
-          <aside
-            style={{
-              gridRowStart: '1',
-              gridRowEnd: '3',
-              gridColumnStart: '2',
-              gridColumnEnd: '3'
-            }}
-          ></aside>
-          <p
-            style={{
-              gridRowStart: '2',
-              gridColumnStart: '1',
-              gridColumnEnd: '2',
-              alignSelf: 'start'
-            }}
-          >
+          <div style={{ position: 'relative', height: '25vh' }}>
+            <Image src='/fiber.jpg' alt='fiber cable' layout='fill' />
+          </div>
+          <p>
             We provide you with Telecom solutions and support that help you
             focus on your core business and succeed in this rapidly changing
             business environment. We like to think that we are Momma Bear, and
@@ -85,35 +68,15 @@ export default function Home() {
         </section>
         <section
           style={{
-            display: 'grid',
+            display: 'flex',
+            flexDirection: 'column',
             backgroundColor: 'var(--section-color)',
-            paddingTop: '15px'
+            paddingTop: '15px',
+            color: 'white'
           }}
         >
-          <aside
-            style={{
-              gridRowStart: '1',
-              gridRowEnd: '3',
-              gridColumnStart: '1',
-              gridColumnEnd: '2'
-            }}
-          ></aside>
-          <h3
-            style={{
-              gridRowStart: '1',
-              gridColumnStart: '2',
-              gridColumnEnd: '3'
-            }}
-          >
-            The Bottom Line
-          </h3>
-          <p
-            style={{
-              gridRowStart: '2',
-              gridColumnStart: '2',
-              gridColumnEnd: '3'
-            }}
-          >
+          <h3>The Bottom Line</h3>
+          <p>
             Every service we develop at GTI is designed to make a significant,
             measurable impact on what you care most about.
           </p>
@@ -123,10 +86,7 @@ export default function Home() {
               display: 'flex',
               padding: '0',
               justifyContent: 'space-between',
-              gridRowStart: '3',
-              gridRowEnd: '4',
-              gridColumnStart: '1',
-              gridColumnEnd: '3'
+              flexDirection: 'column'
             }}
           >
             <li>Like delighting your customers</li>
@@ -136,14 +96,7 @@ export default function Home() {
               way
             </li>
           </ul>
-          <p
-            style={{
-              gridColumnStart: '1',
-              gridColumnEnd: '3',
-              gridRowStart: '4',
-              gridRowEnd: '5'
-            }}
-          >
+          <p>
             Technology is driving significant changes in the marketplace: Today,
             the world&apos;s leading retailer has no physical stores, the
             world&apos;s largest taxi company owns no vehicles, and the

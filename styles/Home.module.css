@@ -15,7 +15,6 @@
 .footer {
   display: flex;
   flex: 1;
-  padding: 4rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
@@ -110,13 +109,11 @@
 }
 
 @media (min-width: 600px) {
-
   .container {
     padding: 0 2rem;
   }
 
   .main {
-  
     padding: 4rem 0;
 
     display: flex;

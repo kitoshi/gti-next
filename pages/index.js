@@ -5,7 +5,16 @@ import Link from 'next/link'
 import LandingList from '../components/landinglist'
 import LandingHeader from '../components/landingheader'
 import BottomLine from '../components/bottomlinelist'
-export default function Home() {
+import { useRef } from 'react'
+export default function Home(props) {
+  const contactRef = useRef(null)
+  const learnRef = useRef(null)
+  function onLearnButtonClick() {
+    learnRef.current.scrollIntoView()
+  }
+  function onContactButtonClick() {
+    contactRef.current.scrollIntoView()
+  }
   return (
     <>
       <Head>
@@ -26,7 +35,10 @@ export default function Home() {
           flexDirection: 'column'
         }}
       >
-        <LandingHeader />
+        <LandingHeader
+          onLearnButtonClick={onLearnButtonClick}
+          onContactButtonClick={onContactButtonClick}
+        />
       </section>
       <main className={styles.container}>
         <section
@@ -35,6 +47,7 @@ export default function Home() {
             paddingTop: '15px',
             color: 'white'
           }}
+          ref={learnRef}
         >
           <h3
             style={{
@@ -57,7 +70,7 @@ export default function Home() {
             <Image src='/fiber.jpg' alt='fiber cable' layout='fill' />
           </div>
           <p>
-            We provide you with Telecom solutions and constant support that
+            We provide you with Telecom solutions and reliable support that
             enables you to focus on your core business to succeed in this
             rapidly changing business environment. We like to think that we are
             Momma Bear, and that your Telecom services are the cubs that we need
@@ -65,14 +78,29 @@ export default function Home() {
           </p>
         </section>
         <BottomLine />
+        <section ref={contactRef}>
+          <h3>Bringing a world of Telecom solutions to your business. </h3>
+          <p>
+            Technology is driving significant changes in the marketplace: Today,
+            the world&apos;s leading retailer has no physical stores, the
+            world&apos;s largest taxi company owns no vehicles, and the
+            world&apos;s biggest hotel company owns no buildings. To thrive,
+            your business needs to embrace technology changes. We&apos;re here
+            to help and support you in moving forward.
+          </p>
+          <form>Contact Form</form>
+        </section>
       </main>
       <section
         style={{
-          display: 'grid',
-          paddingTop: '15px'
+          display: 'flex',
+          flexDirection: 'column',
+          paddingTop: '15px',
+          backgroundColor: 'var(--section-color)',
+          color: 'white',
+          height: '25vh'
         }}
       >
-        <h4>GTI...bringing a world of telecom solutions to your business. </h4>
         <Link href={'/services'}>
           <a>Services</a>
         </Link>

@@ -1,18 +1,6 @@
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 
 export default function LandingList(params) {
-  const [time, setTime] = useState(0)
-  useEffect(() => {
-    setTimeout(() => {
-      setTime((prevtime) => prevtime + 1)
-    }, 1000)
-
-    return () => {
-      time
-    }
-  }, [time])
-
   return (
     <>
       <ul

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function LandingHeader(params) {
+export default function LandingHeader(props) {
   return (
     <>
       <header>
@@ -36,6 +36,7 @@ export default function LandingHeader(params) {
             marginRight: '5%',
             fontSize: 'medium'
           }}
+          onClick={props.onLearnButtonClick}
         >
           Learn More
         </button>
@@ -48,8 +49,9 @@ export default function LandingHeader(params) {
             border: 'none',
             fontSize: 'medium'
           }}
+          onClick={props.onContactButtonClick}
         >
-          Get Quote
+          Contact Us
         </button>
       </div>
 

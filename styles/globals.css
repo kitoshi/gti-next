@@ -90,9 +90,7 @@ div.landingcontainer {
   overflow: hidden;
 }
 
-.landingimage {
-  z-index: -1;
-}
+
 
 nav {
   position: fixed;

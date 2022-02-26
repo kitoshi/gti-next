@@ -29,22 +29,24 @@ export default function LandingHeader(params) {
           style={{
             backgroundColor: 'var(--section-color)',
             color: 'white',
-            width: '100px',
-            height: '50px',
+            width: '33%',
+            height: '6vh',
             borderRadius: '12px',
             border: 'none',
-            marginRight: '5%'
+            marginRight: '5%',
+            fontSize: 'medium'
           }}
         >
           Learn More
         </button>
         <button
           style={{
-            width: '100px',
-            height: '50px',
+            width: '33%',
+            height: '6vh',
             borderRadius: '12px',
             borderStyle: 'solid',
-            border: 'none'
+            border: 'none',
+            fontSize: 'medium'
           }}
         >
           Get Quote

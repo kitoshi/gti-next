@@ -17,10 +17,10 @@ export default function Navbar(props) {
     updateWidth()
     if (width > 800) {
       hamburgerRef.current.style.borderRadius = '0%'
-      setDisplay(true)
+      setDisplay(() => true)
     }
     if (width <= 800) {
-      setDisplay(false)
+      setDisplay(() =>false)
     }
     return () => {
       window.removeEventListener('resize', updateWidth)
@@ -29,9 +29,9 @@ export default function Navbar(props) {
 
   function updateDisplay() {
     if (navdisplay === false) {
-      setDisplay(true)
+      setDisplay(() => true)
     } else {
-      setDisplay(false)
+      setDisplay(() => false)
     }
   }
 

@@ -5,7 +5,7 @@ export default function LandingList(params) {
   const [time, setTime] = useState(0)
   useEffect(() => {
     setTimeout(() => {
-      setTime(time + 1)
+      setTime((prevtime) => prevtime + 1)
     }, 1000)
 
     return () => {
@@ -22,7 +22,8 @@ export default function LandingList(params) {
           padding: '0',
           justifyContent: 'space-evenly',
           gridTemplateRows: '1fr 1fr 1fr',
-          columnGap: '10px'
+          rowGap: '2%',
+          marginTop: '10%'
         }}
       >
         <li
@@ -39,9 +40,10 @@ export default function LandingList(params) {
           className='landing-tiles'
         >
           <Image
-            src='/office-phone.jpg'
-            alt='texting on phone'
+            src='/phone_animation.gif'
+            alt='blueprint animation of a phone'
             layout='intrinsic'
+            className='landing-image'
             width={150}
             height={150}
           />
@@ -50,10 +52,13 @@ export default function LandingList(params) {
               width: '65%',
               textAlign: 'center',
               marginLeft: 'auto',
-              marginRight: 'auto'
+              marginRight: 'auto',
+              paddingLeft: '5vw',
+              paddingRight: '5vw'
             }}
           >
-            Crystal clear voice calling where and when you want it.
+            <strong>Crystal clear</strong> voice calling where and when you want
+            it.
           </p>
         </li>
         <li
@@ -70,9 +75,10 @@ export default function LandingList(params) {
           className='landing-tiles'
         >
           <Image
-            src='/blueprints-laptop.jpg'
+            src='/mesh_animation.gif'
             alt='texting on phone'
             layout='intrinsic'
+            className='landing-image'
             width={150}
             height={150}
           />
@@ -81,10 +87,12 @@ export default function LandingList(params) {
               width: '65%',
               textAlign: 'center',
               marginLeft: 'auto',
-              marginRight: 'auto'
+              marginRight: 'auto',
+              paddingLeft: '5vw',
+              paddingRight: '5vw'
             }}
           >
-            The best internet connection for your business.
+            The <strong>optimal</strong> internet connection for your business.
           </p>
         </li>
         <li
@@ -101,9 +109,10 @@ export default function LandingList(params) {
           className='landing-tiles'
         >
           <Image
-            src='/office-login.jpg'
-            alt='texting on phone'
+            src='/lock_animation.gif'
+            alt='a lock morphing to checkmark'
             layout='intrinsic'
+            className='landing-image'
             width={150}
             height={150}
           />
@@ -112,10 +121,13 @@ export default function LandingList(params) {
               width: '65%',
               textAlign: 'center',
               marginLeft: 'auto',
-              marginRight: 'auto'
+              marginRight: 'auto',
+              paddingLeft: '5vw',
+              paddingRight: '5vw'
             }}
           >
-            Robust data solutions where security and predictability count
+            Robust data solutions where{' '}
+            <strong>security and predictability</strong> count
           </p>
         </li>
       </ul>

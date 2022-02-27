@@ -11,7 +11,7 @@ export default function LandingHeader(props) {
           width={24}
           height={24}
         />
-        Global Telemanagement Inc.
+        &nbsp;Global Telemanagement Inc.
       </header>
       <h1
         style={{
@@ -63,7 +63,7 @@ export default function LandingHeader(props) {
           textAlign: 'center'
         }}
       >
-        / Voice / Internet / Data
+       / Enterprise / Voice / Internet / Data
       </p>
     </>
   )

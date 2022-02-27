@@ -65,10 +65,13 @@ export default function Home(props) {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'space-between'
+            justifyContent: 'space-evenly'
           }}
         >
-          <h3>Adapting to a changing environment</h3>
+          <h3>
+            Adapting to a <span className='orange-emphasis'>changing</span>{' '}
+            environment
+          </h3>
           <p>
             Companies need to change and move forward to stay ahead of their
             competitors. We have an established track record of supporting
@@ -86,7 +89,13 @@ export default function Home(props) {
           </p>
         </section>
         <BottomLine />
-        <section ref={contactRef}>
+        <section
+          ref={contactRef}
+          style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
           <h3>
             Bringing a world of Telecom{' '}
             <span className='orange-emphasis'>solutions</span> to your business{' '}

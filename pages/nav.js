@@ -27,6 +27,24 @@ export default function Navbar(props) {
     }
   }, [width])
 
+  useEffect(() => {
+    function moveNav() {
+      if (width <= 800 && hamburgerRef.current.style.bottom !== '2vh') {
+        hamburgerRef.current.style.right = '-5vh'
+        setTimeout(() => {
+          hamburgerRef.current.style.removeProperty('top')
+          hamburgerRef.current.style.right = '1vh'
+          hamburgerRef.current.style.bottom = '2vh'
+        }, 500)
+      }
+    }
+    window.addEventListener('scroll', moveNav)
+
+    return () => {
+      window.removeEventListener('scroll', moveNav)
+    }
+  }, [width])
+
   function updateDisplay(e) {
     e.preventDefault()
     if (navdisplay === false) {
@@ -44,7 +62,8 @@ export default function Navbar(props) {
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        className: 'navbar'
+        top: '2vh',
+        right: '1vw'
       }}
     >
       <button

@@ -61,6 +61,7 @@ h1 {
 
 h2 {
   font-family: 'DMSerifDisplay';
+  font-size: 250%;
 }
 
 h3 {
@@ -84,13 +85,15 @@ section {
   height: 50vh;
 }
 
+.orange-emphasis {
+  color: var(--secondary-color);
+}
+
 div.landingcontainer {
   width: 100%;
   height: 25vh;
   overflow: hidden;
 }
-
-
 
 nav {
   position: fixed;
@@ -110,6 +113,14 @@ a {
 
 nav > a {
   color: var(--heading-color);
+}
+
+.landing-button {
+  background-color: var(--section-color);
+}
+
+button.landing-button:hover {
+  background-color: #465a6e;
 }
 
 button.hamburger {

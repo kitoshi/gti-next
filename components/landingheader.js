@@ -23,11 +23,11 @@ export default function LandingHeader(props) {
         }}
       >
         Enabling businesses to flow with change in order to grow
+        <span className='orange-emphasis'>.</span>
       </h1>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button
           style={{
-            backgroundColor: 'var(--section-color)',
             color: 'white',
             width: '33%',
             height: '6vh',
@@ -36,6 +36,7 @@ export default function LandingHeader(props) {
             marginRight: '5%',
             fontSize: 'medium'
           }}
+          className='landing-button'
           onClick={props.onLearnButtonClick}
         >
           Learn More

@@ -10,7 +10,17 @@ export default function BottomLine(params) {
         color: 'white'
       }}
     >
-      <h3>The Bottom Line</h3>
+      <h3>
+        The Bottom{' '}
+        <span
+          style={{
+            textDecoration: 'underline',
+            textDecorationColor: 'var(--secondary-color)'
+          }}
+        >
+          Line
+        </span>
+      </h3>
       <p>
         Every service we develop at GTI is designed to make a significant and
         measurable impact on what you care most about.
@@ -124,7 +134,8 @@ export default function BottomLine(params) {
               marginRight: 'auto'
             }}
           >
-            Operating systems in a better, faster, more effective and secure way.
+            Operating systems in a better, faster, more effective and secure
+            way.
           </p>
         </li>
         <li

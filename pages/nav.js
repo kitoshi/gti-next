@@ -20,14 +20,15 @@ export default function Navbar(props) {
       setDisplay(() => true)
     }
     if (width <= 800) {
-      setDisplay(() =>false)
+      setDisplay(() => false)
     }
     return () => {
       window.removeEventListener('resize', updateWidth)
     }
   }, [width])
 
-  function updateDisplay() {
+  function updateDisplay(e) {
+    e.preventDefault()
     if (navdisplay === false) {
       setDisplay(() => true)
     } else {

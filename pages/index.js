@@ -6,6 +6,7 @@ import LandingList from '../components/landinglist'
 import LandingHeader from '../components/landingheader'
 import BottomLine from '../components/bottomlinelist'
 import { useRef } from 'react'
+import ContactForm from '../components/contactform'
 export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)
@@ -22,7 +23,7 @@ export default function Home(props) {
           Custom Telecom Solutions Provider - Global Telemanagement Inc
         </title>
         <meta
-          name='Telecom Solutions Provider'
+          name='description'
           content='Business Information for Global Telemanagement Inc'
         />
         <link rel='icon' href='/favicon.ico' />
@@ -49,21 +50,28 @@ export default function Home(props) {
           }}
           ref={learnRef}
         >
-          <h3
+          <h2
             style={{
               margin: '0'
             }}
           >
-            We scale your network infrastructure with your growing business
-          </h3>
+            We <span className='orange-emphasis'>scale</span> your network
+            infrastructure with your growing business
+          </h2>
 
           <LandingList />
         </section>
-        <section style={{ display: 'flex', flexDirection: 'column' }}>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between'
+          }}
+        >
           <h3>Adapting to a changing environment</h3>
           <p>
             Companies need to change and move forward to stay ahead of their
-            competitors. We have an established track record by supporting
+            competitors. We have an established track record of supporting
             business in adapting to these changes since 1995.{' '}
           </p>
           <div style={{ position: 'relative', height: '25vh' }}>
@@ -79,7 +87,10 @@ export default function Home(props) {
         </section>
         <BottomLine />
         <section ref={contactRef}>
-          <h3>Bringing a world of Telecom solutions to your business. </h3>
+          <h3>
+            Bringing a world of Telecom{' '}
+            <span className='orange-emphasis'>solutions</span> to your business{' '}
+          </h3>
           <p>
             Technology is driving significant changes in the marketplace: Today,
             the world&apos;s leading retailer has no physical stores, the
@@ -88,7 +99,11 @@ export default function Home(props) {
             your business needs to embrace technology changes. We&apos;re here
             to help and support you in moving forward.
           </p>
-          <form>Contact Form</form>
+          <p>
+            Please leave use your email and a preferred time to chat and we will
+            discuss your business requirements.
+          </p>
+          <ContactForm />
         </section>
       </main>
       <section

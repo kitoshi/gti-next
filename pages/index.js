@@ -55,7 +55,7 @@ export default function Home(props) {
               margin: '0'
             }}
           >
-            We <span className='orange-emphasis'>scale</span> your network
+            We <em className='orange-emphasis'>scale</em> your network
             infrastructure with your growing business
           </h2>
 
@@ -69,7 +69,7 @@ export default function Home(props) {
           }}
         >
           <h3>
-            Adapting to a <span className='orange-emphasis'>changing</span>{' '}
+            Adapting to a <em className='orange-emphasis'>changing</em>{' '}
             environment
           </h3>
           <p>
@@ -98,7 +98,7 @@ export default function Home(props) {
         >
           <h3>
             Bringing a world of Telecom{' '}
-            <span className='orange-emphasis'>solutions</span> to your business{' '}
+            <em className='orange-emphasis'>solutions</em> to your business{' '}
           </h3>
           <p>
             Technology is driving significant changes in the marketplace: Today,

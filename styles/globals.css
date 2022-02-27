@@ -90,8 +90,9 @@ section {
   height: 50vh;
 }
 
-.orange-emphasis {
+em.orange-emphasis {
   color: var(--secondary-color);
+  font-style: normal;
 }
 
 div.landingcontainer {

@@ -23,7 +23,7 @@ export default function LandingHeader(props) {
         }}
       >
         Enabling businesses to flow with change in order to grow
-        <span className='orange-emphasis'>.</span>
+        <em className='orange-emphasis'>.</em>
       </h1>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button
@@ -63,7 +63,7 @@ export default function LandingHeader(props) {
           textAlign: 'center'
         }}
       >
-       / Enterprise / Voice / Internet / Data
+        / Enterprise / Voice / Internet / Data
       </p>
     </>
   )

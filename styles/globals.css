@@ -112,13 +112,8 @@ nav {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-  color: 'var(--secondary-color)';
-}
-
-nav > a {
-  color: var(--heading-color);
+  color: var(--section-color);
 }
 
 .landing-button {

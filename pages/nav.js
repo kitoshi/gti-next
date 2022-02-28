@@ -9,9 +9,24 @@ export default function Navbar(props) {
   const [navdisplay, setDisplay] = useState(false)
   const hamburgerRef = useRef(null)
 
+  /*useEffect(() => {
+    function closeHamburgerNav(e) {
+      if (e.target.value !== hamburgerRef) {
+        setDisplay(() => false)
+      }
+    }
+    document.querySelector('body').addEventListener('click', closeHamburgerNav)
+
+    return () => {
+      document
+        .querySelector('body')
+        .removeEventListener('click', closeHamburgerNav)
+    }
+  }, [navdisplay])*/
+
   useEffect(() => {
     function updateWidth() {
-      setWidth(window.innerWidth)
+      setWidth(() => window.innerWidth)
     }
     window.addEventListener('resize', updateWidth)
     updateWidth()

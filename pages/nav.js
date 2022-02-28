@@ -29,13 +29,25 @@ export default function Navbar(props) {
 
   useEffect(() => {
     function moveNav() {
-      if (width <= 800 && hamburgerRef.current.style.bottom !== '2vh') {
+      if (
+        width <= 800 &&
+        hamburgerRef.current.style.bottom !== '2vh' &&
+        window.scrollY !== 0
+      ) {
         hamburgerRef.current.style.right = '-5vh'
         setTimeout(() => {
           hamburgerRef.current.style.removeProperty('top')
           hamburgerRef.current.style.right = '1vh'
           hamburgerRef.current.style.bottom = '2vh'
-        }, 500)
+        }, 250)
+      }
+      if (window.scrollY === 0) {
+        hamburgerRef.current.style.right = '-5vh'
+        setTimeout(() => {
+          hamburgerRef.current.style.removeProperty('bottom')
+          hamburgerRef.current.style.right = '1vh'
+          hamburgerRef.current.style.top = '2vh'
+        }, 250)
       }
     }
     window.addEventListener('scroll', moveNav)

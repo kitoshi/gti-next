@@ -1,5 +1,5 @@
-import Navbar from './nav'
-import Hamburger from '../components/hamburger'
+import Navbar from '../pages/nav'
+import Hamburger from './svg/hamburger'
 
 export default function HamburgerMenu(params) {
   return (

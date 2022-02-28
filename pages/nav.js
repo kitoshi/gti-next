@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PhoneSvg from '../components/phone'
-import EmailSVG from '../components/email'
-import HamburgerSVG from '../components/hamburger'
+import PhoneSvg from '../components/svg/phone'
+import EmailSVG from '../components/svg/email'
+import HamburgerSVG from '../components/svg/hamburger'
 import { useState, useEffect, useRef } from 'react'
 export default function Navbar(props) {
   const [width, setWidth] = useState(0)
@@ -62,7 +62,7 @@ export default function Navbar(props) {
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        top: '2vh',
+        top: '1vh',
         right: '1vw'
       }}
     >

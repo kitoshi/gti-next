@@ -122,7 +122,8 @@ export default function Home(props) {
           paddingTop: '15px',
           backgroundColor: 'var(--section-color)',
           color: 'white',
-          height: '25vh'
+          height: '25vh',
+          position: 'absolute'
         }}
       >
         <Link href={'/services'}>

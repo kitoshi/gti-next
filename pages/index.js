@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import LandingList from '../components/landinglist'
-import LandingHeader from '../components/landingheader'
-import BottomLine from '../components/bottomlinelist'
+import LandingListContent from '../components/content/landinglistcontent'
+import LandingHeaderContent from '../components/content/landingheadercontent'
+import BottomLineContent from '../components/content/bottomlinelistcontent'
 import { useRef } from 'react'
 import ContactForm from '../components/contactform'
 export default function Home(props) {
@@ -36,7 +36,7 @@ export default function Home(props) {
           flexDirection: 'column'
         }}
       >
-        <LandingHeader
+        <LandingHeaderContent
           onLearnButtonClick={onLearnButtonClick}
           onContactButtonClick={onContactButtonClick}
         />
@@ -59,7 +59,7 @@ export default function Home(props) {
             infrastructure with your growing business
           </h2>
 
-          <LandingList />
+          <LandingListContent />
         </section>
         <section
           style={{
@@ -88,7 +88,7 @@ export default function Home(props) {
             to fiercely protect and support.
           </p>
         </section>
-        <BottomLine />
+        <BottomLineContent />
         <section
           ref={contactRef}
           style={{

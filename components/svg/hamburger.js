@@ -3,10 +3,11 @@ const HamburgerSVG = (props) => (
     xmlns='http://www.w3.org/2000/svg'
     height={props.height}
     width={props.width}
-    viewBox='0 0 24 24'
-    fill='var(--faux-eerie)'
+    viewBox='0 0 100 60'
   >
-    <path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z' />
+    <rect y='0' width='100' height='10'></rect>
+    <rect y='30' width='100' height='10'></rect>
+    <rect y='60' width='100' height='10'></rect>
   </svg>
 )
 

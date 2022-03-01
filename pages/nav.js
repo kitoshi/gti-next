@@ -47,7 +47,7 @@ export default function Navbar(props) {
       if (
         width <= 800 &&
         hamburgerRef.current.style.bottom !== '2vh' &&
-        window.scrollY !== 0
+        window.scrollY > 20
       ) {
         hamburgerRef.current.style.right = '-5vh'
         setTimeout(() => {
@@ -56,7 +56,7 @@ export default function Navbar(props) {
           hamburgerRef.current.style.bottom = '2vh'
         }, 250)
       }
-      if (window.scrollY === 0) {
+      if (window.scrollY <= 20) {
         hamburgerRef.current.style.right = '-5vh'
         setTimeout(() => {
           hamburgerRef.current.style.removeProperty('bottom')
@@ -93,16 +93,6 @@ export default function Navbar(props) {
         right: '1vw'
       }}
     >
-      <button
-        style={width > 800 ? { display: 'none' } : { display: 'inline' }}
-        className='hamburger'
-        onClick={updateDisplay}
-        aria-label='Nav Menu'
-      >
-        <HamburgerSVG width={'24'} height={'24'}>
-          Nav Menu
-        </HamburgerSVG>
-      </button>
       <Link href={'/'}>
         <a
           style={
@@ -185,6 +175,16 @@ export default function Navbar(props) {
           width={24}
         />
       </a>
+      <button
+        style={width > 800 ? { display: 'none' } : { display: 'inline' }}
+        className='hamburger'
+        onClick={updateDisplay}
+        aria-label='Nav Menu'
+      >
+        <HamburgerSVG width={'24'} height={'24'}>
+          Nav Menu
+        </HamburgerSVG>
+      </button>
     </nav>
   )
 }

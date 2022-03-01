@@ -6,7 +6,7 @@
   --palatinate-purple: #52154eff;
   --russian-violet: #111344ff;
   --black-blue: #212a33;
-  --ochre: #c97211ff;
+  --ochre: #c97211;
   --faux-eerie: #0d1427;
   --gold: #d4af37;
   --primary-color: #111344ff;
@@ -86,10 +86,6 @@ span {
   font-family: 'DMSerifDisplay';
 }
 
-section {
-  height: 50vh;
-}
-
 em.orange-emphasis {
   color: var(--secondary-color);
   font-style: normal;
@@ -149,7 +145,7 @@ button.hamburger {
 section {
   padding-right: 5px;
   padding-left: 5px;
-  height: 100vh;
+  height: 105vh;
   width: 100%;
 }
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function LandingHeader(props) {
+export default function LandingHeaderContent(props) {
   return (
     <>
       <header>
@@ -19,7 +19,9 @@ export default function LandingHeader(props) {
           paddingRight: '2%',
           height: '70vh',
           width: '75%',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          marginTop: '7%',
+          marginBottom: '7%'
         }}
       >
         Enabling businesses to flow with change in order to grow

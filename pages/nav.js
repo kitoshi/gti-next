@@ -6,6 +6,7 @@ import HamburgerSVG from '../components/svg/hamburger'
 import { useState, useEffect, useRef } from 'react'
 export default function Navbar(props) {
   const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
   const [navdisplay, setDisplay] = useState(false)
   const hamburgerRef = useRef(null)
 
@@ -27,6 +28,7 @@ export default function Navbar(props) {
   useEffect(() => {
     function updateWidth() {
       setWidth(() => window.innerWidth)
+      setHeight(() => window.innerHeight)
     }
     window.addEventListener('resize', updateWidth)
     updateWidth()

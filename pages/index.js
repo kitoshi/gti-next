@@ -26,6 +26,10 @@ export default function Home(props) {
           name='description'
           content='Business Information for Global Telemanagement Inc'
         />
+        <meta
+          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+          name='viewport'
+        ></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <section
@@ -90,7 +94,6 @@ export default function Home(props) {
         </section>
         <BottomLineContent />
         <section
-          ref={contactRef}
           style={{
             display: 'flex',
             flexDirection: 'column'
@@ -112,7 +115,6 @@ export default function Home(props) {
             Please leave use your email and a preferred time to chat and we will
             discuss your business requirements.
           </p>
-          <ContactForm />
         </section>
       </main>
       <section
@@ -121,15 +123,17 @@ export default function Home(props) {
           flexDirection: 'column',
           paddingTop: '15px',
           backgroundColor: 'var(--section-color)',
-          color: 'white',
-          height: '25vh',
-          position: 'absolute'
+          color: 'white'
         }}
+        ref={contactRef}
       >
-        <Link href={'/services'}>
-          <a>Services</a>
-        </Link>
-        <footer className={styles.footer}>
+        <footer
+          style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <ContactForm />
           <p>
             2017 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
             W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772

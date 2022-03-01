@@ -67,15 +67,15 @@ h2 {
 h3 {
   font-family: 'DMSerifDisplay';
   font-size: 250%;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 header {
   font-family: 'DMSerifDisplay';
   display: flex;
   align-items: center;
-  margin-top: 0.5vh;
+  margin-top: 2%;
 }
 
 button {
@@ -91,15 +91,8 @@ em.orange-emphasis {
   font-style: normal;
 }
 
-div.landingcontainer {
-  width: 100%;
-  height: 25vh;
-  overflow: hidden;
-}
-
 nav {
   position: fixed;
-
   flex-direction: column;
   z-index: 5;
   padding: 1px 1px;
@@ -145,7 +138,8 @@ button.hamburger {
 section {
   padding-right: 5px;
   padding-left: 5px;
-  height: 105vh;
+  padding-bottom: 10%;
+  height: 100%;
   width: 100%;
 }
 

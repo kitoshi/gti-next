@@ -13,8 +13,7 @@ export default function ContactForm() {
           alignSelf: 'center',
           backgroundColor: 'var(--section-color)',
           color: 'var(--bg-color)',
-          padding: '5%',
-          position: 'absolute'
+          padding: '10%'
         }}
       >
         Thank you for your message. We will be in contact as soon as possible.
@@ -27,12 +26,14 @@ export default function ContactForm() {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        height: '35vh',
+        height: '100%',
         width: '80%',
         alignSelf: 'center',
         backgroundColor: 'var(--section-color)',
         color: 'var(--bg-color)',
-        padding: '5%'
+        padding: '2%',
+        paddingBottom: '25%',
+        marginBottom: '25%'
       }}
     >
       <label htmlFor='email'>Email Address</label>
@@ -43,7 +44,7 @@ export default function ContactForm() {
         style={{
           backgroundColor: 'var(--section-color)',
           color: 'var(--bg-color)',
-          height: '15%',
+          height: '20%',
           fontFamily: 'OpenSans',
           fontSize: '100%'
         }}
@@ -56,7 +57,7 @@ export default function ContactForm() {
         style={{
           backgroundColor: 'var(--section-color)',
           color: 'var(--bg-color)',
-          height: '45%',
+          height: '100%',
           fontFamily: 'OpenSans',
           fontSize: '100%'
         }}
@@ -68,7 +69,7 @@ export default function ContactForm() {
         style={{
           color: 'var(--section-color)',
           width: '33%',
-          height: '6vh',
+          height: '40px',
           borderRadius: '12px',
           border: 'none',
           marginLeft: 'auto',

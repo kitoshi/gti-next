@@ -48,22 +48,22 @@ export default function Navbar(props) {
     function moveNav() {
       if (
         width <= 800 &&
-        hamburgerRef.current.style.bottom !== '2vh' &&
+        hamburgerRef.current.style.bottom !== '10px' &&
         window.scrollY > 20
       ) {
-        hamburgerRef.current.style.right = '-5vh'
+        hamburgerRef.current.style.right = '-25px'
         setTimeout(() => {
           hamburgerRef.current.style.removeProperty('top')
-          hamburgerRef.current.style.right = '1vh'
-          hamburgerRef.current.style.bottom = '2vh'
+          hamburgerRef.current.style.right = '7px'
+          hamburgerRef.current.style.bottom = '10px'
         }, 250)
       }
       if (window.scrollY <= 20) {
-        hamburgerRef.current.style.right = '-5vh'
+        hamburgerRef.current.style.right = '-25px'
         setTimeout(() => {
           hamburgerRef.current.style.removeProperty('bottom')
-          hamburgerRef.current.style.right = '1vh'
-          hamburgerRef.current.style.top = '2vh'
+          hamburgerRef.current.style.right = '10px'
+          hamburgerRef.current.style.top = '7px'
         }, 250)
       }
     }
@@ -91,8 +91,8 @@ export default function Navbar(props) {
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        top: '1vh',
-        right: '1vw'
+        top: '7px',
+        right: '10px'
       }}
     >
       <Link href={'/'}>

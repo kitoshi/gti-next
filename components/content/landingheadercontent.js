@@ -20,7 +20,7 @@ export default function LandingHeaderContent(props) {
           height: '100%',
           width: '75%',
           justifyContent: 'center',
-          marginTop: '7%',
+          marginTop: '5%',
           marginBottom: '7%'
         }}
       >

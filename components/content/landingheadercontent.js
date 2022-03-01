@@ -32,7 +32,7 @@ export default function LandingHeaderContent(props) {
           style={{
             color: 'white',
             width: '33%',
-            height: '40px',
+            height: '50px',
             borderRadius: '12px',
             border: 'none',
             marginRight: '5%',
@@ -46,7 +46,7 @@ export default function LandingHeaderContent(props) {
         <button
           style={{
             width: '33%',
-            height: '40px',
+            height: '50px',
             borderRadius: '12px',
             borderStyle: 'solid',
             border: 'none',

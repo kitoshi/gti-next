@@ -32,8 +32,7 @@ export default function ContactForm() {
         backgroundColor: 'var(--section-color)',
         color: 'var(--bg-color)',
         padding: '2%',
-        paddingBottom: '25%',
-        marginBottom: '25%'
+        paddingBottom: '25%'
       }}
     >
       <label htmlFor='email'>Email Address</label>

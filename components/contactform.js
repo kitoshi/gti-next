@@ -13,7 +13,8 @@ export default function ContactForm() {
           alignSelf: 'center',
           backgroundColor: 'var(--section-color)',
           color: 'var(--bg-color)',
-          padding: '5%'
+          padding: '5%',
+          position: 'absolute'
         }}
       >
         Thank you for your message. We will be in contact as soon as possible.

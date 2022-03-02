@@ -1,5 +1,5 @@
 import Image from 'next/image'
-export default function BottomLine(params) {
+export default function BottomLineContent(params) {
   return (
     <section
       style={{

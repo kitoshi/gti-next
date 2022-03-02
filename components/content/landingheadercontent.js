@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function LandingHeader(props) {
+export default function LandingHeaderContent(props) {
   return (
     <>
       <header>
@@ -17,9 +17,11 @@ export default function LandingHeader(props) {
         style={{
           paddingLeft: '2%',
           paddingRight: '2%',
-          height: '70vh',
+          height: '100%',
           width: '75%',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          marginTop: '5%',
+          marginBottom: '7%'
         }}
       >
         Enabling businesses to flow with change in order to grow
@@ -30,7 +32,7 @@ export default function LandingHeader(props) {
           style={{
             color: 'white',
             width: '33%',
-            height: '6vh',
+            height: '50px',
             borderRadius: '12px',
             border: 'none',
             marginRight: '5%',
@@ -44,7 +46,7 @@ export default function LandingHeader(props) {
         <button
           style={{
             width: '33%',
-            height: '6vh',
+            height: '50px',
             borderRadius: '12px',
             borderStyle: 'solid',
             border: 'none',

@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import LandingList from '../components/landinglist'
-import LandingHeader from '../components/landingheader'
-import BottomLine from '../components/bottomlinelist'
+import LandingListContent from '../components/content/landinglistcontent'
+import LandingHeaderContent from '../components/content/landingheadercontent'
+import BottomLineContent from '../components/content/bottomlinelistcontent'
 import { useRef } from 'react'
 import ContactForm from '../components/contactform'
 export default function Home(props) {
@@ -26,6 +26,10 @@ export default function Home(props) {
           name='description'
           content='Business Information for Global Telemanagement Inc'
         />
+        <meta
+          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+          name='viewport'
+        ></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <section
@@ -36,7 +40,7 @@ export default function Home(props) {
           flexDirection: 'column'
         }}
       >
-        <LandingHeader
+        <LandingHeaderContent
           onLearnButtonClick={onLearnButtonClick}
           onContactButtonClick={onContactButtonClick}
         />
@@ -59,7 +63,7 @@ export default function Home(props) {
             infrastructure with your growing business
           </h2>
 
-          <LandingList />
+          <LandingListContent />
         </section>
         <section
           style={{
@@ -88,9 +92,8 @@ export default function Home(props) {
             to fiercely protect and support.
           </p>
         </section>
-        <BottomLine />
+        <BottomLineContent />
         <section
-          ref={contactRef}
           style={{
             display: 'flex',
             flexDirection: 'column'
@@ -112,7 +115,6 @@ export default function Home(props) {
             Please leave use your email and a preferred time to chat and we will
             discuss your business requirements.
           </p>
-          <ContactForm />
         </section>
       </main>
       <section
@@ -121,14 +123,17 @@ export default function Home(props) {
           flexDirection: 'column',
           paddingTop: '15px',
           backgroundColor: 'var(--section-color)',
-          color: 'white',
-          height: '25vh'
+          color: 'white'
         }}
+        ref={contactRef}
       >
-        <Link href={'/services'}>
-          <a>Services</a>
-        </Link>
-        <footer className={styles.footer}>
+        <footer
+          style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <ContactForm />
           <p>
             2017 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
             W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772

@@ -6,6 +6,7 @@ import HamburgerSVG from '../components/svg/hamburger'
 import { useState, useEffect, useRef } from 'react'
 export default function Navbar(props) {
   const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
   const [navdisplay, setDisplay] = useState(false)
   const hamburgerRef = useRef(null)
 
@@ -27,6 +28,7 @@ export default function Navbar(props) {
   useEffect(() => {
     function updateWidth() {
       setWidth(() => window.innerWidth)
+      setHeight(() => window.innerHeight)
     }
     window.addEventListener('resize', updateWidth)
     updateWidth()
@@ -46,22 +48,22 @@ export default function Navbar(props) {
     function moveNav() {
       if (
         width <= 800 &&
-        hamburgerRef.current.style.bottom !== '2vh' &&
-        window.scrollY !== 0
+        hamburgerRef.current.style.bottom !== '10px' &&
+        window.scrollY > 20
       ) {
-        hamburgerRef.current.style.right = '-5vh'
+        hamburgerRef.current.style.right = '-25px'
         setTimeout(() => {
           hamburgerRef.current.style.removeProperty('top')
-          hamburgerRef.current.style.right = '1vh'
-          hamburgerRef.current.style.bottom = '2vh'
+          hamburgerRef.current.style.right = '7px'
+          hamburgerRef.current.style.bottom = '10px'
         }, 250)
       }
-      if (window.scrollY === 0) {
-        hamburgerRef.current.style.right = '-5vh'
+      if (window.scrollY <= 20) {
+        hamburgerRef.current.style.right = '-25px'
         setTimeout(() => {
           hamburgerRef.current.style.removeProperty('bottom')
-          hamburgerRef.current.style.right = '1vh'
-          hamburgerRef.current.style.top = '2vh'
+          hamburgerRef.current.style.right = '10px'
+          hamburgerRef.current.style.top = '7px'
         }, 250)
       }
     }
@@ -89,20 +91,10 @@ export default function Navbar(props) {
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        top: '1vh',
-        right: '1vw'
+        top: '7px',
+        right: '10px'
       }}
     >
-      <button
-        style={width > 800 ? { display: 'none' } : { display: 'inline' }}
-        className='hamburger'
-        onClick={updateDisplay}
-        aria-label='Nav Menu'
-      >
-        <HamburgerSVG width={'24'} height={'24'}>
-          Nav Menu
-        </HamburgerSVG>
-      </button>
       <Link href={'/'}>
         <a
           style={
@@ -185,6 +177,16 @@ export default function Navbar(props) {
           width={24}
         />
       </a>
+      <button
+        style={width > 800 ? { display: 'none' } : { display: 'inline' }}
+        className='hamburger'
+        onClick={updateDisplay}
+        aria-label='Nav Menu'
+      >
+        <HamburgerSVG width={'24'} height={'24'}>
+          Nav Menu
+        </HamburgerSVG>
+      </button>
     </nav>
   )
 }

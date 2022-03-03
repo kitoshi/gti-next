@@ -143,9 +143,9 @@ export default function Navbar(props) {
         style={
           navdisplay === false ? { display: 'none' } : { display: 'inline' }
         }
+        href='#bottom contact'
         className='navbar-item last-nav-link'
         onClick={props.onContactButtonClick}
-    
       >
         Contact
       </a>

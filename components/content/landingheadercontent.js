@@ -19,15 +19,16 @@ export default function LandingHeaderContent(props) {
           paddingRight: '2%',
           height: '100%',
           width: '75%',
-          justifyContent: 'center',
-          marginTop: '5%',
-          marginBottom: '7%'
+          justifyContent: 'center'
         }}
       >
         Enabling businesses to flow with change in order to grow
         <em className='orange-emphasis'>.</em>
       </h1>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div
+        className='landing-button-box'
+        style={{ display: 'flex', justifyContent: 'center' }}
+      >
         <button
           style={{
             color: 'white',

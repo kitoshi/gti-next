@@ -3,6 +3,7 @@
   --isabelline: #efe9e7ff;
   --lavender-web: #dae0f2ff;
   --pink-lace: #f9cff2ff;
+  --off-white: #eeeeff;
   --palatinate-purple: #52154eff;
   --russian-violet: #111344ff;
   --black-blue: #212a33;
@@ -12,7 +13,7 @@
   --primary-color: #111344ff;
   --secondary-color: var(--ochre);
   --font-color: #0d1427;
-  --bg-color: #fff;
+  --bg-color: var(--off-white);
   --heading-color: #efe9e7ff;
   --section-color: #212a33;
 }
@@ -57,7 +58,11 @@ body {
 
 h1 {
   font-family: 'DMSerifDisplay';
-  font-size: 350%;
+  font-size: 300%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 h2 {
@@ -101,6 +106,7 @@ nav {
   padding: 1px 1px;
   border: 1px solid black;
   transition: all 0.2s linear;
+  animation-delay: 0s;
 }
 
 a {
@@ -144,8 +150,8 @@ button.hamburger {
 }
 
 section {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 3%;
+  padding-left: 3%;
   padding-bottom: 10%;
   height: 100%;
   width: 100%;
@@ -153,6 +159,10 @@ section {
 
 .rounded-logo {
   border-radius: 40%;
+}
+
+.landing-button-box {
+  padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 800px) {
@@ -170,12 +180,12 @@ section {
 
   h1 {
     font-size: 500%;
+    padding-top: 0;
   }
 
   a {
     color: inherit;
     text-decoration: none;
-    color: 'var(--secondary-color)';
     cursor: pointer;
   }
 
@@ -239,5 +249,9 @@ section {
 
   .adapting-bottom-paragraph {
     margin-top: 5%;
+  }
+
+  .landing-button-box {
+    padding-bottom: 7%;
   }
 }

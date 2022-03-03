@@ -7,6 +7,9 @@ import LandingHeaderContent from '../components/content/landingheadercontent'
 import BottomLineContent from '../components/content/bottomlinelistcontent'
 import { useRef } from 'react'
 import ContactForm from '../components/contactform'
+import Navbar from '../components/navbar'
+import AdaptingContent from '../components/content/adaptingcontent'
+import ClosingContent from '../components/content/closingcontent'
 export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)
@@ -32,10 +35,9 @@ export default function Home(props) {
         ></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Navbar onContactButtonClick={onContactButtonClick} />
       <section
         style={{
-          paddingRight: '2.5%',
-          paddingLeft: '2.5%',
           display: 'flex',
           flexDirection: 'column'
         }}
@@ -54,15 +56,6 @@ export default function Home(props) {
           }}
           ref={learnRef}
         >
-          <h2
-            style={{
-              margin: '0'
-            }}
-          >
-            We <em className='orange-emphasis'>scale</em> your network
-            infrastructure with your growing business
-          </h2>
-
           <LandingListContent />
         </section>
         <section
@@ -72,49 +65,29 @@ export default function Home(props) {
             justifyContent: 'space-evenly'
           }}
         >
-          <h3>
-            Adapting to a <em className='orange-emphasis'>changing</em>{' '}
-            environment
-          </h3>
-          <p>
-            Companies need to change and move forward to stay ahead of their
-            competitors. We have an established track record of supporting
-            business in adapting to these changes since 1995.{' '}
-          </p>
-          <div style={{ position: 'relative', height: '25vh' }}>
-            <Image src='/fiber.jpg' alt='fiber cable' layout='fill' />
-          </div>
-          <p>
-            We provide you with Telecom solutions and reliable support that
-            enables you to focus on your core business to succeed in this
-            rapidly changing business environment. We like to think that we are
-            Momma Bear, and that your Telecom services are the cubs that we need
-            to fiercely protect and support.
-          </p>
+          <AdaptingContent />
         </section>
-        <BottomLineContent />
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundColor: 'var(--section-color)',
+            paddingTop: '15px',
+            color: 'white'
+          }}
+        >
+          <BottomLineContent />
+        </section>
+
         <section
           style={{
             display: 'flex',
             flexDirection: 'column'
           }}
+          ref={contactRef}
         >
-          <h3>
-            Bringing a world of Telecom{' '}
-            <em className='orange-emphasis'>solutions</em> to your business{' '}
-          </h3>
-          <p>
-            Technology is driving significant changes in the marketplace: Today,
-            the world&apos;s leading retailer has no physical stores, the
-            world&apos;s largest taxi company owns no vehicles, and the
-            world&apos;s biggest hotel company owns no buildings. To thrive,
-            your business needs to embrace technology changes. We&apos;re here
-            to help and support you in moving forward.
-          </p>
-          <p>
-            Please leave use your email and a preferred time to chat and we will
-            discuss your business requirements.
-          </p>
+          <ClosingContent />
+          <ContactForm />
         </section>
       </main>
       <section
@@ -125,7 +98,6 @@ export default function Home(props) {
           backgroundColor: 'var(--section-color)',
           color: 'white'
         }}
-        ref={contactRef}
       >
         <footer
           style={{
@@ -133,7 +105,6 @@ export default function Home(props) {
             flexDirection: 'column'
           }}
         >
-          <ContactForm />
           <p>
             2017 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
             W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772

@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PhoneSvg from '../components/svg/phone'
-import EmailSVG from '../components/svg/email'
-import HamburgerSVG from '../components/svg/hamburger'
+import HamburgerSVG from './svg/hamburger'
 import { useState, useEffect, useRef } from 'react'
 export default function Navbar(props) {
   const [width, setWidth] = useState(0)
@@ -87,7 +85,6 @@ export default function Navbar(props) {
     <nav
       ref={hamburgerRef}
       style={{
-        backgroundColor: 'white',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
@@ -116,7 +113,7 @@ export default function Navbar(props) {
           style={
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
-          className='navbar-item'
+          className='navbar-item first-nav-link'
         >
           Home
         </a>
@@ -141,42 +138,18 @@ export default function Navbar(props) {
           About
         </a>
       </Link>
-      <Link href={'/contact'} style={{}}>
-        <a
-          style={
-            navdisplay === false ? { display: 'none' } : { display: 'inline' }
-          }
-          className='navbar-item'
-        >
-          Contact
-        </a>
-      </Link>
+
       <a
         style={
           navdisplay === false ? { display: 'none' } : { display: 'inline' }
         }
+        className='navbar-item last-nav-link'
+        onClick={props.onContactButtonClick}
+    
       >
-        <PhoneSvg
-          backgroundcolor={'#0d1427'}
-          objectcolor={'#c97211ff'}
-          scale={1}
-          height={24}
-          width={24}
-        />
+        Contact
       </a>
-      <a
-        style={
-          navdisplay === false ? { display: 'none' } : { display: 'inline' }
-        }
-      >
-        <EmailSVG
-          backgroundcolor={'#0d1427'}
-          objectcolor={'#c97211ff'}
-          scale={1}
-          height={24}
-          width={24}
-        />
-      </a>
+
       <button
         style={width > 800 ? { display: 'none' } : { display: 'inline' }}
         className='hamburger'

@@ -43,6 +43,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'OpenSans';
 }
 
 html,
@@ -89,9 +90,11 @@ span {
 em.orange-emphasis {
   color: var(--secondary-color);
   font-style: normal;
+  font-family: 'DMSerifDisplay';
 }
 
 nav {
+  background-color: white;
   position: fixed;
   flex-direction: column;
   z-index: 5;
@@ -107,6 +110,11 @@ a {
 
 .landing-button {
   background-color: var(--section-color);
+  cursor: pointer;
+}
+
+.landing-button-contact {
+  cursor: pointer;
 }
 
 button.landing-button:hover {
@@ -168,18 +176,26 @@ section {
     color: inherit;
     text-decoration: none;
     color: 'var(--secondary-color)';
+    cursor: pointer;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  section {
+    padding-right: 25%;
+    padding-left: 25%;
   }
 
   nav {
     position: inherit;
     flex-direction: row;
+    background-color: var(--section-color);
   }
 
   nav > a {
     color: var(--heading-color);
-  }
-  section {
-    height: 100vh;
   }
 
   .rounded-logo {
@@ -188,6 +204,7 @@ section {
 
   .navbar-item {
     border-bottom: 2px solid transparent;
+    margin-right: 0.5%;
   }
 
   .navbar-item:hover {
@@ -199,7 +216,28 @@ section {
   }
 
   .btn {
-    font-family: 'OpenSans', Helvetica, sans-serif;
+    font-family: 'LibreBaskerville', Helvetica, sans-serif;
     text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .landing-button-contact {
+    cursor: pointer;
+  }
+
+  .first-nav-link {
+    margin-left: auto;
+  }
+
+  .last-nav-link {
+    margin-right: 2%;
+  }
+
+  .adapting-paragraph {
+    margin-bottom: 5%;
+  }
+
+  .adapting-bottom-paragraph {
+    margin-top: 5%;
   }
 }

@@ -3,6 +3,14 @@ import Image from 'next/image'
 export default function LandingList(params) {
   return (
     <>
+      <h2
+        style={{
+          margin: '0'
+        }}
+      >
+        We <em className='orange-emphasis'>scale</em> your network
+        infrastructure with your growing business
+      </h2>
       <ul
         style={{
           listStyleType: 'none',

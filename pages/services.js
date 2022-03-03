@@ -1,6 +1,9 @@
+import Navbar from '../components/navbar'
+
 export default function Home() {
   return (
     <>
+      <Navbar />
       <h1>Voice services</h1>
       <h2>
         Crystal Clear Voice Quality and Call Controls Your voice services give

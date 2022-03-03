@@ -53,6 +53,7 @@ export default function LandingHeaderContent(props) {
             fontSize: 'medium'
           }}
           onClick={props.onContactButtonClick}
+          className='landing-button-contact'
         >
           Contact Us
         </button>

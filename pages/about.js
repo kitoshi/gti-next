@@ -1,6 +1,9 @@
+import Navbar from "../components/navbar"
+
 export default function About() {
   return (
     <>
+      <Navbar />
       <h1>Who Are We at GTI?</h1>
       <h2>Who Are We:</h2>
       <p>

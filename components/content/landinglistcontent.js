@@ -1,6 +1,11 @@
 import Image from 'next/image'
 
-export default function LandingList(params) {
+export default function LandingList(props) {
+  function handleServiceContentChange(e) {
+    if (activeServiceContent === '') {
+      props.setActive(e.target.key)
+    }
+  }
   return (
     <>
       <h2
@@ -34,6 +39,7 @@ export default function LandingList(params) {
             marginLeft: '1%'
           }}
           className='landing-tiles'
+          onClick={handleServiceContentChange}
         >
           <Image
             src='/phone_animation.gif'
@@ -69,6 +75,7 @@ export default function LandingList(params) {
             marginLeft: '1%'
           }}
           className='landing-tiles'
+          onClick={handleServiceContentChange}
         >
           <Image
             src='/mesh_animation.gif'
@@ -103,6 +110,7 @@ export default function LandingList(params) {
             marginLeft: '1%'
           }}
           className='landing-tiles'
+          onClick={handleServiceContentChange}
         >
           <Image
             src='/lock_animation.gif'

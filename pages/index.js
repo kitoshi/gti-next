@@ -5,7 +5,7 @@ import Link from 'next/link'
 import LandingListContent from '../components/content/landinglistcontent'
 import LandingHeaderContent from '../components/content/landingheadercontent'
 import BottomLineContent from '../components/content/bottomlinelistcontent'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import ContactForm from '../components/contactform'
 import Navbar from '../components/navbar'
 import AdaptingContent from '../components/content/adaptingcontent'
@@ -13,12 +13,14 @@ import ClosingContent from '../components/content/closingcontent'
 export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)
+  const [activeServiceContent, setActive] = useState('')
   function onLearnButtonClick() {
     learnRef.current.scrollIntoView()
   }
   function onContactButtonClick() {
     contactRef.current.scrollIntoView()
   }
+
   return (
     <>
       <Head>
@@ -56,8 +58,9 @@ export default function Home(props) {
           }}
           ref={learnRef}
         >
-          <LandingListContent />
+          <LandingListContent setActive={setActive} />
         </section>
+
         <section
           style={{
             display: 'flex',

@@ -12,6 +12,7 @@
   --gold: #d4af37;
   --primary-color: #111344ff;
   --secondary-color: var(--ochre);
+  --hover-color: #aab4be;
   --font-color: #0d1427;
   --bg-color: var(--off-white);
   --heading-color: #efe9e7ff;
@@ -53,7 +54,6 @@ body {
   margin: 0;
   font-family: 'OpenSans';
   font-size: 100%;
-  width: 100vw;
 }
 
 h1 {
@@ -62,7 +62,7 @@ h1 {
   padding-top: 5%;
   padding-bottom: 10%;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 h2 {
@@ -233,6 +233,9 @@ section {
 
   .landing-button-contact {
     cursor: pointer;
+  }
+  .landing-button-contact:hover {
+    background-color: var(--hover-color);
   }
 
   .first-nav-link {

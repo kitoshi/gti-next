@@ -34,16 +34,12 @@ export default function Navbar(props) {
         hamburgerRef.current.style.bottom !== '10px' &&
         window.scrollY > 20
       ) {
-        setTimeout(() => {
-          hamburgerRef.current.style.removeProperty('top')
-          hamburgerRef.current.style.bottom = '10px'
-        }, 250)
+        hamburgerRef.current.style.removeProperty('top')
+        hamburgerRef.current.style.bottom = '10px'
       }
       if (window.scrollY <= 20) {
-        setTimeout(() => {
-          hamburgerRef.current.style.removeProperty('bottom')
-          hamburgerRef.current.style.top = '7px'
-        }, 250)
+        hamburgerRef.current.style.removeProperty('bottom')
+        hamburgerRef.current.style.top = '7px'
       }
     }
     window.addEventListener('scroll', moveNav)

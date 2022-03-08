@@ -1,4 +1,4 @@
-export default function InternetList(params) {
+export default function InternetListContent(params) {
   return (
     <>
       <section>

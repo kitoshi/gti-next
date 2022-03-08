@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import LandingListContent from '../components/content/landinglistcontent'
 import LandingHeaderContent from '../components/content/landingheadercontent'
@@ -13,7 +12,8 @@ import ClosingContent from '../components/content/closingcontent'
 export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)
-  const [activeServiceContent, setActive] = useState('')
+  const headerRef = useRef(null)
+  const [width, setWidth] = useState(0)
   function onLearnButtonClick() {
     learnRef.current.scrollIntoView()
   }
@@ -37,7 +37,11 @@ export default function Home(props) {
         ></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar onContactButtonClick={onContactButtonClick} />
+      <Navbar
+        onContactButtonClick={onContactButtonClick}
+        width={width}
+        setWidth={setWidth}
+      />
       <section
         style={{
           display: 'flex',
@@ -47,9 +51,11 @@ export default function Home(props) {
         <LandingHeaderContent
           onLearnButtonClick={onLearnButtonClick}
           onContactButtonClick={onContactButtonClick}
+          headerRef={headerRef}
+          width={width}
         />
       </section>
-      <main className={styles.container}>
+      <main>
         <section
           style={{
             backgroundColor: 'var(--section-color)',
@@ -58,7 +64,7 @@ export default function Home(props) {
           }}
           ref={learnRef}
         >
-          <LandingListContent setActive={setActive} />
+          <LandingListContent />
         </section>
 
         <section

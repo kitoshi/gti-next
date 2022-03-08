@@ -3,7 +3,7 @@
   --isabelline: #efe9e7ff;
   --lavender-web: #dae0f2ff;
   --pink-lace: #f9cff2ff;
-  --off-white: #eeeeff;
+  --off-white: #f5f6fa;
   --palatinate-purple: #52154eff;
   --russian-violet: #111344ff;
   --black-blue: #212a33;
@@ -61,8 +61,8 @@ h1 {
   font-size: 300%;
   padding-top: 5%;
   padding-bottom: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 25%;
+  margin-bottom: 25%;
 }
 
 h2 {
@@ -99,13 +99,13 @@ em.orange-emphasis {
 }
 
 nav {
-  background-color: white;
+  background-color: var(--off-white);
   position: fixed;
   flex-direction: column;
   z-index: 5;
   padding: 1px 1px;
   border: 1px solid black;
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
   animation-delay: 0s;
 }
 
@@ -181,6 +181,8 @@ section {
   h1 {
     font-size: 500%;
     padding-top: 0;
+    margin-bottom: 15%;
+    margin-top: 10%;
   }
 
   a {

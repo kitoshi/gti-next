@@ -3,7 +3,10 @@ import Image from 'next/image'
 export default function LandingHeaderContent(props) {
   return (
     <>
-      <header>
+      <header
+        ref={props.headerRef}
+        style={props.width < 800 ? { display: 'inherit' } : { display: 'none' }}
+      >
         <Image
           src={'/logo_only_clr_sm.png'}
           alt='GTI logo'
@@ -18,11 +21,12 @@ export default function LandingHeaderContent(props) {
           paddingLeft: '2%',
           paddingRight: '2%',
           height: '100%',
-          width: '75%',
+          width: '100%',
           justifyContent: 'center'
         }}
       >
-        Enabling businesses to flow with change in order to grow
+        Enabling businesses to flow with{' '}
+        <em className='orange-emphasis'>change</em> in order to grow
         <em className='orange-emphasis'>.</em>
       </h1>
       <div

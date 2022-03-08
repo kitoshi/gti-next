@@ -7,11 +7,11 @@ export default function VoiceListContent(params) {
           Scalable Crystal Clear Calling quality solutions delivered where and
           when you want them.
         </h3>
-        <h3>
-          Crystal Clear Voice Quality and Call Controls Your voice services give
-          that personal touch to your client contact. Ensure your branding is
-          supported with:
-        </h3>
+        <h3>Crystal Clear Voice Quality and Call Controls.</h3>
+        <h4>
+          Your voice services give that personal touch to your client contact.
+          Ensure your branding is supported with:
+        </h4>
         <ul>
           <li>
             SIP Trunking Flexibility, multiple options. Reduce toll charges and

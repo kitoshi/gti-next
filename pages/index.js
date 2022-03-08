@@ -13,7 +13,7 @@ export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)
   const headerRef = useRef(null)
-  const [width, setWidth] = useState(0)
+
   function onLearnButtonClick() {
     learnRef.current.scrollIntoView()
   }
@@ -37,11 +37,7 @@ export default function Home(props) {
         ></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar
-        onContactButtonClick={onContactButtonClick}
-        width={width}
-        setWidth={setWidth}
-      />
+      <Navbar onContactButtonClick={onContactButtonClick} />
       <section
         style={{
           display: 'flex',
@@ -52,7 +48,6 @@ export default function Home(props) {
           onLearnButtonClick={onLearnButtonClick}
           onContactButtonClick={onContactButtonClick}
           headerRef={headerRef}
-          width={width}
         />
       </section>
       <main>

@@ -3,34 +3,34 @@ import Image from 'next/image'
 import HamburgerSVG from './svg/hamburger'
 import { useState, useEffect, useRef } from 'react'
 export default function Navbar(props) {
-  
+  const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
   const [navdisplay, setDisplay] = useState(false)
   const hamburgerRef = useRef(null)
 
   useEffect(() => {
     function updateWidth() {
-      props.setWidth(() => window.innerWidth)
+      setWidth(() => window.innerWidth)
       setHeight(() => window.innerHeight)
     }
     window.addEventListener('resize', updateWidth)
     updateWidth()
-    if (props.width > 800) {
+    if (width > 800) {
       hamburgerRef.current.style.borderRadius = '0%'
       setDisplay(() => true)
     }
-    if (props.width <= 800) {
+    if (width <= 800) {
       setDisplay(() => false)
     }
     return () => {
       window.removeEventListener('resize', updateWidth)
     }
-  }, [props.width, props])
+  }, [width])
 
   useEffect(() => {
     function moveNav() {
       if (
-        props.width <= 800 &&
+        width <= 800 &&
         hamburgerRef.current.style.bottom !== '10px' &&
         window.scrollY > 20
       ) {
@@ -51,7 +51,7 @@ export default function Navbar(props) {
     return () => {
       window.removeEventListener('scroll', moveNav)
     }
-  }, [props.width])
+  }, [width])
 
   function updateDisplay(e) {
     e.preventDefault()
@@ -132,7 +132,7 @@ export default function Navbar(props) {
       </a>
 
       <button
-        style={props.width > 800 ? { display: 'none' } : { display: 'inline' }}
+        style={width > 800 ? { display: 'none' } : { display: 'inline' }}
         className='hamburger'
         onClick={updateDisplay}
         aria-label='Nav Menu'

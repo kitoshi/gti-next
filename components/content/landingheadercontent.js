@@ -1,11 +1,24 @@
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 export default function LandingHeaderContent(props) {
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    function updateWidth() {
+      setWidth(() => window.innerWidth)
+    }
+    window.addEventListener('resize', updateWidth)
+    updateWidth()
+    return () => {
+      window.removeEventListener('resize', updateWidth)
+    }
+  }, [width])
+
   return (
     <>
       <header
-        ref={props.headerRef}
-        style={props.width < 800 ? { display: 'inherit' } : { display: 'none' }}
+        style={width < 800 ? { display: 'inherit' } : { display: 'none' }}
       >
         <Image
           src={'/logo_only_clr_sm.png'}

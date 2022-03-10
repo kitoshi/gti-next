@@ -61,8 +61,8 @@ h1 {
   font-size: 300%;
   padding-top: 5%;
   padding-bottom: 10%;
-  margin-top: 25%;
-  margin-bottom: 25%;
+  margin-top: 15%;
+  margin-bottom: auto;
 }
 
 h2 {
@@ -99,12 +99,10 @@ em.orange-emphasis {
 }
 
 nav {
-  background-color: var(--off-white);
   position: fixed;
   flex-direction: column;
   z-index: 5;
   padding: 1px 1px;
-  border: 1px solid black;
   transition: all 0.1s linear;
   animation-delay: 0s;
 }
@@ -127,11 +125,6 @@ button.landing-button:hover {
   background-color: #465a6e;
 }
 
-button.hamburger {
-  outline: none;
-  background: transparent;
-}
-
 .btn {
   font-family: 'LibreBaskerville', Helvetica, sans-serif;
   text-transform: uppercase;
@@ -139,6 +132,7 @@ button.hamburger {
 
 .navbar-item {
   border-bottom: 2px solid transparent;
+  align-self: flex-start;
 }
 
 .navbar-item:hover {
@@ -164,6 +158,14 @@ section {
 
 .landing-button-box {
   padding-bottom: 5%;
+}
+
+.hamburger {
+  background-color: white;
+  display: block;
+  margin: 1em;
+  width: 36px;
+  border: none;
 }
 
 @media only screen and (min-width: 800px) {

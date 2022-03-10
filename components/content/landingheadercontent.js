@@ -39,8 +39,7 @@ export default function LandingHeaderContent(props) {
         }}
       >
         Enabling businesses to flow with{' '}
-        <em className='orange-emphasis'>change</em> in order to grow
-        <em className='orange-emphasis'>.</em>
+        <em className='orange-emphasis'>change</em> in order to grow.
       </h1>
       <div
         className='landing-button-box'

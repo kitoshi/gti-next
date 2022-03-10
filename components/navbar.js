@@ -74,22 +74,6 @@ export default function Navbar(props) {
           style={
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
-        >
-          <Image
-            src='/logo_only_clr_sm.png'
-            alt='logo'
-            width={'32'}
-            height={'32'}
-            quality={'100'}
-            className='rounded-logo'
-          ></Image>
-        </a>
-      </Link>
-      <Link href={'/'}>
-        <a
-          style={
-            navdisplay === false ? { display: 'none' } : { display: 'inline' }
-          }
           className='navbar-item first-nav-link'
         >
           Home
@@ -132,11 +116,7 @@ export default function Navbar(props) {
         className='hamburger'
         onClick={updateDisplay}
         aria-label='Nav Menu'
-      >
-        <HamburgerSVG width={'24'} height={'24'}>
-          Nav Menu
-        </HamburgerSVG>
-      </button>
+      ></button>
     </nav>
   )
 }

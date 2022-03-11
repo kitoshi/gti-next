@@ -222,6 +222,7 @@ section {
   .navbar-item {
     border-bottom: 2px solid transparent;
     margin-right: 0.5%;
+    background-color: transparent;
   }
 
   .navbar-item:hover {

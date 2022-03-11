@@ -133,9 +133,29 @@ button.landing-button:hover {
 
 .navbar-item {
   border-bottom: 2px solid transparent;
-  align-self: flex-start;
+  text-align: center;
   background-color: white;
   width: 100%;
+  font-family: DMSerifDisplay;
+  box-shadow: 2px 2px 2px #000;
+  margin-bottom: 5%;
+}
+
+.hamburger {
+  background-color: white;
+  display: block;
+  margin: 1em;
+  width: 36px;
+  border: none;
+  margin-top: 1px;
+  cursor: pointer;
+  color: var(--font-color);
+  box-shadow: 2px 2px 2px #000;
+}
+
+.last-nav-link {
+  background-color: white;
+  box-shadow: 2px 2px 2px #000;
 }
 
 .navbar-item:hover {
@@ -161,17 +181,6 @@ section {
 
 .landing-button-box {
   padding-bottom: 5%;
-}
-
-.hamburger {
-  background-color: white;
-  display: block;
-  margin: 1em;
-  width: 36px;
-  border: none;
-  margin-top: 1px;
-  cursor: pointer;
-  color: var(--section-color);
 }
 
 @media only screen and (min-width: 800px) {
@@ -213,6 +222,8 @@ section {
     position: inherit;
     flex-direction: row;
     background-color: var(--section-color);
+    align-items: center;
+    justify-content: center;
   }
 
   nav > a {
@@ -225,8 +236,18 @@ section {
 
   .navbar-item {
     border-bottom: 2px solid transparent;
+    font-family: 'OpenSans';
     margin-right: 0.5%;
     background-color: transparent;
+    width: auto;
+    align-self: center;
+    font-weight: 500;
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+
+  .last-nav-link {
+    box-shadow: none;
   }
 
   .navbar-item:hover {

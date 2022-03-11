@@ -29,11 +29,7 @@ export default function Navbar(props) {
 
   useLayoutEffect(() => {
     function moveNav() {
-      if (
-        navdisplay == false &&
-        hamburgerRef.current.style.bottom !== '10px' &&
-        window.scrollY > 20
-      ) {
+      if (hamburgerRef.current.style.bottom !== '10px' && window.scrollY > 20) {
         hamburgerRef.current.style.removeProperty('top')
         hamburgerRef.current.style.bottom = '10px'
       }
@@ -58,7 +54,11 @@ export default function Navbar(props) {
   }
 
   function closeDisplay(e) {
-    setDisplay(() => false)
+    if (navdisplay === true) {
+      return null
+    } else {
+      setDisplay(() => false)
+    }
   }
 
   return (
@@ -75,7 +75,9 @@ export default function Navbar(props) {
       <Link href={'/'}>
         <a
           style={
-            navdisplay === false ? { display: 'none' } : { display: 'inline' }
+            navdisplay === false || (navdisplay === true && width < 800)
+              ? { display: 'none' }
+              : { display: 'inline' }
           }
           onClick={closeDisplay}
         >

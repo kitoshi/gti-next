@@ -52,7 +52,11 @@ export default function Navbar(props) {
     if (navdisplay === false) {
       setDisplay(() => true)
     } else {
-      setDisplay(() => false)
+      if (width > 800) {
+        return null
+      } else {
+        setDisplay(() => false)
+      }
     }
   }
 

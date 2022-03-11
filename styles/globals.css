@@ -133,6 +133,7 @@ button.landing-button:hover {
 .navbar-item {
   border-bottom: 2px solid transparent;
   align-self: flex-start;
+  background-color: white;
 }
 
 .navbar-item:hover {
@@ -166,6 +167,7 @@ section {
   margin: 1em;
   width: 36px;
   border: none;
+  margin-top: 1px;
 }
 
 @media only screen and (min-width: 800px) {

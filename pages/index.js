@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import LandingListContent from '../components/content/landinglistcontent'
-import LandingHeaderContent from '../components/content/landingheadercontent'
-import BottomLineContent from '../components/content/bottomlinelistcontent'
+import LandingListContent from '../components/content/landinglist'
+import LandingHeaderContent from '../components/content/landingheader'
+import BottomLineContent from '../components/content/bottomlinelist'
 import { useRef, useState } from 'react'
 import ContactForm from '../components/contactform'
 import Navbar from '../components/navbar'
-import AdaptingContent from '../components/content/adaptingcontent'
-import ClosingContent from '../components/content/closingcontent'
+import AdaptingContent from '../components/content/adapting'
+import ClosingContent from '../components/content/closing'
 export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)

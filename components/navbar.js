@@ -6,6 +6,7 @@ export default function Navbar(props) {
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
   const [navdisplay, setDisplay] = useState(false)
+  const [navtop, setNavTop] = useState(false)
   const hamburgerRef = useRef(null)
 
   useEffect(() => {
@@ -32,10 +33,12 @@ export default function Navbar(props) {
       if (hamburgerRef.current.style.bottom !== '10px' && window.scrollY > 20) {
         hamburgerRef.current.style.removeProperty('top')
         hamburgerRef.current.style.bottom = '10px'
+        setNavTop(() => false)
       }
       if (window.scrollY <= 20) {
         hamburgerRef.current.style.removeProperty('bottom')
         hamburgerRef.current.style.top = '7px'
+        setNavTop(() => true)
       }
     }
     window.addEventListener('scroll', moveNav)
@@ -83,6 +86,18 @@ export default function Navbar(props) {
           ></Image>
         </a>
       </Link>
+      <button
+        style={
+          width < 800 && navtop == true
+            ? { display: 'inline' }
+            : { display: 'none' }
+        }
+        className='hamburger'
+        onClick={updateDisplay}
+        aria-label='Nav Menu'
+      >
+        <HamburgerSVG />
+      </button>
       <Link href={'/'}>
         <a
           style={
@@ -129,12 +144,16 @@ export default function Navbar(props) {
       </Link>
 
       <button
-        style={width > 800 ? { display: 'none' } : { display: 'inline' }}
+        style={
+          width < 800 && navtop == false
+            ? { display: 'inline' }
+            : { display: 'none' }
+        }
         className='hamburger'
         onClick={updateDisplay}
         aria-label='Nav Menu'
       >
-        X
+        <HamburgerSVG />
       </button>
     </nav>
   )

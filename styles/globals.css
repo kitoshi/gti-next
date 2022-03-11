@@ -105,6 +105,8 @@ nav {
   padding: 1px 1px;
   transition: all 0.1s linear;
   animation-delay: 0s;
+  width: 20%;
+  margin-top: 2%;
 }
 
 a {
@@ -137,25 +139,26 @@ button.landing-button:hover {
   background-color: white;
   width: 100%;
   font-family: DMSerifDisplay;
-  box-shadow: 2px 2px 2px 2px rgb(126, 126, 126);
-  margin-bottom: 10%;
+  box-shadow: 1px 1px 1px 1px rgb(126, 126, 126);
+  margin-bottom: 3%;
+  transition: visibility 0s 250ms;
 }
 
 .hamburger {
-  background-color: white;
+  background-color: transparent;
   display: block;
   margin: 1em;
-  width: 36px;
+  width: 32px;
   border: none;
   margin-top: 1px;
   cursor: pointer;
   color: var(--font-color);
-  box-shadow: 2px 2px 2px rgb(126, 126, 126);
+  border: 1px solid transparent;
 }
 
 .last-nav-link {
   background-color: white;
-  box-shadow: 2px 2px 2px 2px rgb(126, 126, 126);
+  box-shadow: 1px 1px 1px 1px rgb(126, 126, 126);
 }
 
 .navbar-item:hover {

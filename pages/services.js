@@ -1,7 +1,7 @@
-import VoiceListContent from '../components/content/voicelistcontent'
+import VoiceListContent from '../components/content/voicelist'
 import Navbar from '../components/navbar'
-import InternetListContent from '../components/content/internetlistcontent'
-import DataListContent from '../components/content/datalistcontent'
+import InternetListContent from '../components/content/internetlist'
+import DataListContent from '../components/content/datalist'
 import ContactForm from '../components/contactform'
 export default function Home(props) {
   return (

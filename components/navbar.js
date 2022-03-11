@@ -53,14 +53,6 @@ export default function Navbar(props) {
     }
   }
 
-  function closeDisplay(e) {
-    if (navdisplay === true) {
-      return null
-    } else {
-      setDisplay(() => false)
-    }
-  }
-
   return (
     <nav
       ref={hamburgerRef}
@@ -79,7 +71,7 @@ export default function Navbar(props) {
               ? { display: 'none' }
               : { display: 'inline' }
           }
-          onClick={closeDisplay}
+          onClick={updateDisplay}
         >
           <Image
             src='/logo_only_clr_sm.png'
@@ -97,7 +89,7 @@ export default function Navbar(props) {
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
           className='navbar-item first-nav-link'
-          onClick={closeDisplay}
+          onClick={updateDisplay}
         >
           Home
         </a>
@@ -108,7 +100,7 @@ export default function Navbar(props) {
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
           className='navbar-item'
-          onClick={closeDisplay}
+          onClick={updateDisplay}
         >
           Services
         </a>
@@ -119,7 +111,7 @@ export default function Navbar(props) {
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
           className='navbar-item'
-          onClick={closeDisplay}
+          onClick={updateDisplay}
         >
           About
         </a>
@@ -130,7 +122,7 @@ export default function Navbar(props) {
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
           className='navbar-item last-nav-link'
-          onClick={closeDisplay}
+          onClick={updateDisplay}
         >
           Contact
         </a>

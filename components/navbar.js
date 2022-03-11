@@ -50,12 +50,15 @@ export default function Navbar(props) {
   }, [hamburgerRef, navdisplay])
 
   function updateDisplay(e) {
-    e.preventDefault()
     if (navdisplay === false) {
       setDisplay(() => true)
     } else {
       setDisplay(() => false)
     }
+  }
+
+  function closeDisplay(e) {
+    setDisplay(() => false)
   }
 
   return (
@@ -74,7 +77,25 @@ export default function Navbar(props) {
           style={
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
+          onClick={closeDisplay}
+        >
+          <Image
+            src='/logo_only_clr_sm.png'
+            alt='logo'
+            width={'24'}
+            height={'24'}
+            quality={'100'}
+            className='rounded-logo'
+          ></Image>
+        </a>
+      </Link>
+      <Link href={'/'}>
+        <a
+          style={
+            navdisplay === false ? { display: 'none' } : { display: 'inline' }
+          }
           className='navbar-item first-nav-link'
+          onClick={closeDisplay}
         >
           Home
         </a>
@@ -85,6 +106,7 @@ export default function Navbar(props) {
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
           className='navbar-item'
+          onClick={closeDisplay}
         >
           Services
         </a>
@@ -95,28 +117,31 @@ export default function Navbar(props) {
             navdisplay === false ? { display: 'none' } : { display: 'inline' }
           }
           className='navbar-item'
+          onClick={closeDisplay}
         >
           About
         </a>
       </Link>
-
-      <a
-        style={
-          navdisplay === false ? { display: 'none' } : { display: 'inline' }
-        }
-        href='#bottom contact'
-        className='navbar-item last-nav-link'
-        onClick={props.onContactButtonClick}
-      >
-        Contact
-      </a>
+      <Link href={'/contact'}>
+        <a
+          style={
+            navdisplay === false ? { display: 'none' } : { display: 'inline' }
+          }
+          className='navbar-item last-nav-link'
+          onClick={closeDisplay}
+        >
+          Contact
+        </a>
+      </Link>
 
       <button
         style={width > 800 ? { display: 'none' } : { display: 'inline' }}
         className='hamburger'
         onClick={updateDisplay}
         aria-label='Nav Menu'
-      ></button>
+      >
+        X
+      </button>
     </nav>
   )
 }

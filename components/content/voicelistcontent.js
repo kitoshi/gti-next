@@ -1,8 +1,7 @@
 export default function VoiceListContent(params) {
   return (
     <>
-      <section>
-        <h3>Voice Services</h3>
+        <h3 style={{ marginTop: '0' }}>Voice Services</h3>
         <h3>
           Scalable Crystal Clear Calling quality solutions delivered where and
           when you want them.
@@ -30,7 +29,6 @@ export default function VoiceListContent(params) {
             your existing CRM infrastructure
           </li>
         </ul>
-      </section>
     </>
   )
 }

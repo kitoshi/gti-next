@@ -37,7 +37,6 @@ export default function Home(props) {
         ></meta>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar onContactButtonClick={onContactButtonClick} />
       <section
         style={{
           display: 'flex',

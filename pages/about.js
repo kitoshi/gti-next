@@ -3,10 +3,9 @@ import Navbar from '../components/navbar'
 export default function About() {
   return (
     <>
-      <Navbar />
       <main>
         <section>
-          <h1>Who Are We at GTI?</h1>
+          <h1 style={{ marginTop: '0' }}>Who Are We at GTI?</h1>
           <h2>Who Are We:</h2>
           <p>
             Established in 1995, GTI has a proven track record of bringing

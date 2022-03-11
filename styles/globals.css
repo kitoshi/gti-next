@@ -119,6 +119,7 @@ a {
 
 .landing-button-contact {
   cursor: pointer;
+  color: var(--section-color);
 }
 
 button.landing-button:hover {
@@ -170,6 +171,7 @@ section {
   border: none;
   margin-top: 1px;
   cursor: pointer;
+  color: var(--section-color);
 }
 
 @media only screen and (min-width: 800px) {

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import HamburgerSVG from './svg/hamburger'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useLayoutEffect } from 'react'
 export default function Navbar(props) {
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
@@ -27,10 +27,10 @@ export default function Navbar(props) {
     }
   }, [width])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     function moveNav() {
       if (
-        width <= 800 &&
+        navdisplay == false &&
         hamburgerRef.current.style.bottom !== '10px' &&
         window.scrollY > 20
       ) {
@@ -47,7 +47,7 @@ export default function Navbar(props) {
     return () => {
       window.removeEventListener('scroll', moveNav)
     }
-  }, [width])
+  }, [hamburgerRef, navdisplay])
 
   function updateDisplay(e) {
     e.preventDefault()

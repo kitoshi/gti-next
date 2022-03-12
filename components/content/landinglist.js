@@ -1,11 +1,13 @@
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import VoiceListContent from './voicelist'
 import InternetListContent from './internetlist'
 import DataListContent from './datalist'
 export default function LandingList(props) {
   const [landingdisplay, setLandingVisibility] = useState(true)
   const [activedisplay, setLandingDisplay] = useState('')
+  const landingGridRef = useRef(null)
+
   function handleLandingVisibility() {
     setLandingVisibility(false)
   }
@@ -18,6 +20,16 @@ export default function LandingList(props) {
       setLandingDisplay('DataListContent')
     }
   }
+
+  useEffect(() => {
+    if (props.landinglistfocus === 'Enterprise') {
+      landingGridRef.current.style.border = '2px solid black'
+    }
+    //animated border here, make 100% wide element and shrink borders to show fake animation
+
+    return () => {}
+  }, [props.landinglistfocus])
+
   return (
     <>
       <VoiceListContent
@@ -49,12 +61,13 @@ export default function LandingList(props) {
           style={{
             listStyleType: 'none',
             display: 'grid',
-            padding: '0',
             justifyContent: 'space-evenly',
             gridTemplateRows: '1fr 1fr 1fr',
             rowGap: '2%',
             marginTop: '10%'
           }}
+          className='landing-list-container'
+          ref={landingGridRef}
         >
           <li
             style={{

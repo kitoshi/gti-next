@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 export default function LandingHeaderContent(props) {
   const [width, setWidth] = useState(0)
 
+
   useEffect(() => {
     function updateWidth() {
       setWidth(() => window.innerWidth)
@@ -14,6 +15,10 @@ export default function LandingHeaderContent(props) {
       window.removeEventListener('resize', updateWidth)
     }
   }, [width])
+
+  function handleFocusChange(e) {
+    props.setLandingListFocus(e)
+  }
 
   return (
     <>
@@ -83,7 +88,34 @@ export default function LandingHeaderContent(props) {
           textAlign: 'center'
         }}
       >
-        / Enterprise / Voice / Internet / Data
+        <a
+          onClick={() => {
+            props.onLearnButtonClick(), handleFocusChange('Enterprise')
+          }}
+        >
+          / Enterprise{' '}
+        </a>
+        <a
+          onClick={() => {
+            props.onLearnButtonClick(), handleFocusChange('Voice')
+          }}
+        >
+          / Voice{' '}
+        </a>
+        <a
+          onClick={() => {
+            props.onLearnButtonClick(), handleFocusChange('Internet')
+          }}
+        >
+          / Internet{' '}
+        </a>
+        <a
+          onClick={() => {
+            props.onLearnButtonClick(), handleFocusChange('Data')
+          }}
+        >
+          / Data
+        </a>
       </p>
     </>
   )

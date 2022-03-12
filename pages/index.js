@@ -4,7 +4,7 @@ import Link from 'next/link'
 import LandingListContent from '../components/content/landinglist'
 import LandingHeaderContent from '../components/content/landingheader'
 import BottomLineContent from '../components/content/bottomlinelist'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import ContactForm from '../components/contactform'
 import AdaptingContent from '../components/content/adapting'
 import ClosingContent from '../components/content/closing'
@@ -12,6 +12,7 @@ export default function Home(props) {
   const contactRef = useRef(null)
   const learnRef = useRef(null)
   const headerRef = useRef(null)
+  const [landinglistfocus, setLandingListFocus] = useState('')
 
   function onLearnButtonClick() {
     learnRef.current.scrollIntoView()
@@ -46,6 +47,7 @@ export default function Home(props) {
         <LandingHeaderContent
           onLearnButtonClick={onLearnButtonClick}
           onContactButtonClick={onContactButtonClick}
+          setLandingListFocus={setLandingListFocus}
           headerRef={headerRef}
         />
       </section>
@@ -58,7 +60,7 @@ export default function Home(props) {
           }}
           ref={learnRef}
         >
-          <LandingListContent />
+          <LandingListContent landinglistfocus={landinglistfocus} />
         </section>
 
         <section

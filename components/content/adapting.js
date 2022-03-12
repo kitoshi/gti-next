@@ -4,7 +4,7 @@ export default function AdaptingContent(params) {
   return (
     <>
       <h3>
-        Adapting to a <em className='orange-emphasis'>changing</em> environment
+        <em className='orange-emphasis'>Adapting</em> to a changing environment
       </h3>
       <p className='adapting-paragraph'>
         Companies need to change and move forward to stay ahead of their

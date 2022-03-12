@@ -1,6 +1,14 @@
-export default function DataListContent(params) {
+export default function DataListContent(props) {
   return (
-    <>
+    <div
+      style={
+        (props.landingdisplay === false &&
+          props.activedisplay === 'DataListContent') ||
+        props.page !== 'index'
+          ? { display: 'inline' }
+          : { display: 'none' }
+      }
+    >
       <h3>Data Services</h3>
       <h3>Predictable, Secure, and Private</h3>
       <h3>Robust Reliable Services You Can Count On.</h3>
@@ -24,6 +32,6 @@ export default function DataListContent(params) {
           and technologie
         </li>
       </ul>
-    </>
+    </div>
   )
 }

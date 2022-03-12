@@ -1,3 +1,5 @@
+import ContactForm from '../components/contactform'
+
 export default function Contact(props) {
   return (
     <>
@@ -8,6 +10,7 @@ export default function Contact(props) {
       </h3>
       <p>Visit our head office</p>
       <p>Give us a call</p>
+      <ContactForm />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import Navbar from '../components/navbar'
+import ContactForm from '../components/contactform'
 
 export default function About() {
   return (
@@ -82,6 +82,7 @@ export default function About() {
             GTI...bringing a world of telecom solutions to your business.{' '}
           </h4>
         </section>
+        <ContactForm />
       </main>
     </>
   )

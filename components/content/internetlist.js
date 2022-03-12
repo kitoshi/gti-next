@@ -1,6 +1,14 @@
-export default function InternetListContent(params) {
+export default function InternetListContent(props) {
   return (
-    <>
+    <div
+      style={
+        (props.landingdisplay === false &&
+          props.activedisplay === 'InternetListContent') ||
+        props.page !== 'index'
+          ? { display: 'inline' }
+          : { display: 'none' }
+      }
+    >
       <h3>Internet Services</h3>
       <h3>The Best Connection for your business.</h3>
       <h3>Internet for Business</h3>
@@ -26,6 +34,6 @@ export default function InternetListContent(params) {
           and technologie
         </li>
       </ul>
-    </>
+    </div>
   )
 }

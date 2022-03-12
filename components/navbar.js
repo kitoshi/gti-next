@@ -6,7 +6,7 @@ export default function Navbar(props) {
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
   const [navdisplay, setDisplay] = useState(false)
-  const [navtop, setNavTop] = useState(false)
+  const [navtop, setNavTop] = useState(true)
   const hamburgerRef = useRef(null)
 
   useEffect(() => {
@@ -33,14 +33,16 @@ export default function Navbar(props) {
       if (hamburgerRef.current.style.bottom !== '10px' && window.scrollY > 20) {
         hamburgerRef.current.style.removeProperty('top')
         hamburgerRef.current.style.bottom = '10px'
-        setNavTop(() => false)
+
+        setNavTop(false)
       }
       if (window.scrollY <= 20) {
         hamburgerRef.current.style.removeProperty('bottom')
         hamburgerRef.current.style.top = '7px'
-        setNavTop(() => true)
+        setNavTop(true)
       }
     }
+
     window.addEventListener('scroll', moveNav)
 
     return () => {
@@ -50,12 +52,12 @@ export default function Navbar(props) {
 
   function updateDisplay(e) {
     if (navdisplay === false) {
-      setDisplay(() => true)
+      setDisplay(true)
     } else {
       if (width > 800) {
         return null
       } else {
-        setDisplay(() => false)
+        setDisplay(false)
       }
     }
   }

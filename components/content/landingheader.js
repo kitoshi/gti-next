@@ -1,9 +1,20 @@
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 
 export default function LandingHeaderContent(props) {
   const [width, setWidth] = useState(0)
-
+  const [activeword, setActiveWord] = useState([
+    'b',
+    'u',
+    's',
+    'i',
+    'n',
+    'e',
+    's',
+    's',
+    'e',
+    's'
+  ])
 
   useEffect(() => {
     function updateWidth() {
@@ -19,6 +30,32 @@ export default function LandingHeaderContent(props) {
   function handleFocusChange(e) {
     props.setLandingListFocus(e)
   }
+
+  async function headlineTextSwitch() {
+    let headlinelist = [
+      'schools',
+      'non-profits',
+      'charities',
+      'universities',
+      'businesses'
+    ]
+    await new Promise((res) => setTimeout(res, 1000))
+    for (const item of headlinelist) {
+      let singlewordarray = item.split('')
+      for (const [idx, letter] of singlewordarray.entries()) {
+        let activecopy = [...activeword]
+        setActiveWord(activecopy.splice(idx, 1, letter))
+        console.log(activecopy)
+        await new Promise((res) => setTimeout(res, 1000))
+        if (idx === singlewordarray.length - 1) {
+          let activemutatedarray = activecopy.splice(idx + 1)
+          setActiveWord(activemutatedarray)
+        }
+      }
+      await new Promise((res) => setTimeout(res, 5000))
+    }
+  }
+  headlineTextSwitch()
 
   return (
     <>
@@ -43,7 +80,7 @@ export default function LandingHeaderContent(props) {
           justifyContent: 'center'
         }}
       >
-        Enabling businesses to flow with{' '}
+        Enabling {activeword.join('')} to flow with{' '}
         <em className='orange-emphasis'>change</em> in order to grow.
       </h1>
       <div
@@ -88,33 +125,37 @@ export default function LandingHeaderContent(props) {
           textAlign: 'center'
         }}
       >
+        /{' '}
         <a
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Enterprise')
           }}
         >
-          / Enterprise{' '}
+          Enterprise{' '}
         </a>
+        /{' '}
         <a
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Voice')
           }}
         >
-          / Voice{' '}
+          Voice{' '}
         </a>
+        /{' '}
         <a
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Internet')
           }}
         >
-          / Internet{' '}
+          Internet{' '}
         </a>
+        /{' '}
         <a
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Data')
           }}
         >
-          / Data
+          Data
         </a>
       </p>
     </>

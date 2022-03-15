@@ -1,20 +1,9 @@
 import Image from 'next/image'
-import { useState, useEffect, useLayoutEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function LandingHeaderContent(props) {
   const [width, setWidth] = useState(0)
-  const [activeword, setActiveWord] = useState([
-    'b',
-    'u',
-    's',
-    'i',
-    'n',
-    'e',
-    's',
-    's',
-    'e',
-    's'
-  ])
+  const [activeword, setActiveWord] = useState('business')
 
   useEffect(() => {
     function updateWidth() {
@@ -39,23 +28,33 @@ export default function LandingHeaderContent(props) {
       'universities',
       'businesses'
     ]
-    await new Promise((res) => setTimeout(res, 1000))
     for (const item of headlinelist) {
-      let singlewordarray = item.split('')
-      for (const [idx, letter] of singlewordarray.entries()) {
-        let activecopy = [...activeword]
-        setActiveWord(activecopy.splice(idx, 1, letter))
-        console.log(activecopy)
-        await new Promise((res) => setTimeout(res, 1000))
-        if (idx === singlewordarray.length - 1) {
-          let activemutatedarray = activecopy.splice(idx + 1)
-          setActiveWord(activemutatedarray)
-        }
-      }
       await new Promise((res) => setTimeout(res, 5000))
+      setActiveWord(item)
     }
   }
-  headlineTextSwitch()
+
+  useEffect(() => {
+    headlineTextSwitch()
+    setInterval(() => {
+      headlineTextSwitch()
+    }, 30000)
+    async function headlineTextSwitch() {
+      let headlinelist = [
+        'schools',
+        'non-profits',
+        'charities',
+        'universities',
+        'businesses'
+      ]
+
+      for (const item of headlinelist) {
+        await new Promise((res) => setTimeout(res, 5000))
+        setActiveWord(item)
+      }
+    }
+    return () => {}
+  }, [])
 
   return (
     <>
@@ -80,7 +79,7 @@ export default function LandingHeaderContent(props) {
           justifyContent: 'center'
         }}
       >
-        Enabling {activeword.join('')} to flow with{' '}
+        Enabling {activeword} to flow with{' '}
         <em className='orange-emphasis'>change</em> in order to grow.
       </h1>
       <div

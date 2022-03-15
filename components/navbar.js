@@ -3,6 +3,9 @@ import Image from 'next/image'
 import HamburgerSVG from './svg/hamburger'
 import { useState, useEffect, useRef, useLayoutEffect } from 'react'
 export default function Navbar(props) {
+  if (typeof document === 'undefined') {
+    useLayoutEffect = useEffect
+  }
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
   const [navdisplay, setDisplay] = useState(false)

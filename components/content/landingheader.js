@@ -20,25 +20,11 @@ export default function LandingHeaderContent(props) {
     props.setLandingListFocus(e)
   }
 
-  async function headlineTextSwitch() {
-    let headlinelist = [
-      'schools',
-      'non-profits',
-      'charities',
-      'universities',
-      'businesses'
-    ]
-    for (const item of headlinelist) {
-      await new Promise((res) => setTimeout(res, 5000))
-      setActiveWord(item)
-    }
-  }
-
   useEffect(() => {
     headlineTextSwitch()
     setInterval(() => {
       headlineTextSwitch()
-    }, 30000)
+    }, 24000)
     async function headlineTextSwitch() {
       let headlinelist = [
         'schools',
@@ -49,7 +35,7 @@ export default function LandingHeaderContent(props) {
       ]
 
       for (const item of headlinelist) {
-        await new Promise((res) => setTimeout(res, 5000))
+        await new Promise((res) => setTimeout(res, 4000))
         setActiveWord(item)
       }
     }
@@ -129,6 +115,7 @@ export default function LandingHeaderContent(props) {
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Enterprise')
           }}
+          href='#enterprise information list'
         >
           Enterprise{' '}
         </a>
@@ -137,6 +124,7 @@ export default function LandingHeaderContent(props) {
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Voice')
           }}
+          href='#voice information list'
         >
           Voice{' '}
         </a>
@@ -145,6 +133,7 @@ export default function LandingHeaderContent(props) {
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Internet')
           }}
+          href='#internet information list'
         >
           Internet{' '}
         </a>
@@ -153,6 +142,7 @@ export default function LandingHeaderContent(props) {
           onClick={() => {
             props.onLearnButtonClick(), handleFocusChange('Data')
           }}
+          href='#data information list'
         >
           Data
         </a>

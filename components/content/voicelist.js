@@ -1,7 +1,26 @@
-import { useRef, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect, useState, useEffect } from 'react'
 
 export default function VoiceListContent(props) {
   const containerRef = useRef(null)
+  const [containerVisibility, setContainerVisibility] = useState(true)
+
+  function handleContainerVisibility() {
+    if (containerVisibility === true) {
+      setContainerVisibility(false)
+    } else {
+      setContainerVisibility(true)
+    }
+  }
+
+  useEffect(() => {
+    if (containerVisibility === true) {
+    } else if (containerVisibility === false) {
+      containerRef.current.style.display = 'none'
+    }
+
+    return () => {}
+  }, [containerVisibility, containerRef])
+
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
@@ -26,6 +45,7 @@ export default function VoiceListContent(props) {
           : { display: 'none' }
       }
       ref={containerRef}
+      onClick={handleContainerVisibility}
     >
       <h3 style={{ marginTop: '0' }}>Voice Services</h3>
       <h4>

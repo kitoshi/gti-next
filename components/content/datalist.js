@@ -5,7 +5,13 @@ export default function DataListContent(props) {
         (props.landingdisplay === false &&
           props.activedisplay === 'DataListContent') ||
         props.page !== 'index'
-          ? { display: 'inline' }
+          ? {
+              display: 'inline',
+              position: 'absolute',
+              left: '0',
+              backgroundColor: 'var(--section-color)',
+              zIndex: '2'
+            }
           : { display: 'none' }
       }
     >

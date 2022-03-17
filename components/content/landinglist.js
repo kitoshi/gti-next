@@ -9,7 +9,11 @@ export default function LandingList(props) {
   const landingGridRef = useRef(null)
 
   function handleLandingVisibility() {
-    setLandingVisibility(false)
+    if (landingdisplay === true) {
+      setLandingVisibility(false)
+    } else {
+      setLandingVisibility(true)
+    }
   }
   function handleLandingDisplay(e) {
     if (e === 'voice') {
@@ -47,12 +51,7 @@ export default function LandingList(props) {
         activedisplay={activedisplay}
         page={'index'}
       />
-      <div
-        className='landing-content'
-        style={
-          landingdisplay === true ? { display: 'inline' } : { display: 'none' }
-        }
-      >
+      <div className='landing-content'>
         <h2>
           We <em className='orange-emphasis'>scale</em> your network
           infrastructure with your growing business

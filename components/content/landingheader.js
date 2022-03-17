@@ -24,7 +24,7 @@ export default function LandingHeaderContent(props) {
     headlineTextSwitch()
     setInterval(() => {
       headlineTextSwitch()
-    }, 24000)
+    }, 15000)
     async function headlineTextSwitch() {
       let headlinelist = [
         'schools',
@@ -35,7 +35,7 @@ export default function LandingHeaderContent(props) {
       ]
 
       for (const item of headlinelist) {
-        await new Promise((res) => setTimeout(res, 4000))
+        await new Promise((res) => setTimeout(res, 3000))
         setActiveWord(item)
       }
     }

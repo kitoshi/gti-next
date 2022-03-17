@@ -2,8 +2,16 @@ export default function VoiceListContent(props) {
   return (
     <div
       style={
-        props.landingdisplay === false && props.activedisplay === 'VoiceListContent' || props.page !== 'index'
-          ? { display: 'inline' }
+        (props.landingdisplay === false &&
+          props.activedisplay === 'VoiceListContent') ||
+        props.page !== 'index'
+          ? {
+              display: 'inline',
+              position: 'absolute',
+              left: '0',
+              backgroundColor: 'var(--section-color)',
+              zIndex: '2'
+            }
           : { display: 'none' }
       }
     >

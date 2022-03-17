@@ -5,7 +5,13 @@ export default function InternetListContent(props) {
         (props.landingdisplay === false &&
           props.activedisplay === 'InternetListContent') ||
         props.page !== 'index'
-          ? { display: 'inline' }
+          ? {
+              display: 'inline',
+              position: 'absolute',
+              left: '0',
+              backgroundColor: 'var(--section-color)',
+              zIndex: '2'
+            }
           : { display: 'none' }
       }
     >

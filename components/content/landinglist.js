@@ -22,7 +22,7 @@ export default function LandingList(props) {
       setLandingDisplay('InternetListContent')
     } else if (e === 'data') {
       setLandingDisplay('DataListContent')
-    } else if (e === '') {
+    } else {
       setLandingDisplay('')
     }
   }
@@ -41,16 +41,19 @@ export default function LandingList(props) {
       <VoiceListContent
         landingdisplay={landingdisplay}
         activedisplay={activedisplay}
+        handleLandingVisibility={() => handleLandingVisibility()}
         page={'index'}
       />
       <InternetListContent
         landingdisplay={landingdisplay}
         activedisplay={activedisplay}
+        handleLandingVisibility={() => handleLandingVisibility()}
         page={'index'}
       />
       <DataListContent
         landingdisplay={landingdisplay}
         activedisplay={activedisplay}
+        handleLandingVisibility={() => handleLandingVisibility()}
         page={'index'}
       />
       <div className='landing-content'>

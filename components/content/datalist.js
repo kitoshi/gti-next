@@ -48,7 +48,9 @@ export default function DataListContent(props) {
           : { display: 'none' }
       }
       ref={containerRef}
-      onClick={handleContainerVisibility}
+      onClick={() => {
+        handleContainerVisibility(), props.handleLandingVisibility()
+      }}
     >
       <h3>Data Services</h3>
       <h3>Predictable, Secure, and Private</h3>

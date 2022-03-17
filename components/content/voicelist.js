@@ -49,7 +49,9 @@ export default function VoiceListContent(props) {
           : { display: 'none' }
       }
       ref={containerRef}
-      onClick={handleContainerVisibility}
+      onClick={() => {
+        handleContainerVisibility(), props.handleLandingVisibility()
+      }}
     >
       <h3 style={{ marginTop: '0' }}>Voice Services</h3>
       <h4>

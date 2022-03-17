@@ -48,7 +48,9 @@ export default function InternetListContent(props) {
           : { display: 'none' }
       }
       ref={containerRef}
-      onClick={handleContainerVisibility}
+      onClick={() => {
+        handleContainerVisibility(), props.handleLandingVisibility()
+      }}
     >
       <h3>Internet Services</h3>
       <h3>The Best Connection for your business.</h3>

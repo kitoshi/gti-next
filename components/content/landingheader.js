@@ -21,12 +21,17 @@ export default function LandingHeaderContent(props) {
   }
 
   useEffect(() => {
+    //mounted variable for cleanup on page change
     let mounted = true
-    if (mounted) {
+    if (mounted === true) {
       headlineTextSwitch()
-      setInterval(() => {
-        headlineTextSwitch()
-      }, 15000)
+      try {
+        setInterval(() => {
+          headlineTextSwitch()
+        }, 15000)
+      } catch (error) {
+        mounted = false
+      }
       async function headlineTextSwitch() {
         let headlinelist = [
           'schools',
@@ -37,8 +42,12 @@ export default function LandingHeaderContent(props) {
         ]
 
         for (const item of headlinelist) {
-          await new Promise((res) => setTimeout(res, 3000))
-          setActiveWord(item)
+          try {
+            await new Promise((res) => setTimeout(res, 3000))
+            setActiveWord(item)
+          } catch (error) {
+            mounted = false
+          }
         }
       }
     }

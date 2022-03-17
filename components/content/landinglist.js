@@ -29,7 +29,7 @@ export default function LandingList(props) {
 
   useEffect(() => {
     if (props.landinglistfocus === 'Enterprise') {
-      landingGridRef.current.style.border = '2px solid black'
+      landingGridRef.current.style.border = '5px solid black'
     }
     //animated border here, make 100% wide element and shrink borders to show fake animation
 

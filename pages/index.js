@@ -111,7 +111,7 @@ export default function Home(props) {
           }}
         >
           <p>
-            2017 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
+            2022 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
             W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772
           </p>
         </footer>

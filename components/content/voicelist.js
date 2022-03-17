@@ -5,7 +5,7 @@ export default function VoiceListContent(props) {
   const [containerVisibility, setContainerVisibility] = useState(true)
 
   function handleContainerVisibility() {
-    if (containerVisibility === true) {
+    if (containerVisibility === true && props.page !== 'services') {
       setContainerVisibility(false)
     } else {
       setContainerVisibility(true)
@@ -13,19 +13,20 @@ export default function VoiceListContent(props) {
   }
 
   useEffect(() => {
-    if (containerVisibility === true) {
-    } else if (containerVisibility === false) {
+    if (containerVisibility === true && props.page !== 'services') {
+    } else if (containerVisibility === false && props.page !== 'services') {
       containerRef.current.style.display = 'none'
     }
 
     return () => {}
-  }, [containerVisibility, containerRef])
+  }, [containerVisibility, containerRef, props.page])
 
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
+      containerRef.current.style.backgroundColor = 'var(--off-white)'
+      containerRef.current.style.zIndex = '0'
     }
-
     return () => {}
   }, [containerRef, props.page])
 
@@ -40,7 +41,10 @@ export default function VoiceListContent(props) {
               position: 'absolute',
               left: '0',
               backgroundColor: 'var(--section-color)',
-              zIndex: '2'
+              zIndex: '2',
+              paddingLeft: '3%',
+              paddingRight: '3%',
+              paddingBottom: '10%'
             }
           : { display: 'none' }
       }
@@ -53,10 +57,10 @@ export default function VoiceListContent(props) {
         when you want them.
       </h4>
       <h4>Crystal Clear Voice Quality and Call Controls.</h4>
-      <h4>
+      <p>
         Your voice services give that personal touch to your client contact.
         Ensure your branding is supported with:
-      </h4>
+      </p>
       <ul>
         <li>
           SIP Trunking Flexibility, multiple options. Reduce toll charges and

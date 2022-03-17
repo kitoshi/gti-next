@@ -5,7 +5,7 @@ export default function InternetListContent(props) {
   const [containerVisibility, setContainerVisibility] = useState(true)
 
   function handleContainerVisibility() {
-    if (containerVisibility === true) {
+    if (containerVisibility === true && props.page !== 'services') {
       setContainerVisibility(false)
     } else {
       setContainerVisibility(true)
@@ -13,13 +13,13 @@ export default function InternetListContent(props) {
   }
 
   useEffect(() => {
-    if (containerVisibility === true) {
-    } else if (containerVisibility === false) {
+    if (containerVisibility === true && props.page !== 'services') {
+    } else if (containerVisibility === false && props.page !== 'services') {
       containerRef.current.style.display = 'none'
     }
 
     return () => {}
-  }, [containerVisibility, containerRef])
+  }, [containerVisibility, containerRef, props.page])
 
   useLayoutEffect(() => {
     if (props.page === 'services') {
@@ -40,7 +40,10 @@ export default function InternetListContent(props) {
               position: 'absolute',
               left: '0',
               backgroundColor: 'var(--section-color)',
-              zIndex: '2'
+              zIndex: '2',
+              paddingLeft: '3%',
+              paddingRight: '3%',
+              paddingBottom: '10%'
             }
           : { display: 'none' }
       }

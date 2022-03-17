@@ -1,4 +1,15 @@
+import { useRef, useLayoutEffect } from 'react'
+
 export default function InternetListContent(props) {
+  const containerRef = useRef(null)
+  useLayoutEffect(() => {
+    if (props.page === 'services') {
+      containerRef.current.style.position = 'relative'
+    }
+
+    return () => {}
+  }, [containerRef, props.page])
+
   return (
     <div
       style={
@@ -14,6 +25,7 @@ export default function InternetListContent(props) {
             }
           : { display: 'none' }
       }
+      ref={containerRef}
     >
       <h3>Internet Services</h3>
       <h3>The Best Connection for your business.</h3>

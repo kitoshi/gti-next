@@ -111,7 +111,7 @@ nav {
   margin-top: 2%;
 }
 
-nav:active {
+nav a:active {
   background: transparent;
 }
 

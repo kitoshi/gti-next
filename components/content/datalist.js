@@ -1,4 +1,15 @@
+import { useRef, useLayoutEffect } from 'react'
+
 export default function DataListContent(props) {
+  const containerRef = useRef(null)
+  useLayoutEffect(() => {
+    if (props.page === 'services') {
+      containerRef.current.style.position = 'relative'
+      containerRef.current.style.backgroundColor = 'var(--off-white)'
+    }
+
+    return () => {}
+  }, [containerRef, props.page])
   return (
     <div
       style={
@@ -14,6 +25,7 @@ export default function DataListContent(props) {
             }
           : { display: 'none' }
       }
+      ref={containerRef}
     >
       <h3>Data Services</h3>
       <h3>Predictable, Secure, and Private</h3>

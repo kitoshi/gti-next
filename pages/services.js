@@ -3,7 +3,7 @@ import Navbar from '../components/navbar'
 import InternetListContent from '../components/content/internetlist'
 import DataListContent from '../components/content/datalist'
 import ContactForm from '../components/contactform'
-export default function Home(props) {
+export default function Services(props) {
   return (
     <>
       <main>
@@ -13,7 +13,7 @@ export default function Home(props) {
             paddingTop: '15px'
           }}
         >
-          <VoiceListContent />
+          <VoiceListContent page={'services'} />
         </section>
 
         <section
@@ -25,7 +25,7 @@ export default function Home(props) {
             color: 'var(--heading-color)'
           }}
         >
-          <InternetListContent />
+          <InternetListContent page={'services'} />
         </section>
         <section
           style={{
@@ -35,7 +35,7 @@ export default function Home(props) {
             paddingTop: '15px'
           }}
         >
-          <DataListContent />
+          <DataListContent page={'services'} />
         </section>
 
         <section

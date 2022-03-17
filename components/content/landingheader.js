@@ -21,25 +21,31 @@ export default function LandingHeaderContent(props) {
   }
 
   useEffect(() => {
-    headlineTextSwitch()
-    setInterval(() => {
+    let mounted = true
+    if (mounted) {
       headlineTextSwitch()
-    }, 15000)
-    async function headlineTextSwitch() {
-      let headlinelist = [
-        'schools',
-        'non-profits',
-        'charities',
-        'universities',
-        'businesses'
-      ]
+      setInterval(() => {
+        headlineTextSwitch()
+      }, 15000)
+      async function headlineTextSwitch() {
+        let headlinelist = [
+          'schools',
+          'non-profits',
+          'charities',
+          'universities',
+          'businesses'
+        ]
 
-      for (const item of headlinelist) {
-        await new Promise((res) => setTimeout(res, 3000))
-        setActiveWord(item)
+        for (const item of headlinelist) {
+          await new Promise((res) => setTimeout(res, 3000))
+          setActiveWord(item)
+        }
       }
     }
-    return () => {}
+
+    return () => {
+      mounted = false
+    }
   }, [])
 
   return (

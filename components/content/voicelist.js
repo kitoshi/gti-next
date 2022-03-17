@@ -1,4 +1,15 @@
+import { useRef, useLayoutEffect } from 'react'
+
 export default function VoiceListContent(props) {
+  const containerRef = useRef(null)
+  useLayoutEffect(() => {
+    if (props.page === 'services') {
+      containerRef.current.style.position = 'relative'
+    }
+
+    return () => {}
+  }, [containerRef, props.page])
+
   return (
     <div
       style={
@@ -14,6 +25,7 @@ export default function VoiceListContent(props) {
             }
           : { display: 'none' }
       }
+      ref={containerRef}
     >
       <h3 style={{ marginTop: '0' }}>Voice Services</h3>
       <h4>

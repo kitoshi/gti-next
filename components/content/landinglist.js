@@ -22,6 +22,8 @@ export default function LandingList(props) {
       setLandingDisplay('InternetListContent')
     } else if (e === 'data') {
       setLandingDisplay('DataListContent')
+    } else if (e === '') {
+      setLandingDisplay('')
     }
   }
 

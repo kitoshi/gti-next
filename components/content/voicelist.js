@@ -53,16 +53,15 @@ export default function VoiceListContent(props) {
         handleContainerVisibility(), props.handleLandingVisibility()
       }}
     >
-      <h3 style={{ marginTop: '0' }}>Voice Services</h3>
+      <h3 style={{ marginTop: '0' }}>Our Voice Services</h3>
       <h4>
-        Scalable Crystal Clear Calling quality solutions delivered where and
-        when you want them.
+        Scalable, Crystal Clear Voice, Call Control solutions delivered where
+        and when you want them.
       </h4>
-      <h4>Crystal Clear Voice Quality and Call Controls.</h4>
-      <p>
+      <h5>
         Your voice services give that personal touch to your client contact.
         Ensure your branding is supported with:
-      </p>
+      </h5>
       <ul>
         <li>
           SIP Trunking Flexibility, multiple options. Reduce toll charges and

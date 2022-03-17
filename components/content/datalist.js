@@ -52,16 +52,15 @@ export default function DataListContent(props) {
         handleContainerVisibility(), props.handleLandingVisibility()
       }}
     >
-      <h3>Data Services</h3>
-      <h3>Predictable, Secure, and Private</h3>
-      <h3>Robust Reliable Services You Can Count On.</h3>
-      <h4>
-        Secure and reliable networking solutions. Connect your locations across
-        the country on a completely private network with the most direct, lowest
-        latency data transfer routes for your mission-critical applications.
-        Completely protected from any events that affect the internet (including
-        hacking and performance).
-      </h4>
+      <h3>Our Data Services</h3>
+      <h4>Robust, Reliable, Predictable, Secure, and Private</h4>
+      <h5> Reliable and Secure Networking Services You Can Count On.</h5>
+      <p>
+        Connect your locations across the country on a completely private
+        network with the most direct, lowest latency data transfer routes for
+        your mission-critical applications. Completely protected from any events
+        that affect the internet (including hacking and performance).
+      </p>
       <ul>
         <li>
           MPLS Proven best of breed predictable secure multipoint connections

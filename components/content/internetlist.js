@@ -52,13 +52,12 @@ export default function InternetListContent(props) {
         handleContainerVisibility(), props.handleLandingVisibility()
       }}
     >
-      <h3>Internet Services</h3>
-      <h3>The Best Connection for your business.</h3>
-      <h3>Internet for Business</h3>
-      <h4>
+      <h3>Our Internet Services</h3>
+      <h4>The Best Connection for your business.</h4>
+      <h5>
         High-speed, dedicated internet access, with the features you need to
         connect with customers, partners, and employees.
-      </h4>
+      </h5>
       <ul>
         <li>Fiber Internet. Robust high bandwidth scalable solutions</li>
         <li>

@@ -77,6 +77,22 @@ h3 {
   font-size: 250%;
   margin-top: 5%;
   margin-bottom: 5%;
+  padding-top: 7%;
+}
+
+h4 {
+  font-size: 200%;
+  font-family: 'DMSerifDisplay';
+}
+
+h5 {
+  font-size: 150%;
+  font-family: 'DMSerifDisplay';
+}
+
+h6 {
+  font-size: 125%;
+  font-family: 'DMSerifDisplay';
 }
 
 header {

@@ -75,7 +75,6 @@ export default function LandingHeaderContent(props) {
         style={{
           paddingLeft: '2%',
           paddingRight: '2%',
-          height: '100%',
           width: '100%',
           justifyContent: 'center'
         }}
@@ -87,9 +86,7 @@ export default function LandingHeaderContent(props) {
         <Image
           src={'/wavy_animation.gif'}
           alt='wavy wave animation'
-          layout='intrinsic'
-          width={640}
-          height={156}
+          layout='fill'
         />
       </div>
 
@@ -131,7 +128,8 @@ export default function LandingHeaderContent(props) {
         style={{
           textTransform: 'uppercase',
           fontSize: 'medium',
-          textAlign: 'center'
+          textAlign: 'center',
+          marginTop: '0'
         }}
       >
         /{' '}

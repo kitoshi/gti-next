@@ -60,11 +60,18 @@ h1 {
   font-family: 'DMSerifDisplay';
   font-size: 300%;
   padding-top: 5%;
-  padding-bottom: 5%;
-  margin-top: 15%;
+  padding-bottom: 0%;
+  margin-top: 10%;
   margin-bottom: 0%;
   max-height: max-content;
   min-height: 50%;
+}
+
+.wavy-container {
+  padding-bottom: 15%;
+  margin-bottom: 15%;
+  height: 13%;
+  position: relative;
 }
 
 h2 {

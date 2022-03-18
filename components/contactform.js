@@ -16,6 +16,7 @@ export default function ContactForm() {
       className='calendly-inline-widget'
       data-url='https://calendly.com/g-t-i?hide_landing_page_details=1&hide_gdpr_banner=1'
       style={{ minWidth: '320px', height: '630px' }}
+      title='calender meeting scheduler'
     />
   )
 }

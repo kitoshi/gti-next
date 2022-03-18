@@ -5,12 +5,12 @@
   --pink-lace: #f9cff2ff;
   --off-white: #f5f6fa;
   --palatinate-purple: #52154eff;
-  --russian-violet: #111344ff;
+  --russian-violet: #111344;
   --black-blue: #212a33;
   --ochre: #c97211;
   --faux-eerie: #0d1427;
   --gold: #d4af37;
-  --primary-color: #111344ff;
+  --primary-color: #111344;
   --secondary-color: var(--ochre);
   --hover-color: #aab4be;
   --font-color: #0d1427;
@@ -64,7 +64,7 @@ h1 {
   margin-top: 15%;
   margin-bottom: 0%;
   max-height: max-content;
-  min-height: 70%;
+  min-height: 50%;
 }
 
 h2 {
@@ -235,6 +235,8 @@ section {
     padding-top: 0;
     margin-bottom: 10%;
     margin-top: 10%;
+    max-height: 75%;
+    min-height: 50%;
   }
 
   a {

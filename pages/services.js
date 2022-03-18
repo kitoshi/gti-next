@@ -1,18 +1,53 @@
 import VoiceListContent from '../components/content/voicelist'
-import Navbar from '../components/navbar'
 import InternetListContent from '../components/content/internetlist'
 import DataListContent from '../components/content/datalist'
 import ContactForm from '../components/contactform'
+import Image from 'next/image'
+import { useState, useEffect } from 'react'
 export default function Services(props) {
+  const [width, setWidth] = useState(0)
+  useEffect(() => {
+    function updateWidth() {
+      setWidth(() => window.innerWidth)
+    }
+    window.addEventListener('resize', updateWidth)
+    updateWidth()
+    return () => {
+      window.removeEventListener('resize', updateWidth)
+    }
+  }, [width])
   return (
     <>
+      <header
+        style={
+          width < 800
+            ? {
+                display: 'flex',
+                backgroundColor: 'var(--off-white)',
+                paddingTop: '4%',
+                marginTop: '0',
+                paddingLeft: '3%'
+              }
+            : { display: 'none' }
+        }
+      >
+        <Image
+          src={'/logo_only_clr_sm.png'}
+          alt='GTI logo'
+          layout='fixed'
+          width={24}
+          height={24}
+        />
+        &nbsp;Global Telemanagement Inc.
+      </header>
       <main>
         <section
           style={{
             backgroundColor: 'var(--bg-color)',
-            paddingTop: '15px'
+            paddingTop: '10%'
           }}
         >
+          <h1>Our Services Suite</h1>
           <VoiceListContent page={'services'} />
         </section>
 

@@ -49,7 +49,12 @@ export default function DataListContent(props) {
       }
       ref={containerRef}
       onClick={() => {
-        handleContainerVisibility(), props.handleLandingVisibility()
+        if (props.handleLandingVisibility === undefined) {
+          //if on page with no props passed
+          handleContainerVisibility()
+        } else {
+          handleContainerVisibility(), props.handleLandingVisibility()
+        }
       }}
     >
       <h3>Our Data Services</h3>

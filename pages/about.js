@@ -1,11 +1,45 @@
 import ContactForm from '../components/contactform'
-
+import Image from 'next/image'
+import { useState, useEffect } from 'react'
 export default function About() {
+  const [width, setWidth] = useState(0)
+  useEffect(() => {
+    function updateWidth() {
+      setWidth(() => window.innerWidth)
+    }
+    window.addEventListener('resize', updateWidth)
+    updateWidth()
+    return () => {
+      window.removeEventListener('resize', updateWidth)
+    }
+  }, [width])
   return (
     <>
-      <main>
+      <header
+        style={
+          width < 800
+            ? {
+                display: 'flex',
+                backgroundColor: 'var(--off-white)',
+                paddingTop: '4%',
+                marginTop: '0',
+                paddingLeft: '3%'
+              }
+            : { display: 'none' }
+        }
+      >
+        <Image
+          src={'/logo_only_clr_sm.png'}
+          alt='GTI logo'
+          layout='fixed'
+          width={24}
+          height={24}
+        />
+        &nbsp;Global Telemanagement Inc.
+      </header>
+      <main style={{ marginTop: '0' }}>
         <section>
-          <h1 style={{ marginTop: '0' }}>Who Are We at GTI?</h1>
+          <h1 style={{ marginTop: '0', paddingTop: '20%' }}>Our Team at GTI</h1>
           <h2>Who Are We:</h2>
           <p>
             Established in 1995, GTI has a proven track record of bringing

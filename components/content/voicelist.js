@@ -50,10 +50,15 @@ export default function VoiceListContent(props) {
       }
       ref={containerRef}
       onClick={() => {
-        handleContainerVisibility(), props.handleLandingVisibility()
+        if (props.handleLandingVisibility === undefined) {
+          //if on page with no props passed
+          handleContainerVisibility()
+        } else {
+          handleContainerVisibility(), props.handleLandingVisibility()
+        }
       }}
     >
-      <h3 style={{ marginTop: '0' }}>Our Voice Services</h3>
+      <h3 style={{ marginTop: '0', fontSize: '300%' }}>Our Voice Services</h3>
       <h4>
         Scalable, Crystal Clear Voice, Call Control solutions delivered where
         and when you want them.

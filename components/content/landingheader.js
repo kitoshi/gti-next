@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 export default function LandingHeaderContent(props) {
   const [width, setWidth] = useState(0)
-  const [activeword, setActiveWord] = useState('business')
+  const [activeword, setActiveWord] = useState('businesses')
 
   useEffect(() => {
     function updateWidth() {
@@ -83,6 +83,16 @@ export default function LandingHeaderContent(props) {
         Enabling {activeword} to flow with{' '}
         <em className='orange-emphasis'>change</em> in order to grow.
       </h1>
+      <div className='wavy-container'>
+        <Image
+          src={'/wavy_animation.gif'}
+          alt='wavy wave animation'
+          layout='intrinsic'
+          width={640}
+          height={156}
+        />
+      </div>
+
       <div
         className='landing-button-box'
         style={{ display: 'flex', justifyContent: 'center' }}
@@ -117,7 +127,6 @@ export default function LandingHeaderContent(props) {
           Contact Us
         </button>
       </div>
-
       <p
         style={{
           textTransform: 'uppercase',

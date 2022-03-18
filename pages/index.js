@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import LandingListContent from '../components/content/landinglist'
 import LandingHeaderContent from '../components/content/landingheader'
 import BottomLineContent from '../components/content/bottomlinelist'

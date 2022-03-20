@@ -96,6 +96,7 @@ export default function LandingList(props) {
               className='landing-image'
               width={150}
               height={150}
+              priority
             />
             <p
               style={{
@@ -130,11 +131,12 @@ export default function LandingList(props) {
           >
             <Image
               src='/mesh_animation.gif'
-              alt='texting on phone'
+              alt='mesh network shifting'
               layout='intrinsic'
               className='landing-image'
               width={150}
               height={150}
+              priority
             />
             <p
               style={{
@@ -174,6 +176,7 @@ export default function LandingList(props) {
               className='landing-image'
               width={150}
               height={150}
+              priority
             />
             <p
               style={{

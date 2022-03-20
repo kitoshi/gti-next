@@ -95,6 +95,7 @@ export default function LandingHeaderContent(props) {
           }}
           className='landing-button'
           onClick={props.onLearnButtonClick}
+          tabIndex='0'
         >
           Learn More
         </button>
@@ -127,6 +128,7 @@ export default function LandingHeaderContent(props) {
             props.onLearnButtonClick(), handleFocusChange('Enterprise')
           }}
           href='#enterprise information list'
+          className='landing-service-links'
         >
           Enterprise{' '}
         </a>
@@ -136,6 +138,7 @@ export default function LandingHeaderContent(props) {
             props.onLearnButtonClick(), handleFocusChange('Voice')
           }}
           href='#voice information list'
+          className='landing-service-links'
         >
           Voice{' '}
         </a>
@@ -145,6 +148,7 @@ export default function LandingHeaderContent(props) {
             props.onLearnButtonClick(), handleFocusChange('Internet')
           }}
           href='#internet information list'
+          className='landing-service-links'
         >
           Internet{' '}
         </a>
@@ -154,6 +158,7 @@ export default function LandingHeaderContent(props) {
             props.onLearnButtonClick(), handleFocusChange('Data')
           }}
           href='#data information list'
+          className='landing-service-links'
         >
           Data
         </a>

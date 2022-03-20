@@ -4,6 +4,8 @@ const HamburgerSVG = (props) => (
     height={props.height}
     width={props.width}
     viewBox='0 0 80 80'
+    title='hamburger navigation icon'
+    role='navigation'
   >
     <rect y='20' width='100' height='10' fill='#c97211'></rect>
     <rect y='40' width='100' height='10' fill='#c97211'></rect>

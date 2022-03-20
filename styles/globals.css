@@ -139,10 +139,20 @@ nav a:active {
   background: transparent;
 }
 
-a {
+a.landing-service-links {
   text-decoration: none;
-  color: var(--section-color);
+  color: var(--font-color);
   cursor: pointer;
+}
+
+a.header-home-link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: var(--font-color);
+  cursor: pointer;
+  align-items: center;
+  font-family: DMSerifDisplay;
 }
 
 .landing-button {
@@ -165,6 +175,8 @@ button.landing-button:hover {
 }
 
 .navbar-item {
+  color: var(--font-color);
+  text-decoration: none;
   border-bottom: 2px solid transparent;
   text-align: center;
   background-color: white;
@@ -227,13 +239,14 @@ section {
 }
 
 .contact-link {
-  background-color: var(--secondary-color);
+  background-color: var(--section-color);
   width: auto;
   max-width: 50%;
   padding: 2%;
-  color: var(--section-color);
+  color: var(--off-white);
   font-family: DMSerifDisplay;
   text-align: center;
+  border: 2px solid var(--secondary-color);
 }
 
 .contact-link:hover {

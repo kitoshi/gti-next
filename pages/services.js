@@ -31,14 +31,16 @@ export default function Services(props) {
               }
         }
       >
-        <Image
-          src={'/logo_only_clr_sm.png'}
-          alt='GTI logo'
-          layout='fixed'
-          width={24}
-          height={24}
-        />
-        &nbsp;Global Telemanagement Inc.
+        <a href={'/'} className='header-home-link' alt='logo home link'>
+          <Image
+            src={'/logo_only_clr_sm.png'}
+            alt='GTI logo'
+            layout='fixed'
+            width={24}
+            height={24}
+          />
+          &nbsp;Global Telemanagement Inc.
+        </a>
       </header>
       <main>
         <section

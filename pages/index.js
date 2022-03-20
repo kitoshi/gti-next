@@ -120,7 +120,8 @@ export default function Home(props) {
         <section
           style={{
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
           ref={contactRef}
         >

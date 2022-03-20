@@ -38,7 +38,15 @@ export default function Contact(props) {
         />
         &nbsp;Global Telemanagement Inc.
       </header>
-      <section>
+      <section
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          paddingTop: '15px',
+          backgroundColor: 'var(--section-color)',
+          color: 'white'
+        }}
+      >
         <h3 style={{ marginTop: '0', paddingTop: '20%' }}>
           Please Contact Us For Any Additional Information.
         </h3>

@@ -58,7 +58,9 @@ export default function Services(props) {
             flexDirection: 'column',
             justifyContent: 'space-evenly',
             backgroundColor: 'var(--section-color)',
-            color: 'var(--heading-color)'
+            color: 'var(--heading-color)',
+            paddingLeft: '0',
+            paddingRight: '0'
           }}
         >
           <InternetListContent page={'services'} />
@@ -68,7 +70,9 @@ export default function Services(props) {
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: 'var(--bg-color)',
-            paddingTop: '15px'
+            paddingTop: '15px',
+            paddingLeft: '0',
+            paddingRight: '0'
           }}
         >
           <DataListContent page={'services'} />
@@ -77,7 +81,8 @@ export default function Services(props) {
         <section
           style={{
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
           ref={props.contactRef}
         >

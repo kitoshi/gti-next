@@ -7,12 +7,13 @@
   --palatinate-purple: #52154eff;
   --russian-violet: #111344;
   --black-blue: #212a33;
-  --ochre: #c97211;
+  --ochre: #ca7412;
   --faux-eerie: #0d1427;
   --gold: #d4af37;
   --primary-color: #111344;
   --secondary-color: var(--ochre);
   --hover-color: #aab4be;
+  --secondary-hover: #c89c68;
   --font-color: #0d1427;
   --bg-color: var(--off-white);
   --heading-color: #efe9e7ff;
@@ -225,6 +226,19 @@ section {
   padding-right: 3%;
 }
 
+.contact-link {
+  background-color: var(--secondary-color);
+  width: auto;
+  max-width: 50%;
+  padding: 2%;
+  color: var(--section-color);
+  font-family: DMSerifDisplay;
+  text-align: center;
+}
+
+.contact-link:hover {
+  background-color: var(--secondary-hover);
+}
 @keyframes drawBorder {
   /*animated border here*/
 }
@@ -360,6 +374,7 @@ section {
   .wavy-container {
     padding-bottom: 15%;
     margin-bottom: 5%;
+    margin-top: auto;
     height: 13%;
     position: relative;
   }

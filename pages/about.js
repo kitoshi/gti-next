@@ -38,7 +38,16 @@ export default function About() {
         &nbsp;Global Telemanagement Inc.
       </header>
       <main style={{ marginTop: '0' }}>
-        <section>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingTop: '15px',
+            backgroundColor: 'var(--off-white)',
+            color: 'var(--font-color)',
+            alignItems: 'center'
+          }}
+        >
           <h1 style={{ marginTop: '0', paddingTop: '10%' }}>Our Team at GTI</h1>
           <h2>Who Are We:</h2>
           <p>
@@ -115,8 +124,8 @@ export default function About() {
           <h4>
             GTI...bringing a world of telecom solutions to your business.{' '}
           </h4>
+          <ContactForm />
         </section>
-        <ContactForm />
       </main>
     </>
   )

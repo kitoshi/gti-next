@@ -75,6 +75,7 @@ export default function LandingHeaderContent(props) {
           src={'/wavy_animation.gif'}
           alt='wavy wave animation'
           layout='fill'
+          priority
         />
       </div>
 

@@ -17,15 +17,15 @@ export default function About() {
     <>
       <header
         style={
-          width < 800
-            ? {
+          width > 800
+            ? { display: 'none' }
+            : {
                 display: 'flex',
                 backgroundColor: 'var(--off-white)',
                 paddingTop: '4%',
                 marginTop: '0',
                 paddingLeft: '3%'
               }
-            : { display: 'none' }
         }
       >
         <Image
@@ -39,7 +39,7 @@ export default function About() {
       </header>
       <main style={{ marginTop: '0' }}>
         <section>
-          <h1 style={{ marginTop: '0', paddingTop: '20%' }}>Our Team at GTI</h1>
+          <h1 style={{ marginTop: '0', paddingTop: '10%' }}>Our Team at GTI</h1>
           <h2>Who Are We:</h2>
           <p>
             Established in 1995, GTI has a proven track record of bringing

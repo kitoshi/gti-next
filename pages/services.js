@@ -20,15 +20,15 @@ export default function Services(props) {
     <>
       <header
         style={
-          width < 800
-            ? {
+          width > 800
+            ? { display: 'none' }
+            : {
                 display: 'flex',
                 backgroundColor: 'var(--off-white)',
                 paddingTop: '4%',
                 marginTop: '0',
                 paddingLeft: '3%'
               }
-            : { display: 'none' }
         }
       >
         <Image
@@ -43,11 +43,12 @@ export default function Services(props) {
       <main>
         <section
           style={{
-            backgroundColor: 'var(--bg-color)',
-            paddingTop: '10%'
+            backgroundColor: 'var(--bg-color)'
           }}
         >
-          <h1>Our Services Suite</h1>
+          <h1 style={{ marginTop: '0', paddingTop: '10%' }}>
+            Our Services Suite
+          </h1>
           <VoiceListContent page={'services'} />
         </section>
 

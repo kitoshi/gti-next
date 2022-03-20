@@ -18,15 +18,15 @@ export default function Contact(props) {
     <>
       <header
         style={
-          width < 800
-            ? {
+          width > 800
+            ? { display: 'none' }
+            : {
                 display: 'flex',
                 backgroundColor: 'var(--off-white)',
                 paddingTop: '4%',
                 marginTop: '0',
                 paddingLeft: '3%'
               }
-            : { display: 'none' }
         }
       >
         <Image

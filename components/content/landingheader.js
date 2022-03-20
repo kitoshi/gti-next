@@ -24,31 +24,31 @@ export default function LandingHeaderContent(props) {
     //mounted variable for cleanup on page change
     let mounted = true
     if (mounted === true) {
-      headlineTextSwitch()
       try {
+        headlineTextSwitch()
         setInterval(() => {
           headlineTextSwitch()
         }, 15000)
-      } catch (error) {
-        mounted = false
-      }
-      async function headlineTextSwitch() {
-        let headlinelist = [
-          'schools',
-          'non-profits',
-          'charities',
-          'universities',
-          'businesses'
-        ]
+        async function headlineTextSwitch() {
+          let headlinelist = [
+            'schools',
+            'non-profits',
+            'charities',
+            'universities',
+            'businesses'
+          ]
 
-        for (const item of headlinelist) {
-          try {
-            await new Promise((res) => setTimeout(res, 3000))
-            setActiveWord(item)
-          } catch (error) {
-            mounted = false
+          for (const item of headlinelist) {
+            try {
+              await new Promise((res) => setTimeout(res, 3000))
+              setActiveWord(item)
+            } catch (error) {
+              mounted = false
+            }
           }
         }
+      } catch (error) {
+        mounted = false
       }
     }
 
@@ -59,18 +59,6 @@ export default function LandingHeaderContent(props) {
 
   return (
     <>
-      <header
-        style={width < 800 ? { display: 'inherit' } : { display: 'none' }}
-      >
-        <Image
-          src={'/logo_only_clr_sm.png'}
-          alt='GTI logo'
-          layout='fixed'
-          width={24}
-          height={24}
-        />
-        &nbsp;Global Telemanagement Inc.
-      </header>
       <h1
         style={{
           paddingLeft: '2%',

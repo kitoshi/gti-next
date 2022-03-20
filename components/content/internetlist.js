@@ -41,13 +41,12 @@ export default function InternetListContent(props) {
               left: '0',
               backgroundColor: 'var(--section-color)',
               zIndex: '2',
-              paddingLeft: '3%',
-              paddingRight: '3%',
               paddingBottom: '10%'
             }
           : { display: 'none' }
       }
       ref={containerRef}
+      className='landing-list-item'
       onClick={() => {
         if (props.handleLandingVisibility === undefined) {
           //if on page with no props passed

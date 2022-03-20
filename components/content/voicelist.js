@@ -24,7 +24,7 @@ export default function VoiceListContent(props) {
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
-      containerRef.current.style.backgroundColor = 'var(--off-white)'
+      containerRef.current.style.backgroundColor = 'var(--section-color)'
       containerRef.current.style.zIndex = '0'
     }
     return () => {}
@@ -37,7 +37,8 @@ export default function VoiceListContent(props) {
           props.activedisplay === 'VoiceListContent') ||
         props.page !== 'index'
           ? {
-              display: 'inline',
+              display: 'flex',
+              flexDirection: 'column',
               position: 'absolute',
               left: '0',
               backgroundColor: 'var(--section-color)',
@@ -57,7 +58,7 @@ export default function VoiceListContent(props) {
         }
       }}
     >
-      <h3 style={{ marginTop: '0', fontSize: '300%' }}>Our Voice Services</h3>
+      <h3 style={{ marginTop: '0', fontSize: '300%' }}>Voice</h3>
       <h4>
         Scalable, Crystal Clear Voice, Call Control solutions delivered where
         and when you want them.

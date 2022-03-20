@@ -14,7 +14,7 @@
   --secondary-color: var(--ochre);
   --hover-color: #aab4be;
   --secondary-hover: #c89c68;
-  --font-color: #0d1427;
+  --font-color: #080c18;
   --bg-color: var(--off-white);
   --heading-color: #efe9e7ff;
   --section-color: #212a33;
@@ -241,10 +241,11 @@ section {
 .contact-link {
   background-color: var(--section-color);
   width: auto;
-  max-width: 50%;
+  max-width: 60%;
   padding: 2%;
   color: var(--off-white);
   font-family: DMSerifDisplay;
+  font-size: 120%;
   text-align: center;
   border: 2px solid var(--secondary-color);
 }
@@ -324,6 +325,7 @@ section {
   }
 
   .navbar-item {
+    color: var(--off-white);
     border-bottom: 2px solid transparent;
     font-family: 'OpenSans';
     margin-right: 0.5%;

@@ -24,6 +24,7 @@ export default function InternetListContent(props) {
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
+      containerRef.current.style.backgroundColor = ''
     }
 
     return () => {}
@@ -56,7 +57,7 @@ export default function InternetListContent(props) {
         }
       }}
     >
-      <h3>Our Internet Services</h3>
+      <h3>Internet</h3>
       <h4>The Best Connection for your business.</h4>
       <h5>
         High-speed, dedicated internet access, with the features you need to

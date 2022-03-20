@@ -45,15 +45,38 @@ export default function Services(props) {
       <main>
         <section
           style={{
-            backgroundColor: 'var(--bg-color)'
+            backgroundColor: 'var(--bg-color)',
+            alignItems: 'center',
+            paddingLeft: '0',
+            paddingRight: '0',
+            position: 'relative',
+            height: '100vh'
           }}
         >
-          <h1 style={{ marginTop: '0', paddingTop: '10%' }}>
-            Our Services Suite
-          </h1>
-          <VoiceListContent page={'services'} />
+          <div
+            className='services-header-image-container'
+            style={{ position: 'relative', height: '50vh' }}
+          >
+            <h1
+              style={{
+                marginTop: '0',
+                paddingTop: '10%',
+                paddingLeft: '3.5%',
+                position: 'absolute',
+                top: '5%',
+                left: '0',
+                zIndex: '1'
+              }}
+            >
+              Specialized enterprise infrastructure tailored to your company.
+            </h1>
+            <Image
+              src={'/gear_animation.gif'}
+              alt='spinning gears animation'
+              layout='fill'
+            />
+          </div>
         </section>
-
         <section
           style={{
             display: 'flex',
@@ -61,6 +84,19 @@ export default function Services(props) {
             justifyContent: 'space-evenly',
             backgroundColor: 'var(--section-color)',
             color: 'var(--heading-color)',
+            paddingLeft: '0',
+            paddingRight: '0'
+          }}
+        >
+          <VoiceListContent page={'services'} />
+        </section>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-evenly',
+            backgroundColor: 'var(--bg-color)',
+            color: 'var(--font-color)',
             paddingLeft: '0',
             paddingRight: '0'
           }}

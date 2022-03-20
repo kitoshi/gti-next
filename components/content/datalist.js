@@ -24,7 +24,8 @@ export default function DataListContent(props) {
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
-      containerRef.current.style.backgroundColor = 'var(--off-white)'
+      containerRef.current.style.backgroundColor = 'var(--section-color)'
+      containerRef.current.style.color = 'var(--off-white)'
     }
 
     return () => {}
@@ -56,7 +57,7 @@ export default function DataListContent(props) {
         }
       }}
     >
-      <h3>Our Data Services</h3>
+      <h3>Data</h3>
       <h4>Robust, Reliable, Predictable, Secure, and Private</h4>
       <h5> Reliable and Secure Networking Services You Can Count On.</h5>
       <p>

@@ -24,7 +24,8 @@ export default function InternetListContent(props) {
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
-      containerRef.current.style.backgroundColor = ''
+      containerRef.current.style.backgroundColor = 'var(--section-color)'
+      containerRef.current.style.color = 'var(--off-white)'
     }
 
     return () => {}

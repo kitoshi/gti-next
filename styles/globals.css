@@ -404,9 +404,4 @@ section {
     height: 50vh;
     position: relative;
   }
-  .services-first-section {
-    height: 100vh;
-    padding-left: 25%;
-    padding-right: 25%;
-  }
 }

@@ -4,6 +4,7 @@ import DataListContent from '../components/content/datalist'
 import ContactForm from '../components/contactform'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import EnhanceVoiceContent from '../components/content/enchancelist'
 
 export default function Services(props) {
   const [width, setWidth] = useState(0)
@@ -81,13 +82,37 @@ export default function Services(props) {
             flexDirection: 'column',
             justifyContent: 'space-evenly',
             backgroundColor: 'var(--section-color)',
-            color: 'var(--heading-color)',
+            color: 'var(--off-white)'
+          }}
+        >
+          <EnhanceVoiceContent />
+        </section>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-evenly',
+            backgroundColor: 'var(--off-white)',
+            color: 'var(--font-color)',
             paddingLeft: '0',
             paddingRight: '0'
           }}
         >
           <VoiceListContent page={'services'} />
         </section>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundColor: 'var(--bg-color)',
+            paddingTop: '15px',
+            paddingLeft: '0',
+            paddingRight: '0'
+          }}
+        >
+          <InternetListContent page={'services'} />
+        </section>
+
         <section
           style={{
             display: 'flex',
@@ -99,30 +124,7 @@ export default function Services(props) {
             paddingRight: '0'
           }}
         >
-          <InternetListContent page={'services'} />
-        </section>
-        <section
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: 'var(--bg-color)',
-            paddingTop: '15px',
-            paddingLeft: '0',
-            paddingRight: '0'
-          }}
-        >
           <DataListContent page={'services'} />
-        </section>
-
-        <section
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}
-          ref={props.contactRef}
-        >
-          <ContactForm />
         </section>
         <section
           style={{
@@ -132,7 +134,11 @@ export default function Services(props) {
             backgroundColor: 'var(--section-color)',
             color: 'white'
           }}
+          ref={props.contactRef}
         >
+          <ContactForm />
+        </section>
+        <section>
           <footer
             style={{
               display: 'flex',

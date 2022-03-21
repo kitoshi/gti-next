@@ -83,6 +83,27 @@ export default function Contact(props) {
         <p>Schedule a meeting online:</p>
         <ContactForm />
       </section>
+      <section
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          paddingTop: '15px',
+          backgroundColor: 'var(--off-white)',
+          color: 'var(--font-color)'
+        }}
+      >
+        <footer
+          style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <p>
+            2022 Global Telemanagement Inc. Global Telemanagement Inc. 200-1892
+            W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772
+          </p>
+        </footer>
+      </section>
     </>
   )
 }

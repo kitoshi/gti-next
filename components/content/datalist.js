@@ -24,8 +24,8 @@ export default function DataListContent(props) {
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
-      containerRef.current.style.backgroundColor = 'var(--section-color)'
-      containerRef.current.style.color = 'var(--off-white)'
+      containerRef.current.style.backgroundColor = 'var(--bg-color)'
+      containerRef.current.style.color = 'var(--font-color)'
     }
 
     return () => {}

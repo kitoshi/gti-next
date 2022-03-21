@@ -24,7 +24,7 @@ export default function VoiceListContent(props) {
   useLayoutEffect(() => {
     if (props.page === 'services') {
       containerRef.current.style.position = 'relative'
-      containerRef.current.style.backgroundColor = 'var(--section-color)'
+      containerRef.current.style.backgroundColor = 'var(--off-white)'
       containerRef.current.style.zIndex = '0'
     }
     return () => {}

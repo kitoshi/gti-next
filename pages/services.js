@@ -4,6 +4,7 @@ import DataListContent from '../components/content/datalist'
 import ContactForm from '../components/contactform'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+
 export default function Services(props) {
   const [width, setWidth] = useState(0)
   useEffect(() => {
@@ -44,19 +45,15 @@ export default function Services(props) {
       </header>
       <main>
         <section
+          className='services-first-section'
           style={{
             backgroundColor: 'var(--bg-color)',
             alignItems: 'center',
-            paddingLeft: '0',
-            paddingRight: '0',
             position: 'relative',
             height: '100vh'
           }}
         >
-          <div
-            className='services-header-image-container'
-            style={{ position: 'relative', height: '50vh' }}
-          >
+          <div className='services-header-image-container'>
             <h1
               style={{
                 marginTop: '0',
@@ -68,12 +65,13 @@ export default function Services(props) {
                 zIndex: '1'
               }}
             >
-              Specialized enterprise infrastructure tailored to your company.
+              Specialized enterprise infrastructure tailored to your business.
             </h1>
             <Image
               src={'/gear_animation.gif'}
               alt='spinning gears animation'
               layout='fill'
+              objectFit='contain'
             />
           </div>
         </section>

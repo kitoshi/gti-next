@@ -46,11 +46,18 @@ export default function About() {
             flexDirection: 'column',
             paddingTop: '15px',
             backgroundColor: 'var(--off-white)',
-            color: 'var(--font-color)',
-            alignItems: 'center'
+            color: 'var(--font-color)'
           }}
         >
           <h1 style={{ marginTop: '0', paddingTop: '10%' }}>Our Team at GTI</h1>
+        </section>
+        <section
+          style={{
+            backgroundColor: 'var(--section-color)',
+            paddingTop: '15px',
+            color: 'white'
+          }}
+        >
           <h2>Who Are We:</h2>
           <p>
             Established in 1995, GTI has a proven track record of bringing
@@ -64,7 +71,9 @@ export default function About() {
             client success. We want to develop a long-term partnership with you
             and help you succeed.
           </p>
-          <h3>Our Commitment:</h3>
+        </section>
+        <section>
+          <h3 style={{ paddingTop: '5%', marginTop: '0' }}>Our Commitment:</h3>
           <p>
             We focus on understanding your business. We help you towards meeting
             current needs and achieving your future goals.
@@ -95,6 +104,7 @@ export default function About() {
               </ul>
             </li>
           </ul>
+
           <h3>GTI Core Values:</h3>
           <ul>
             <li>
@@ -114,6 +124,14 @@ export default function About() {
               ourselves
             </li>
           </ul>
+        </section>
+        <section
+          style={{
+            backgroundColor: 'var(--section-color)',
+            paddingTop: '15px',
+            color: 'white'
+          }}
+        >
           <h3>Our approach is simple:</h3>
           <p>
             We provide tailored solutions that suit your business needs. We are
@@ -126,7 +144,38 @@ export default function About() {
           <h4>
             GTI...bringing a world of telecom solutions to your business.{' '}
           </h4>
+        </section>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            paddingTop: '5%'
+          }}
+        >
           <ContactForm />
+        </section>
+        <section
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingTop: '15px',
+            backgroundColor: 'var(--section-color)',
+            color: 'white'
+          }}
+        >
+          <footer
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
+            <p>
+              2022 Global Telemanagement Inc. Global Telemanagement Inc.
+              200-1892 W. Broadway Vancouver B.C. V6J 1Y9 604-637-4772
+            </p>
+          </footer>
         </section>
       </main>
     </>

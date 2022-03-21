@@ -248,11 +248,17 @@ section {
   font-size: 120%;
   text-align: center;
   border: 2px solid var(--secondary-color);
+  align-self: center;
 }
 
 .contact-link:hover {
   background-color: var(--secondary-hover);
 }
+.services-header-image-container {
+  height: 50vh;
+  position: relative;
+}
+
 @keyframes drawBorder {
   /*animated border here*/
 }
@@ -392,5 +398,15 @@ section {
     margin-top: auto;
     height: 13%;
     position: relative;
+  }
+
+  .services-header-image-container {
+    height: 50vh;
+    position: relative;
+  }
+  .services-first-section {
+    height: 100vh;
+    padding-left: 25%;
+    padding-right: 25%;
   }
 }

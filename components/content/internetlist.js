@@ -58,7 +58,7 @@ export default function InternetListContent(props) {
       }}
     >
       <h3>Internet</h3>
-      <h4>The Best Connection for your business.</h4>
+      <h4>The Optimized Connection for Your Business.</h4>
       <h5>
         High-speed, dedicated internet access, with the features you need to
         connect with customers, partners, and employees.

@@ -40,6 +40,15 @@ export default function Contact(props) {
           &nbsp;Global Telemanagement Inc.
         </a>
       </header>
+      <section>
+        <h3 style={{ marginTop: '0', paddingTop: '20%' }}>
+          Please Contact Us For Any Additional Information.
+        </h3>
+        <h4>
+          We&apos;d more than happy to help you find the solutions to help you
+          move your business forward.
+        </h4>
+      </section>
       <section
         style={{
           display: 'flex',
@@ -49,15 +58,29 @@ export default function Contact(props) {
           color: 'white'
         }}
       >
-        <h3 style={{ marginTop: '0', paddingTop: '20%' }}>
-          Please Contact Us For Any Additional Information.
-        </h3>
-        <h4>
-          We&apos;d more than happy to help you find the solutions to help you
-          move your business forward.
-        </h4>
-        <p>Visit our head office</p>
-        <p>Give us a call</p>
+        <address style={{ fontStyle: 'normal' }}>
+          <p>
+            We are happy to assist you during our business hours between:
+            <br></br>Monday to Friday 9:00am to 17:00pm
+          </p>
+          <p>
+            Contact us by Phone: 604-637-4772<br></br>
+            Fax Number: 604-637-4722
+          </p>
+          <p>
+            Visit our head office: <br></br>200 - 1892 W. Broadway Vancouver
+            B.C. V6J 1Y9<br></br>
+          </p>
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4775.120337979842!2d-123.14714037228175!3d49.264024896921505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673b75dec6c77%3A0x714fb34c425bac2!2s200-1892%20W%20Broadway%2C%20Vancouver%2C%20BC%20V6J%201Y9%2C%20Canada!5e0!3m2!1sen!2sus!4v1647820792295!5m2!1sen!2sus'
+            width={width - 25}
+            height='450'
+            style={{ border: '0' }}
+            allowFullScreen=''
+            loading='lazy'
+          ></iframe>
+        </address>
+        <p>Schedule a meeting online:</p>
         <ContactForm />
       </section>
     </>

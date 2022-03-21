@@ -1,5 +1,5 @@
 import { useRef, useLayoutEffect, useState, useEffect } from 'react'
-
+import Image from 'next/image'
 export default function VoiceListContent(props) {
   const containerRef = useRef(null)
   const [containerVisibility, setContainerVisibility] = useState(true)
@@ -58,15 +58,14 @@ export default function VoiceListContent(props) {
         }
       }}
     >
-      <h3 style={{ marginTop: '0', fontSize: '300%' }}>Voice</h3>
       <h4>
         Scalable, Crystal Clear Voice, Call Control solutions delivered where
         and when you want them.
       </h4>
-      <h5>
+      <p>
         Your voice services give that personal touch to your client contact.
         Ensure your branding is supported with:
-      </h5>
+      </p>
       <ul>
         <li>
           SIP Trunking Flexibility, multiple options. Reduce toll charges and

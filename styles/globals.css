@@ -259,6 +259,11 @@ section {
   position: relative;
 }
 
+.about-header-image-container {
+  height: 20vh;
+  position: relative;
+}
+
 @keyframes drawBorder {
   /*animated border here*/
 }
@@ -401,6 +406,11 @@ section {
   }
 
   .services-header-image-container {
+    height: 50vh;
+    position: relative;
+  }
+
+  .about-header-image-container {
     height: 50vh;
     position: relative;
   }

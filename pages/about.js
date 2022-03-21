@@ -50,6 +50,15 @@ export default function About() {
           }}
         >
           <h1 style={{ marginTop: '0', paddingTop: '10%' }}>Our Team at GTI</h1>
+          <div className='about-header-image-container'>
+            {' '}
+            <Image
+              src={'/burrard_inlet.png'}
+              alt='GTI logo'
+              layout='fill'
+              objectFit='contain'
+            />
+          </div>
         </section>
         <section
           style={{

@@ -73,6 +73,16 @@ export default function Services(props) {
               alt='spinning gears animation'
               layout='fill'
               objectFit='contain'
+              priority
+            />
+          </div>
+          <div className='services-header-image-container'>
+            <Image
+              src={'/chart_animation.gif'}
+              alt='chart with arrow pointing up animation'
+              layout='fill'
+              objectFit='contain'
+              priority
             />
           </div>
         </section>

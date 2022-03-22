@@ -78,6 +78,7 @@ h1 {
 h2 {
   font-family: 'DMSerifDisplay';
   font-size: 250%;
+  margin-top: 2%;
 }
 
 h3 {
@@ -85,7 +86,6 @@ h3 {
   font-size: 250%;
   margin-top: 5%;
   margin-bottom: 5%;
-  padding-top: 7%;
 }
 
 h4 {
@@ -191,7 +191,7 @@ button.landing-button:hover {
   background-color: transparent;
   display: block;
   margin: 1em;
-  width: 32px;
+  width: 44px;
   border: none;
   margin-top: 1px;
   cursor: pointer;
@@ -215,7 +215,7 @@ button.landing-button:hover {
 section {
   padding-right: 3%;
   padding-left: 3%;
-  padding-bottom: 10%;
+  padding-bottom: 3%;
   height: 100%;
   width: 100%;
   background-color: var(--off-white);
@@ -297,6 +297,14 @@ section {
   h2 {
     margin-top: 5%;
     padding-top: 7%;
+  }
+
+  h3 {
+    font-family: 'DMSerifDisplay';
+    font-size: 250%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 0%;
   }
 
   a {

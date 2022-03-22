@@ -40,6 +40,7 @@ export default function LandingList(props) {
       <VoiceListContent
         landingdisplay={landingdisplay}
         activedisplay={activedisplay}
+        width={props.width}
         handleLandingVisibility={() => handleLandingVisibility()}
         page={'index'}
       />

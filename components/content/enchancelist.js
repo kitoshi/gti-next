@@ -3,18 +3,11 @@ import Image from 'next/image'
 export default function EnhanceVoiceContent(props) {
   return (
     <>
-      <h3>Services for the modern workplace, customized for your needs</h3>
+      <h3>Services for the modern workplace customized for your needs</h3>
       <p>
         Enhance your GTI business telecom experience with integrated services
         that streamline your business operations.
       </p>
-      <div style={{ position: 'relative', height: '25vh' }}>
-        <Image
-          src='/router_cables.jpg'
-          alt='router with cables attached'
-          layout='fill'
-        />
-      </div>
 
       <ul>
         <li>
@@ -60,6 +53,13 @@ export default function EnhanceVoiceContent(props) {
           </p>
         </li>
       </ul>
+      <div style={{ position: 'relative', height: '25vh' }}>
+        <Image
+          src='/router_cables.jpg'
+          alt='router with cables attached'
+          layout='fill'
+        />
+      </div>
     </>
   )
 }

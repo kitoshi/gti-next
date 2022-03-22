@@ -95,7 +95,10 @@ export default function Home(props) {
           }}
           ref={learnRef}
         >
-          <LandingListContent landinglistfocus={landinglistfocus} />
+          <LandingListContent
+            landinglistfocus={landinglistfocus}
+            width={width}
+          />
         </section>
 
         <section

@@ -66,6 +66,7 @@ export default function VoiceListContent(props) {
         Your voice services give that personal touch to your client contact.
         Ensure your branding is supported with:
       </p>
+
       <ul>
         <li>
           SIP Trunking Flexibility, multiple options. Reduce toll charges and
@@ -83,6 +84,13 @@ export default function VoiceListContent(props) {
           your existing CRM infrastructure
         </li>
       </ul>
+      <div style={{ position: 'relative', height: '25vh' }}>
+        <Image
+          src={'/network_server.jpg'}
+          alt='router with network cables connected'
+          layout='fill'
+        />
+      </div>
     </div>
   )
 }

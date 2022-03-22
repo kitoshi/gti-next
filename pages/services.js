@@ -108,7 +108,7 @@ export default function Services(props) {
             paddingRight: '0'
           }}
         >
-          <VoiceListContent page={'services'} />
+          <VoiceListContent page={'services'} width={width} />
         </section>
         <section
           style={{

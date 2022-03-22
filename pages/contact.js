@@ -45,7 +45,7 @@ export default function Contact(props) {
           Please Contact Us For Any Additional Information.
         </h3>
         <h4>
-          We&apos;d more than happy to help you find the solutions to help you
+          We would be more than happy to help you find solutions to
           move your business forward.
         </h4>
       </section>

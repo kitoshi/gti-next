@@ -1,4 +1,5 @@
 import { useRef, useLayoutEffect, useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export default function InternetListContent(props) {
   const containerRef = useRef(null)
@@ -82,6 +83,13 @@ export default function InternetListContent(props) {
           and technologie
         </li>
       </ul>
+      <div style={{ position: 'relative', height: '25vh' }}>
+        <Image
+          src={'/back_router.jpg'}
+          alt='router with network cables connected and green lights'
+          layout='fill'
+        />
+      </div>
     </div>
   )
 }

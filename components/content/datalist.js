@@ -1,5 +1,5 @@
 import { useRef, useLayoutEffect, useEffect, useState } from 'react'
-
+import Image from 'next/image'
 export default function DataListContent(props) {
   const containerRef = useRef(null)
   const [containerVisibility, setContainerVisibility] = useState(true)
@@ -79,6 +79,13 @@ export default function DataListContent(props) {
           and technologie
         </li>
       </ul>
+      <div style={{ position: 'relative', height: '25vh' }}>
+        <Image
+          src={'/zoomed_router.jpg'}
+          alt='train tracks with buildings in the middle of a fork'
+          layout='fill'
+        />
+      </div>
     </div>
   )
 }

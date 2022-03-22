@@ -49,7 +49,10 @@ export default function About() {
             color: 'var(--font-color)'
           }}
         >
-          <h1 style={{ marginTop: '0', paddingTop: '10%' }}>Our Team at GTI</h1>
+          <h1 style={{ marginTop: '0', paddingTop: '10%', fontSize: '250%' }}>
+            Proven track record of bringing multiple carriers to the table for
+            your business needs.
+          </h1>
           <div className='about-header-image-container'>
             {' '}
             <Image
@@ -69,10 +72,9 @@ export default function About() {
         >
           <h2>Who Are We:</h2>
           <p>
-            Established in 1995, GTI has a proven track record of bringing
-            multiple carriers to the table to suit your business needs. We
-            specialize in powerful offerings for multiple services at single or
-            multiple sites, offering full redundancy and personalization.
+            Established in 1995, We specialize in powerful offerings for
+            multiple services at single or multiple sites, offering full
+            redundancy and personalization.
           </p>
           <h3>Our Team:</h3>
           <p>

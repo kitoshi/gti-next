@@ -41,13 +41,17 @@ export default function Contact(props) {
         </a>
       </header>
       <section>
-        <h3 style={{ marginTop: '0', paddingTop: '20%' }}>
-          Please Contact Us For Any Additional Information.
-        </h3>
-        <h4>
-          We would be more than happy to help you find solutions to
-          move your business forward.
-        </h4>
+        <div className='services-header-image-container'>
+          <h3
+            style={{
+              marginTop: '0',
+              paddingTop: '20%'
+            }}
+          >
+            We are motivated to help you find solutions that move your business
+            forward.
+          </h3>
+        </div>
       </section>
       <section
         style={{
@@ -58,6 +62,8 @@ export default function Contact(props) {
           color: 'white'
         }}
       >
+        <p>Schedule a meeting online:</p>
+        <ContactForm />
         <address style={{ fontStyle: 'normal' }}>
           <p>
             We are available to assist you during our business hours between:
@@ -80,8 +86,6 @@ export default function Contact(props) {
             loading='lazy'
           ></iframe>
         </address>
-        <p>Schedule a meeting online:</p>
-        <ContactForm />
       </section>
       <section
         style={{

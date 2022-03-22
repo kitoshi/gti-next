@@ -75,6 +75,7 @@ export default function Navbar(props) {
         top: '7px',
         right: '10px'
       }}
+      className='global-nav'
     >
       <Link href={'/'}>
         <a

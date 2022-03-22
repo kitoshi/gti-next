@@ -3,11 +3,16 @@ import InternetListContent from '../components/content/internetlist'
 import DataListContent from '../components/content/datalist'
 import ContactForm from '../components/contactform'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import EnhanceVoiceContent from '../components/content/enchancelist'
 
 export default function Services(props) {
   const [width, setWidth] = useState(0)
+  const enhancedRef = useRef(null)
+  const voiceRef = useRef(null)
+  const internetRef = useRef(null)
+  const dataRef = useRef(null)
+
   useEffect(() => {
     function updateWidth() {
       setWidth(() => window.innerWidth)
@@ -18,6 +23,20 @@ export default function Services(props) {
       window.removeEventListener('resize', updateWidth)
     }
   }, [width])
+
+  function onEnhancedButtonClick() {
+    enhancedRef.current.scrollIntoView()
+  }
+  function onVoiceButtonClick() {
+    voiceRef.current.scrollIntoView()
+  }
+  function onInternetButtonClick() {
+    internetRef.current.scrollIntoView()
+  }
+  function onDataButtonClick() {
+    dataRef.current.scrollIntoView()
+  }
+
   return (
     <>
       <header
@@ -76,15 +95,70 @@ export default function Services(props) {
               priority
             />
           </div>
-          <div className='services-header-image-container'>
-            <Image
-              src={'/chart_animation.gif'}
-              alt='chart with arrow pointing up animation'
-              layout='fill'
-              objectFit='contain'
-              priority
-            />
-          </div>
+
+          <nav>
+            <button
+              style={{
+                color: 'white',
+                width: '33%',
+                height: '50px',
+                borderRadius: '12px',
+                border: 'none',
+                marginRight: '5%',
+                fontSize: 'medium'
+              }}
+              className='landing-button'
+              onClick={onEnhancedButtonClick}
+              tabIndex='0'
+            >
+              Enhanced Voice
+            </button>
+            <button
+              style={{
+                width: '33%',
+                height: '50px',
+                borderRadius: '12px',
+                borderStyle: 'solid',
+                border: 'none',
+                fontSize: 'medium'
+              }}
+              onClick={onVoiceButtonClick}
+              className='landing-button-contact'
+            >
+              Voice
+            </button>
+            <button
+              style={{
+                width: '33%',
+                height: '50px',
+                borderRadius: '12px',
+                borderStyle: 'solid',
+                border: 'none',
+                marginRight: '5%',
+                fontSize: 'medium'
+              }}
+              onClick={onInternetButtonClick}
+              className='landing-button-contact'
+            >
+              Internet
+            </button>
+            <button
+              style={{
+                color: 'white',
+                width: '33%',
+                height: '50px',
+                borderRadius: '12px',
+                border: 'none',
+
+                fontSize: 'medium'
+              }}
+              className='landing-button'
+              onClick={onDataButtonClick}
+              tabIndex='0'
+            >
+              Data
+            </button>
+          </nav>
         </section>
         <section
           style={{
@@ -94,6 +168,7 @@ export default function Services(props) {
             backgroundColor: 'var(--section-color)',
             color: 'var(--off-white)'
           }}
+          ref={enhancedRef}
         >
           <EnhanceVoiceContent />
         </section>
@@ -107,6 +182,7 @@ export default function Services(props) {
             paddingLeft: '0',
             paddingRight: '0'
           }}
+          ref={voiceRef}
         >
           <VoiceListContent page={'services'} width={width} />
         </section>
@@ -119,6 +195,7 @@ export default function Services(props) {
             paddingLeft: '0',
             paddingRight: '0'
           }}
+          ref={internetRef}
         >
           <InternetListContent page={'services'} />
         </section>
@@ -133,6 +210,7 @@ export default function Services(props) {
             paddingLeft: '0',
             paddingRight: '0'
           }}
+          ref={dataRef}
         >
           <DataListContent page={'services'} />
         </section>

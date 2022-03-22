@@ -124,7 +124,7 @@ em.orange-emphasis {
   font-family: 'DMSerifDisplay';
 }
 
-nav {
+nav.global-nav {
   position: fixed;
   flex-direction: column;
   z-index: 5;
@@ -135,7 +135,7 @@ nav {
   margin-top: 2%;
 }
 
-nav a:active {
+nav.global-nav a:active {
   background: transparent;
 }
 
@@ -322,7 +322,7 @@ section {
     padding-left: 25%;
   }
 
-  nav {
+  nav.global-nav {
     position: inherit;
     flex-direction: row;
     background-color: var(--section-color);
@@ -334,7 +334,7 @@ section {
     padding-bottom: 0.5%;
   }
 
-  nav > a {
+  nav.global-nav > a {
     color: var(--heading-color);
     margin-left: 0.5%;
   }

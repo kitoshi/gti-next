@@ -70,7 +70,10 @@ export default function Services(props) {
             backgroundColor: 'var(--bg-color)',
             alignItems: 'center',
             position: 'relative',
-            height: '100vh'
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between'
           }}
         >
           <div className='services-header-image-container'>
@@ -79,7 +82,7 @@ export default function Services(props) {
                 marginTop: '0',
                 paddingTop: '10%',
                 paddingLeft: '3.5%',
-                position: 'absolute',
+                position: 'inherit',
                 top: '5%',
                 left: '0',
                 zIndex: '1'
@@ -99,15 +102,11 @@ export default function Services(props) {
           <nav>
             <button
               style={{
-                color: 'white',
-                width: '33%',
-                height: '50px',
                 borderRadius: '12px',
                 border: 'none',
-                marginRight: '5%',
                 fontSize: 'medium'
               }}
-              className='landing-button'
+              className='services-button'
               onClick={onEnhancedButtonClick}
               tabIndex='0'
             >
@@ -115,46 +114,36 @@ export default function Services(props) {
             </button>
             <button
               style={{
-                width: '33%',
-                height: '50px',
                 borderRadius: '12px',
                 borderStyle: 'solid',
                 border: 'none',
                 fontSize: 'medium'
               }}
               onClick={onVoiceButtonClick}
-              className='landing-button-contact'
+              className='services-button'
             >
               Voice
             </button>
             <button
               style={{
-                width: '33%',
-                height: '50px',
                 borderRadius: '12px',
                 borderStyle: 'solid',
                 border: 'none',
-                marginRight: '5%',
                 fontSize: 'medium'
               }}
               onClick={onInternetButtonClick}
-              className='landing-button-contact'
+              className='services-button'
             >
               Internet
             </button>
             <button
               style={{
-                color: 'white',
-                width: '33%',
-                height: '50px',
                 borderRadius: '12px',
                 border: 'none',
-
                 fontSize: 'medium'
               }}
-              className='landing-button'
+              className='services-button'
               onClick={onDataButtonClick}
-              tabIndex='0'
             >
               Data
             </button>

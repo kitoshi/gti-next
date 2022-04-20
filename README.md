@@ -56,7 +56,7 @@
 ## About The Project
 
  <a href="https://gti-next.vercel.app">
- <img src="screenshots/projectscreenshot.png" alt="project screenshot" width="480" height="480"></img>
+Live Project
  </a>
 
 We are using [NextJS](https://nextjs.org/) as the framework to populate the pages.

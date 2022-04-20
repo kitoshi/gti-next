@@ -62,6 +62,7 @@
 We are using [NextJS](https://nextjs.org/) as the framework to populate the pages.
 
 Here's why I built this:
+<br />
 The [current](http://g-t-i.ca/) site is outdated.
 
     - Image optimization builtin to the framework

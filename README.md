@@ -148,15 +148,15 @@ Project Link: [https://github.com/kitoshi/gti-next](https://github.com/kitoshi/g
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/kitoshi/auctioncrawl.svg?style=for-the-badge
-[contributors-url]: https://github.com/kitoshi/auctioncrawl/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kitoshi/auctioncrawl.svg?style=for-the-badge
-[forks-url]: https://github.com/kitoshi/auctioncrawl/network/members
-[stars-shield]: https://img.shields.io/github/stars/kitoshi/auctioncrawl.svg?style=for-the-badge
-[stars-url]: https://github.com/kitoshi/auctioncrawl/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kitoshi/auctioncrawl.svg?style=for-the-badge
-[issues-url]: https://github.com/kitoshi/auctioncrawl/issues
-[license-shield]: https://img.shields.io/github/license/kitoshi/auctioncrawl.svg?style=for-the-badge
-[license-url]: https://github.com/kitoshi/auctioncrawl/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/kitoshi/gti-next.svg?style=for-the-badge
+[contributors-url]: https://github.com/kitoshi/gti-next/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kitoshi/gti-next.svg?style=for-the-badge
+[forks-url]: https://github.com/kitoshi/gti-next/network/members
+[stars-shield]: https://img.shields.io/github/stars/kitoshi/gti-next.svg?style=for-the-badge
+[stars-url]: https://github.com/kitoshi/gti-next/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kitoshi/gti-next.svg?style=for-the-badge
+[issues-url]: https://github.com/kitoshi/gti-next/issues
+[license-shield]: https://img.shields.io/github/license/kitoshi/gti-next.svg?style=for-the-badge
+[license-url]: https://github.com/kitoshi/gti-next/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/robert-k-charlton/
